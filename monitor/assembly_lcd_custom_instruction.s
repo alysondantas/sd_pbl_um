@@ -21,20 +21,50 @@ _init:
 	ret
 	
 _init_lcd:
+	# call _delay_50ms
+	# call _delay_50ms
+	# addi r16, zero, 0x30 # Registrador d - comando set
+	# addi r15, zero, 0x0 # Registrador rs
+	# custom 0, r19, r15, r16  
+	# call _delay_50ms
+	# addi r16, zero, 0x0E # Registrador d - comando on/of
+	# custom 0, r19, r15, r16 
+	# call _delay_50ms
+	# addi r16, zero, 0x6 # Registrador d - comando clear
+	# custom 0, r19, r15, r16 
+	# call _delay_200ms
+	# addi r16, zero, 0x1 # Registrador d - comando mode set
+	# custom 0, r19, r15, r16 
+	
 	call _delay_50ms
 	call _delay_50ms
 	addi r16, zero, 0x30 # Registrador d - comando set
-	addi r15, zero, 0x0 # Registrador rs
-	custom 0, r19, r15, r16  
+	addi r17, zero, 0x0 # Registrador rs
+	custom 0, r23, r17, r16  
 	call _delay_50ms
 	addi r16, zero, 0x0E # Registrador d - comando on/of
-	custom 0, r19, r15, r16 
+	custom 0, r23, r17, r16 
 	call _delay_50ms
 	addi r16, zero, 0x6 # Registrador d - comando clear
-	custom 0, r19, r15, r16 
+	custom 0, r23, r17, r16 
 	call _delay_200ms
 	addi r16, zero, 0x1 # Registrador d - comando mode set
-	custom 0, r19, r15, r16 
+	custom 0, r23, r17, r16 
+	addi r17, zero, 0x1 # Registrador rs
+	addi r16, zero, 0x4F # Registrador d - caracter para escrita
+	custom 0, r23, r17, r16 
+	addi r16, zero, 0x50 # Registrador d - caracter para escrita
+	custom 0, r23, r17, r16 
+	addi r16, zero, 0xC4 # Registrador d - caracter para escrita
+	custom 0, r23, r17, r16 
+	addi r16, zero, 0x99 # Registrador d - caracter para escrita
+	custom 0, r23, r17, r16 
+	addi r16, zero, 0x4F # Registrador d - caracter para escrita
+	custom 0, r23, r17, r16 
+	addi r16, zero, 0x10 # Registrador d - caracter para escrita
+	custom 0, r23, r17, r16 
+	addi r16, zero, 0x99 # Registrador d - caracter para escrita
+	custom 0, r23, r17, r16
 	
 	ret
 	
