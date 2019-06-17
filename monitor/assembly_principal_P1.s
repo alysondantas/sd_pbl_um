@@ -174,13 +174,16 @@ _EXIBE:
 	addi r16, zero, 0x50 # Registrador d - caracter para escrita P
 	custom 0, r23, r17, r16 
 	call _delay_50ms
-	addi r16, zero, 0x43 # Registrador d - caracter para escrita C
+	addi r16, zero, 0x54 # Registrador d - caracter para escrita T
 	custom 0, r23, r17, r16 
 	call _delay_50ms
-	addi r16, zero, 0x41 # Registrador d - caracter para escrita A
+	addi r16, zero, 0x49 # Registrador d - caracter para escrita I
 	custom 0, r23, r17, r16 
 	call _delay_50ms
 	addi r16, zero, 0x4F # Registrador d - caracter para escrita O
+	custom 0, r23, r17, r16 
+	call _delay_50ms
+	addi r16, zero, 0x4E # Registrador d - caracter para escrita N
 	custom 0, r23, r17, r16 
 	call _delay_50ms
 	addi r16, zero, 0x20 # Registrador d - caracter para escrita Espaço
@@ -268,22 +271,7 @@ _EXIBE_NOVO:
 	addi r16, zero, 0x43 # C
 	custom 0, r23, r17, r16 
 	call _delay_50ms
-	addi r16, zero, 0x49 # I
-	custom 0, r23, r17, r16 
-	call _delay_50ms
-	addi r16, zero, 0x4F # O
-	custom 0, r23, r17, r16 
-	call _delay_50ms
-	addi r16, zero, 0x4E # N
-	custom 0, r23, r17, r16 
-	call _delay_50ms
-	addi r16, zero, 0x41 # A
-	custom 0, r23, r17, r16 
-	call _delay_50ms
-	addi r16, zero, 0x44 # D
-	custom 0, r23, r17, r16 
-	call _delay_50ms
-	addi r16, zero, 0x4F # O
+	addi r16, zero, 0x54 # T
 	custom 0, r23, r17, r16 
 	call _delay_50ms
 	addi r16, zero, 0x20 # Registrador d - caracter para escrita
