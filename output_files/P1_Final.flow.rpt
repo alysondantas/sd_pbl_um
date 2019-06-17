@@ -1,5 +1,5 @@
 Flow report for P1_Final
-Mon Apr 22 11:05:51 2019
+Sat Jun 15 17:05:09 2019
 Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
 
 
@@ -40,15 +40,15 @@ applicable agreement for further details.
 +--------------------------------------------------------------------------------------+
 ; Flow Summary                                                                         ;
 +------------------------------------+-------------------------------------------------+
-; Flow Status                        ; Successful - Mon Apr 22 11:05:44 2019           ;
+; Flow Status                        ; Successful - Sat Jun 15 17:05:03 2019           ;
 ; Quartus II 64-Bit Version          ; 13.0.1 Build 232 06/12/2013 SP 1 SJ Web Edition ;
 ; Revision Name                      ; P1_Final                                        ;
-; Top-level Entity Name              ; cpu                                             ;
+; Top-level Entity Name              ; cpu_evolution                                   ;
 ; Family                             ; Cyclone IV E                                    ;
 ; Device                             ; EP4CE6E22C8                                     ;
 ; Timing Models                      ; Final                                           ;
-; Total logic elements               ; 1,676 / 6,272 ( 27 % )                          ;
-;     Total combinational functions  ; 1,573 / 6,272 ( 25 % )                          ;
+; Total logic elements               ; 1,674 / 6,272 ( 27 % )                          ;
+;     Total combinational functions  ; 1,570 / 6,272 ( 25 % )                          ;
 ;     Dedicated logic registers      ; 929 / 6,272 ( 15 % )                            ;
 ; Total registers                    ; 929                                             ;
 ; Total pins                         ; 28 / 92 ( 30 % )                                ;
@@ -64,29 +64,29 @@ applicable agreement for further details.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 04/22/2019 11:04:41 ;
+; Start date & time ; 06/15/2019 17:04:09 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; P1_Final            ;
 +-------------------+---------------------+
 
 
-+------------------------------------------------------------------------------------------------------------------------+
-; Flow Non-Default Global Settings                                                                                       ;
-+-------------------------------------+---------------------------------------+---------------+-------------+------------+
-; Assignment Name                     ; Value                                 ; Default Value ; Entity Name ; Section Id ;
-+-------------------------------------+---------------------------------------+---------------+-------------+------------+
-; COMPILER_SIGNATURE_ID               ; 128120937693381.155594188000116       ; --            ; --          ; --         ;
-; MAX_CORE_JUNCTION_TEMP              ; 85                                    ; --            ; --          ; --         ;
-; MIN_CORE_JUNCTION_TEMP              ; 0                                     ; --            ; --          ; --         ;
-; NOMINAL_CORE_SUPPLY_VOLTAGE         ; 1.2V                                  ; --            ; --          ; --         ;
-; PARTITION_COLOR                     ; 16764057                              ; --            ; cpu         ; Top        ;
-; PARTITION_FITTER_PRESERVATION_LEVEL ; PLACEMENT_AND_ROUTING                 ; --            ; cpu         ; Top        ;
-; PARTITION_NETLIST_TYPE              ; SOURCE                                ; --            ; cpu         ; Top        ;
-; POWER_BOARD_THERMAL_MODEL           ; None (CONSERVATIVE)                   ; --            ; --          ; --         ;
-; POWER_PRESET_COOLING_SOLUTION       ; 23 MM HEAT SINK WITH 200 LFPM AIRFLOW ; --            ; --          ; --         ;
-; PROJECT_OUTPUT_DIRECTORY            ; output_files                          ; --            ; --          ; --         ;
-; TOP_LEVEL_ENTITY                    ; cpu                                   ; P1_Final      ; --          ; --         ;
-+-------------------------------------+---------------------------------------+---------------+-------------+------------+
++--------------------------------------------------------------------------------------------------------------------------+
+; Flow Non-Default Global Settings                                                                                         ;
++-------------------------------------+---------------------------------------+---------------+---------------+------------+
+; Assignment Name                     ; Value                                 ; Default Value ; Entity Name   ; Section Id ;
++-------------------------------------+---------------------------------------+---------------+---------------+------------+
+; COMPILER_SIGNATURE_ID               ; 40637543367679.156062904806964        ; --            ; --            ; --         ;
+; MAX_CORE_JUNCTION_TEMP              ; 85                                    ; --            ; --            ; --         ;
+; MIN_CORE_JUNCTION_TEMP              ; 0                                     ; --            ; --            ; --         ;
+; NOMINAL_CORE_SUPPLY_VOLTAGE         ; 1.2V                                  ; --            ; --            ; --         ;
+; PARTITION_COLOR                     ; 16764057                              ; --            ; cpu_evolution ; Top        ;
+; PARTITION_FITTER_PRESERVATION_LEVEL ; PLACEMENT_AND_ROUTING                 ; --            ; cpu_evolution ; Top        ;
+; PARTITION_NETLIST_TYPE              ; SOURCE                                ; --            ; cpu_evolution ; Top        ;
+; POWER_BOARD_THERMAL_MODEL           ; None (CONSERVATIVE)                   ; --            ; --            ; --         ;
+; POWER_PRESET_COOLING_SOLUTION       ; 23 MM HEAT SINK WITH 200 LFPM AIRFLOW ; --            ; --            ; --         ;
+; PROJECT_OUTPUT_DIRECTORY            ; output_files                          ; --            ; --            ; --         ;
+; TOP_LEVEL_ENTITY                    ; cpu_evolution                         ; P1_Final      ; --            ; --         ;
++-------------------------------------+---------------------------------------+---------------+---------------+------------+
 
 
 +-------------------------------------------------------------------------------------------------------------------------------+
@@ -94,11 +94,11 @@ applicable agreement for further details.
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name               ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis      ; 00:00:40     ; 1.0                     ; 4713 MB             ; 00:00:39                           ;
-; Fitter                    ; 00:00:17     ; 1.0                     ; 4940 MB             ; 00:00:16                           ;
-; Assembler                 ; 00:00:02     ; 1.0                     ; 4575 MB             ; 00:00:02                           ;
-; TimeQuest Timing Analyzer ; 00:00:06     ; 1.0                     ; 4644 MB             ; 00:00:05                           ;
-; Total                     ; 00:01:05     ; --                      ; --                  ; 00:01:02                           ;
+; Analysis & Synthesis      ; 00:00:34     ; 1.0                     ; 4727 MB             ; 00:00:33                           ;
+; Fitter                    ; 00:00:15     ; 1.0                     ; 4945 MB             ; 00:00:15                           ;
+; Assembler                 ; 00:00:02     ; 1.0                     ; 4572 MB             ; 00:00:02                           ;
+; TimeQuest Timing Analyzer ; 00:00:05     ; 1.0                     ; 4639 MB             ; 00:00:05                           ;
+; Total                     ; 00:00:56     ; --                      ; --                  ; 00:00:55                           ;
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 
@@ -107,10 +107,10 @@ applicable agreement for further details.
 +---------------------------+------------------+-----------+------------+----------------+
 ; Module Name               ; Machine Hostname ; OS Name   ; OS Version ; Processor type ;
 +---------------------------+------------------+-----------+------------+----------------+
-; Analysis & Synthesis      ; DESKTOP-TMMKTIM  ; Windows 7 ; 6.2        ; x86_64         ;
-; Fitter                    ; DESKTOP-TMMKTIM  ; Windows 7 ; 6.2        ; x86_64         ;
-; Assembler                 ; DESKTOP-TMMKTIM  ; Windows 7 ; 6.2        ; x86_64         ;
-; TimeQuest Timing Analyzer ; DESKTOP-TMMKTIM  ; Windows 7 ; 6.2        ; x86_64         ;
+; Analysis & Synthesis      ; DESKTOP-D5BAG4Q  ; Windows 7 ; 6.2        ; x86_64         ;
+; Fitter                    ; DESKTOP-D5BAG4Q  ; Windows 7 ; 6.2        ; x86_64         ;
+; Assembler                 ; DESKTOP-D5BAG4Q  ; Windows 7 ; 6.2        ; x86_64         ;
+; TimeQuest Timing Analyzer ; DESKTOP-D5BAG4Q  ; Windows 7 ; 6.2        ; x86_64         ;
 +---------------------------+------------------+-----------+------------+----------------+
 
 

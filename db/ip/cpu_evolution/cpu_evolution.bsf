@@ -1,0 +1,124 @@
+/*
+WARNING: Do NOT edit the input and output ports in this file in a text
+editor if you plan to continue editing the block that represents it in
+the Block Editor! File corruption is VERY likely to occur.
+*/
+/*
+Copyright (C) 1991-2013 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+*/
+(header "symbol" (version "1.1"))
+(symbol
+	(rect 0 0 384 328)
+	(text "cpu_evolution" (rect 153 -1 207 11)(font "Arial" (font_size 10)))
+	(text "inst" (rect 8 312 20 324)(font "Arial" ))
+	(port
+		(pt 0 72)
+		(input)
+		(text "clk_clk" (rect 0 0 27 12)(font "Arial" (font_size 8)))
+		(text "clk_clk" (rect 4 61 46 72)(font "Arial" (font_size 8)))
+		(line (pt 0 72)(pt 160 72)(line_width 1))
+	)
+	(port
+		(pt 0 112)
+		(input)
+		(text "reset_reset_n" (rect 0 0 56 12)(font "Arial" (font_size 8)))
+		(text "reset_reset_n" (rect 4 101 82 112)(font "Arial" (font_size 8)))
+		(line (pt 0 112)(pt 160 112)(line_width 1))
+	)
+	(port
+		(pt 0 208)
+		(input)
+		(text "pio_buttons_export[3..0]" (rect 0 0 95 12)(font "Arial" (font_size 8)))
+		(text "pio_buttons_export[3..0]" (rect 4 197 148 208)(font "Arial" (font_size 8)))
+		(line (pt 0 208)(pt 160 208)(line_width 3))
+	)
+	(port
+		(pt 0 152)
+		(output)
+		(text "a_7seg_controlle_display[6..0]" (rect 0 0 120 12)(font "Arial" (font_size 8)))
+		(text "a_7seg_controlle_display[6..0]" (rect 4 141 184 152)(font "Arial" (font_size 8)))
+		(line (pt 0 152)(pt 160 152)(line_width 3))
+	)
+	(port
+		(pt 0 168)
+		(output)
+		(text "a_7seg_controlle_cat[3..0]" (rect 0 0 105 12)(font "Arial" (font_size 8)))
+		(text "a_7seg_controlle_cat[3..0]" (rect 4 157 160 168)(font "Arial" (font_size 8)))
+		(line (pt 0 168)(pt 160 168)(line_width 3))
+	)
+	(port
+		(pt 0 248)
+		(output)
+		(text "lcd_controller_rs" (rect 0 0 66 12)(font "Arial" (font_size 8)))
+		(text "lcd_controller_rs" (rect 4 237 106 248)(font "Arial" (font_size 8)))
+		(line (pt 0 248)(pt 160 248)(line_width 1))
+	)
+	(port
+		(pt 0 264)
+		(output)
+		(text "lcd_controller_enable" (rect 0 0 82 12)(font "Arial" (font_size 8)))
+		(text "lcd_controller_enable" (rect 4 253 130 264)(font "Arial" (font_size 8)))
+		(line (pt 0 264)(pt 160 264)(line_width 1))
+	)
+	(port
+		(pt 0 280)
+		(output)
+		(text "lcd_controller_display[7..0]" (rect 0 0 105 12)(font "Arial" (font_size 8)))
+		(text "lcd_controller_display[7..0]" (rect 4 269 172 280)(font "Arial" (font_size 8)))
+		(line (pt 0 280)(pt 160 280)(line_width 3))
+	)
+	(port
+		(pt 0 296)
+		(output)
+		(text "lcd_controller_rw" (rect 0 0 67 12)(font "Arial" (font_size 8)))
+		(text "lcd_controller_rw" (rect 4 285 106 296)(font "Arial" (font_size 8)))
+		(line (pt 0 296)(pt 160 296)(line_width 1))
+	)
+	(drawing
+		(text "clk" (rect 145 43 308 99)(font "Arial" (color 128 0 0)(font_size 9)))
+		(text "clk" (rect 165 67 348 144)(font "Arial" (color 0 0 0)))
+		(text "reset" (rect 131 83 292 179)(font "Arial" (color 128 0 0)(font_size 9)))
+		(text "reset_n" (rect 165 107 372 224)(font "Arial" (color 0 0 0)))
+		(text "a_7seg_controlle" (rect 61 123 218 259)(font "Arial" (color 128 0 0)(font_size 9)))
+		(text "display" (rect 165 147 372 304)(font "Arial" (color 0 0 0)))
+		(text "cat" (rect 165 163 348 336)(font "Arial" (color 0 0 0)))
+		(text "pio_buttons" (rect 93 179 252 371)(font "Arial" (color 128 0 0)(font_size 9)))
+		(text "export" (rect 165 203 366 416)(font "Arial" (color 0 0 0)))
+		(text "lcd_controller" (rect 83 219 250 451)(font "Arial" (color 128 0 0)(font_size 9)))
+		(text "rs" (rect 165 243 342 496)(font "Arial" (color 0 0 0)))
+		(text "enable" (rect 165 259 366 528)(font "Arial" (color 0 0 0)))
+		(text "display" (rect 165 275 372 560)(font "Arial" (color 0 0 0)))
+		(text "rw" (rect 165 291 342 592)(font "Arial" (color 0 0 0)))
+		(text " cpu_evolution " (rect 322 312 734 634)(font "Arial" ))
+		(line (pt 161 52)(pt 161 76)(line_width 1))
+		(line (pt 162 52)(pt 162 76)(line_width 1))
+		(line (pt 161 92)(pt 161 116)(line_width 1))
+		(line (pt 162 92)(pt 162 116)(line_width 1))
+		(line (pt 161 132)(pt 161 172)(line_width 1))
+		(line (pt 162 132)(pt 162 172)(line_width 1))
+		(line (pt 161 188)(pt 161 212)(line_width 1))
+		(line (pt 162 188)(pt 162 212)(line_width 1))
+		(line (pt 161 228)(pt 161 300)(line_width 1))
+		(line (pt 162 228)(pt 162 300)(line_width 1))
+		(line (pt 160 32)(pt 224 32)(line_width 1))
+		(line (pt 224 32)(pt 224 312)(line_width 1))
+		(line (pt 160 312)(pt 224 312)(line_width 1))
+		(line (pt 160 32)(pt 160 312)(line_width 1))
+		(line (pt 0 0)(pt 384 0)(line_width 1))
+		(line (pt 384 0)(pt 384 328)(line_width 1))
+		(line (pt 0 328)(pt 384 328)(line_width 1))
+		(line (pt 0 0)(pt 0 328)(line_width 1))
+	)
+)

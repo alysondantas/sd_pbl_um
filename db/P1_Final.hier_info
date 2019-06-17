@@ -1,6 +1,17 @@
-|cpu
+|cpu_evolution
 clk_clk => clk_clk.IN40
 reset_reset_n => _.IN1
+a_7seg_controlle_display[0] <= display7segment:a_7seg_controller_0.display
+a_7seg_controlle_display[1] <= display7segment:a_7seg_controller_0.display
+a_7seg_controlle_display[2] <= display7segment:a_7seg_controller_0.display
+a_7seg_controlle_display[3] <= display7segment:a_7seg_controller_0.display
+a_7seg_controlle_display[4] <= display7segment:a_7seg_controller_0.display
+a_7seg_controlle_display[5] <= display7segment:a_7seg_controller_0.display
+a_7seg_controlle_display[6] <= display7segment:a_7seg_controller_0.display
+a_7seg_controlle_cat[0] <= display7segment:a_7seg_controller_0.cat
+a_7seg_controlle_cat[1] <= display7segment:a_7seg_controller_0.cat
+a_7seg_controlle_cat[2] <= display7segment:a_7seg_controller_0.cat
+a_7seg_controlle_cat[3] <= display7segment:a_7seg_controller_0.cat
 pio_buttons_export[0] => pio_buttons_export[0].IN1
 pio_buttons_export[1] => pio_buttons_export[1].IN1
 pio_buttons_export[2] => pio_buttons_export[2].IN1
@@ -16,20 +27,9 @@ lcd_controller_display[5] <= lcd:lcd_controller_0.display
 lcd_controller_display[6] <= lcd:lcd_controller_0.display
 lcd_controller_display[7] <= lcd:lcd_controller_0.display
 lcd_controller_rw <= lcd:lcd_controller_0.rw
-a_7seg_controlle_display[0] <= display7segment:a_7seg_controller_0.display
-a_7seg_controlle_display[1] <= display7segment:a_7seg_controller_0.display
-a_7seg_controlle_display[2] <= display7segment:a_7seg_controller_0.display
-a_7seg_controlle_display[3] <= display7segment:a_7seg_controller_0.display
-a_7seg_controlle_display[4] <= display7segment:a_7seg_controller_0.display
-a_7seg_controlle_display[5] <= display7segment:a_7seg_controller_0.display
-a_7seg_controlle_display[6] <= display7segment:a_7seg_controller_0.display
-a_7seg_controlle_cat[0] <= display7segment:a_7seg_controller_0.cat
-a_7seg_controlle_cat[1] <= display7segment:a_7seg_controller_0.cat
-a_7seg_controlle_cat[2] <= display7segment:a_7seg_controller_0.cat
-a_7seg_controlle_cat[3] <= display7segment:a_7seg_controller_0.cat
 
 
-|cpu|cpu_nios2_qsys_0:nios2_qsys_0
+|cpu_evolution|cpu_evolution_nios2_qsys_0:nios2_qsys_0
 E_ci_multi_done => E_ci_multi_clk_en.DATAB
 E_ci_multi_done => E_ci_multi_stall.IN1
 E_ci_result[0] => E_alu_result.DATAB
@@ -407,44 +407,44 @@ i_address[11] <= i_address[11].DB_MAX_OUTPUT_PORT_TYPE
 i_address[12] <= i_address[12].DB_MAX_OUTPUT_PORT_TYPE
 i_address[13] <= i_address[13].DB_MAX_OUTPUT_PORT_TYPE
 i_read <= i_read.DB_MAX_OUTPUT_PORT_TYPE
-jtag_debug_module_debugaccess_to_roms <= cpu_nios2_qsys_0_nios2_oci:the_cpu_nios2_qsys_0_nios2_oci.jtag_debug_module_debugaccess_to_roms
-jtag_debug_module_readdata[0] <= cpu_nios2_qsys_0_nios2_oci:the_cpu_nios2_qsys_0_nios2_oci.readdata
-jtag_debug_module_readdata[1] <= cpu_nios2_qsys_0_nios2_oci:the_cpu_nios2_qsys_0_nios2_oci.readdata
-jtag_debug_module_readdata[2] <= cpu_nios2_qsys_0_nios2_oci:the_cpu_nios2_qsys_0_nios2_oci.readdata
-jtag_debug_module_readdata[3] <= cpu_nios2_qsys_0_nios2_oci:the_cpu_nios2_qsys_0_nios2_oci.readdata
-jtag_debug_module_readdata[4] <= cpu_nios2_qsys_0_nios2_oci:the_cpu_nios2_qsys_0_nios2_oci.readdata
-jtag_debug_module_readdata[5] <= cpu_nios2_qsys_0_nios2_oci:the_cpu_nios2_qsys_0_nios2_oci.readdata
-jtag_debug_module_readdata[6] <= cpu_nios2_qsys_0_nios2_oci:the_cpu_nios2_qsys_0_nios2_oci.readdata
-jtag_debug_module_readdata[7] <= cpu_nios2_qsys_0_nios2_oci:the_cpu_nios2_qsys_0_nios2_oci.readdata
-jtag_debug_module_readdata[8] <= cpu_nios2_qsys_0_nios2_oci:the_cpu_nios2_qsys_0_nios2_oci.readdata
-jtag_debug_module_readdata[9] <= cpu_nios2_qsys_0_nios2_oci:the_cpu_nios2_qsys_0_nios2_oci.readdata
-jtag_debug_module_readdata[10] <= cpu_nios2_qsys_0_nios2_oci:the_cpu_nios2_qsys_0_nios2_oci.readdata
-jtag_debug_module_readdata[11] <= cpu_nios2_qsys_0_nios2_oci:the_cpu_nios2_qsys_0_nios2_oci.readdata
-jtag_debug_module_readdata[12] <= cpu_nios2_qsys_0_nios2_oci:the_cpu_nios2_qsys_0_nios2_oci.readdata
-jtag_debug_module_readdata[13] <= cpu_nios2_qsys_0_nios2_oci:the_cpu_nios2_qsys_0_nios2_oci.readdata
-jtag_debug_module_readdata[14] <= cpu_nios2_qsys_0_nios2_oci:the_cpu_nios2_qsys_0_nios2_oci.readdata
-jtag_debug_module_readdata[15] <= cpu_nios2_qsys_0_nios2_oci:the_cpu_nios2_qsys_0_nios2_oci.readdata
-jtag_debug_module_readdata[16] <= cpu_nios2_qsys_0_nios2_oci:the_cpu_nios2_qsys_0_nios2_oci.readdata
-jtag_debug_module_readdata[17] <= cpu_nios2_qsys_0_nios2_oci:the_cpu_nios2_qsys_0_nios2_oci.readdata
-jtag_debug_module_readdata[18] <= cpu_nios2_qsys_0_nios2_oci:the_cpu_nios2_qsys_0_nios2_oci.readdata
-jtag_debug_module_readdata[19] <= cpu_nios2_qsys_0_nios2_oci:the_cpu_nios2_qsys_0_nios2_oci.readdata
-jtag_debug_module_readdata[20] <= cpu_nios2_qsys_0_nios2_oci:the_cpu_nios2_qsys_0_nios2_oci.readdata
-jtag_debug_module_readdata[21] <= cpu_nios2_qsys_0_nios2_oci:the_cpu_nios2_qsys_0_nios2_oci.readdata
-jtag_debug_module_readdata[22] <= cpu_nios2_qsys_0_nios2_oci:the_cpu_nios2_qsys_0_nios2_oci.readdata
-jtag_debug_module_readdata[23] <= cpu_nios2_qsys_0_nios2_oci:the_cpu_nios2_qsys_0_nios2_oci.readdata
-jtag_debug_module_readdata[24] <= cpu_nios2_qsys_0_nios2_oci:the_cpu_nios2_qsys_0_nios2_oci.readdata
-jtag_debug_module_readdata[25] <= cpu_nios2_qsys_0_nios2_oci:the_cpu_nios2_qsys_0_nios2_oci.readdata
-jtag_debug_module_readdata[26] <= cpu_nios2_qsys_0_nios2_oci:the_cpu_nios2_qsys_0_nios2_oci.readdata
-jtag_debug_module_readdata[27] <= cpu_nios2_qsys_0_nios2_oci:the_cpu_nios2_qsys_0_nios2_oci.readdata
-jtag_debug_module_readdata[28] <= cpu_nios2_qsys_0_nios2_oci:the_cpu_nios2_qsys_0_nios2_oci.readdata
-jtag_debug_module_readdata[29] <= cpu_nios2_qsys_0_nios2_oci:the_cpu_nios2_qsys_0_nios2_oci.readdata
-jtag_debug_module_readdata[30] <= cpu_nios2_qsys_0_nios2_oci:the_cpu_nios2_qsys_0_nios2_oci.readdata
-jtag_debug_module_readdata[31] <= cpu_nios2_qsys_0_nios2_oci:the_cpu_nios2_qsys_0_nios2_oci.readdata
-jtag_debug_module_resetrequest <= cpu_nios2_qsys_0_nios2_oci:the_cpu_nios2_qsys_0_nios2_oci.resetrequest
-jtag_debug_module_waitrequest <= cpu_nios2_qsys_0_nios2_oci:the_cpu_nios2_qsys_0_nios2_oci.waitrequest
+jtag_debug_module_debugaccess_to_roms <= cpu_evolution_nios2_qsys_0_nios2_oci:the_cpu_evolution_nios2_qsys_0_nios2_oci.jtag_debug_module_debugaccess_to_roms
+jtag_debug_module_readdata[0] <= cpu_evolution_nios2_qsys_0_nios2_oci:the_cpu_evolution_nios2_qsys_0_nios2_oci.readdata
+jtag_debug_module_readdata[1] <= cpu_evolution_nios2_qsys_0_nios2_oci:the_cpu_evolution_nios2_qsys_0_nios2_oci.readdata
+jtag_debug_module_readdata[2] <= cpu_evolution_nios2_qsys_0_nios2_oci:the_cpu_evolution_nios2_qsys_0_nios2_oci.readdata
+jtag_debug_module_readdata[3] <= cpu_evolution_nios2_qsys_0_nios2_oci:the_cpu_evolution_nios2_qsys_0_nios2_oci.readdata
+jtag_debug_module_readdata[4] <= cpu_evolution_nios2_qsys_0_nios2_oci:the_cpu_evolution_nios2_qsys_0_nios2_oci.readdata
+jtag_debug_module_readdata[5] <= cpu_evolution_nios2_qsys_0_nios2_oci:the_cpu_evolution_nios2_qsys_0_nios2_oci.readdata
+jtag_debug_module_readdata[6] <= cpu_evolution_nios2_qsys_0_nios2_oci:the_cpu_evolution_nios2_qsys_0_nios2_oci.readdata
+jtag_debug_module_readdata[7] <= cpu_evolution_nios2_qsys_0_nios2_oci:the_cpu_evolution_nios2_qsys_0_nios2_oci.readdata
+jtag_debug_module_readdata[8] <= cpu_evolution_nios2_qsys_0_nios2_oci:the_cpu_evolution_nios2_qsys_0_nios2_oci.readdata
+jtag_debug_module_readdata[9] <= cpu_evolution_nios2_qsys_0_nios2_oci:the_cpu_evolution_nios2_qsys_0_nios2_oci.readdata
+jtag_debug_module_readdata[10] <= cpu_evolution_nios2_qsys_0_nios2_oci:the_cpu_evolution_nios2_qsys_0_nios2_oci.readdata
+jtag_debug_module_readdata[11] <= cpu_evolution_nios2_qsys_0_nios2_oci:the_cpu_evolution_nios2_qsys_0_nios2_oci.readdata
+jtag_debug_module_readdata[12] <= cpu_evolution_nios2_qsys_0_nios2_oci:the_cpu_evolution_nios2_qsys_0_nios2_oci.readdata
+jtag_debug_module_readdata[13] <= cpu_evolution_nios2_qsys_0_nios2_oci:the_cpu_evolution_nios2_qsys_0_nios2_oci.readdata
+jtag_debug_module_readdata[14] <= cpu_evolution_nios2_qsys_0_nios2_oci:the_cpu_evolution_nios2_qsys_0_nios2_oci.readdata
+jtag_debug_module_readdata[15] <= cpu_evolution_nios2_qsys_0_nios2_oci:the_cpu_evolution_nios2_qsys_0_nios2_oci.readdata
+jtag_debug_module_readdata[16] <= cpu_evolution_nios2_qsys_0_nios2_oci:the_cpu_evolution_nios2_qsys_0_nios2_oci.readdata
+jtag_debug_module_readdata[17] <= cpu_evolution_nios2_qsys_0_nios2_oci:the_cpu_evolution_nios2_qsys_0_nios2_oci.readdata
+jtag_debug_module_readdata[18] <= cpu_evolution_nios2_qsys_0_nios2_oci:the_cpu_evolution_nios2_qsys_0_nios2_oci.readdata
+jtag_debug_module_readdata[19] <= cpu_evolution_nios2_qsys_0_nios2_oci:the_cpu_evolution_nios2_qsys_0_nios2_oci.readdata
+jtag_debug_module_readdata[20] <= cpu_evolution_nios2_qsys_0_nios2_oci:the_cpu_evolution_nios2_qsys_0_nios2_oci.readdata
+jtag_debug_module_readdata[21] <= cpu_evolution_nios2_qsys_0_nios2_oci:the_cpu_evolution_nios2_qsys_0_nios2_oci.readdata
+jtag_debug_module_readdata[22] <= cpu_evolution_nios2_qsys_0_nios2_oci:the_cpu_evolution_nios2_qsys_0_nios2_oci.readdata
+jtag_debug_module_readdata[23] <= cpu_evolution_nios2_qsys_0_nios2_oci:the_cpu_evolution_nios2_qsys_0_nios2_oci.readdata
+jtag_debug_module_readdata[24] <= cpu_evolution_nios2_qsys_0_nios2_oci:the_cpu_evolution_nios2_qsys_0_nios2_oci.readdata
+jtag_debug_module_readdata[25] <= cpu_evolution_nios2_qsys_0_nios2_oci:the_cpu_evolution_nios2_qsys_0_nios2_oci.readdata
+jtag_debug_module_readdata[26] <= cpu_evolution_nios2_qsys_0_nios2_oci:the_cpu_evolution_nios2_qsys_0_nios2_oci.readdata
+jtag_debug_module_readdata[27] <= cpu_evolution_nios2_qsys_0_nios2_oci:the_cpu_evolution_nios2_qsys_0_nios2_oci.readdata
+jtag_debug_module_readdata[28] <= cpu_evolution_nios2_qsys_0_nios2_oci:the_cpu_evolution_nios2_qsys_0_nios2_oci.readdata
+jtag_debug_module_readdata[29] <= cpu_evolution_nios2_qsys_0_nios2_oci:the_cpu_evolution_nios2_qsys_0_nios2_oci.readdata
+jtag_debug_module_readdata[30] <= cpu_evolution_nios2_qsys_0_nios2_oci:the_cpu_evolution_nios2_qsys_0_nios2_oci.readdata
+jtag_debug_module_readdata[31] <= cpu_evolution_nios2_qsys_0_nios2_oci:the_cpu_evolution_nios2_qsys_0_nios2_oci.readdata
+jtag_debug_module_resetrequest <= cpu_evolution_nios2_qsys_0_nios2_oci:the_cpu_evolution_nios2_qsys_0_nios2_oci.resetrequest
+jtag_debug_module_waitrequest <= cpu_evolution_nios2_qsys_0_nios2_oci:the_cpu_evolution_nios2_qsys_0_nios2_oci.waitrequest
 
 
-|cpu|cpu_nios2_qsys_0:nios2_qsys_0|cpu_nios2_qsys_0_test_bench:the_cpu_nios2_qsys_0_test_bench
+|cpu_evolution|cpu_evolution_nios2_qsys_0:nios2_qsys_0|cpu_evolution_nios2_qsys_0_test_bench:the_cpu_evolution_nios2_qsys_0_test_bench
 D_iw[0] => ~NO_FANOUT~
 D_iw[1] => ~NO_FANOUT~
 D_iw[2] => ~NO_FANOUT~
@@ -845,7 +845,7 @@ d_write <= d_write~reg0.DB_MAX_OUTPUT_PORT_TYPE
 test_has_ended <= <GND>
 
 
-|cpu|cpu_nios2_qsys_0:nios2_qsys_0|cpu_nios2_qsys_0_register_bank_a_module:cpu_nios2_qsys_0_register_bank_a
+|cpu_evolution|cpu_evolution_nios2_qsys_0:nios2_qsys_0|cpu_evolution_nios2_qsys_0_register_bank_a_module:cpu_evolution_nios2_qsys_0_register_bank_a
 clock => clock.IN1
 data[0] => data[0].IN1
 data[1] => data[1].IN1
@@ -924,43 +924,43 @@ q[30] <= altsyncram:the_altsyncram.q_b
 q[31] <= altsyncram:the_altsyncram.q_b
 
 
-|cpu|cpu_nios2_qsys_0:nios2_qsys_0|cpu_nios2_qsys_0_register_bank_a_module:cpu_nios2_qsys_0_register_bank_a|altsyncram:the_altsyncram
-wren_a => altsyncram_ajg1:auto_generated.wren_a
+|cpu_evolution|cpu_evolution_nios2_qsys_0:nios2_qsys_0|cpu_evolution_nios2_qsys_0_register_bank_a_module:cpu_evolution_nios2_qsys_0_register_bank_a|altsyncram:the_altsyncram
+wren_a => altsyncram_elh1:auto_generated.wren_a
 rden_a => ~NO_FANOUT~
 wren_b => ~NO_FANOUT~
 rden_b => ~NO_FANOUT~
-data_a[0] => altsyncram_ajg1:auto_generated.data_a[0]
-data_a[1] => altsyncram_ajg1:auto_generated.data_a[1]
-data_a[2] => altsyncram_ajg1:auto_generated.data_a[2]
-data_a[3] => altsyncram_ajg1:auto_generated.data_a[3]
-data_a[4] => altsyncram_ajg1:auto_generated.data_a[4]
-data_a[5] => altsyncram_ajg1:auto_generated.data_a[5]
-data_a[6] => altsyncram_ajg1:auto_generated.data_a[6]
-data_a[7] => altsyncram_ajg1:auto_generated.data_a[7]
-data_a[8] => altsyncram_ajg1:auto_generated.data_a[8]
-data_a[9] => altsyncram_ajg1:auto_generated.data_a[9]
-data_a[10] => altsyncram_ajg1:auto_generated.data_a[10]
-data_a[11] => altsyncram_ajg1:auto_generated.data_a[11]
-data_a[12] => altsyncram_ajg1:auto_generated.data_a[12]
-data_a[13] => altsyncram_ajg1:auto_generated.data_a[13]
-data_a[14] => altsyncram_ajg1:auto_generated.data_a[14]
-data_a[15] => altsyncram_ajg1:auto_generated.data_a[15]
-data_a[16] => altsyncram_ajg1:auto_generated.data_a[16]
-data_a[17] => altsyncram_ajg1:auto_generated.data_a[17]
-data_a[18] => altsyncram_ajg1:auto_generated.data_a[18]
-data_a[19] => altsyncram_ajg1:auto_generated.data_a[19]
-data_a[20] => altsyncram_ajg1:auto_generated.data_a[20]
-data_a[21] => altsyncram_ajg1:auto_generated.data_a[21]
-data_a[22] => altsyncram_ajg1:auto_generated.data_a[22]
-data_a[23] => altsyncram_ajg1:auto_generated.data_a[23]
-data_a[24] => altsyncram_ajg1:auto_generated.data_a[24]
-data_a[25] => altsyncram_ajg1:auto_generated.data_a[25]
-data_a[26] => altsyncram_ajg1:auto_generated.data_a[26]
-data_a[27] => altsyncram_ajg1:auto_generated.data_a[27]
-data_a[28] => altsyncram_ajg1:auto_generated.data_a[28]
-data_a[29] => altsyncram_ajg1:auto_generated.data_a[29]
-data_a[30] => altsyncram_ajg1:auto_generated.data_a[30]
-data_a[31] => altsyncram_ajg1:auto_generated.data_a[31]
+data_a[0] => altsyncram_elh1:auto_generated.data_a[0]
+data_a[1] => altsyncram_elh1:auto_generated.data_a[1]
+data_a[2] => altsyncram_elh1:auto_generated.data_a[2]
+data_a[3] => altsyncram_elh1:auto_generated.data_a[3]
+data_a[4] => altsyncram_elh1:auto_generated.data_a[4]
+data_a[5] => altsyncram_elh1:auto_generated.data_a[5]
+data_a[6] => altsyncram_elh1:auto_generated.data_a[6]
+data_a[7] => altsyncram_elh1:auto_generated.data_a[7]
+data_a[8] => altsyncram_elh1:auto_generated.data_a[8]
+data_a[9] => altsyncram_elh1:auto_generated.data_a[9]
+data_a[10] => altsyncram_elh1:auto_generated.data_a[10]
+data_a[11] => altsyncram_elh1:auto_generated.data_a[11]
+data_a[12] => altsyncram_elh1:auto_generated.data_a[12]
+data_a[13] => altsyncram_elh1:auto_generated.data_a[13]
+data_a[14] => altsyncram_elh1:auto_generated.data_a[14]
+data_a[15] => altsyncram_elh1:auto_generated.data_a[15]
+data_a[16] => altsyncram_elh1:auto_generated.data_a[16]
+data_a[17] => altsyncram_elh1:auto_generated.data_a[17]
+data_a[18] => altsyncram_elh1:auto_generated.data_a[18]
+data_a[19] => altsyncram_elh1:auto_generated.data_a[19]
+data_a[20] => altsyncram_elh1:auto_generated.data_a[20]
+data_a[21] => altsyncram_elh1:auto_generated.data_a[21]
+data_a[22] => altsyncram_elh1:auto_generated.data_a[22]
+data_a[23] => altsyncram_elh1:auto_generated.data_a[23]
+data_a[24] => altsyncram_elh1:auto_generated.data_a[24]
+data_a[25] => altsyncram_elh1:auto_generated.data_a[25]
+data_a[26] => altsyncram_elh1:auto_generated.data_a[26]
+data_a[27] => altsyncram_elh1:auto_generated.data_a[27]
+data_a[28] => altsyncram_elh1:auto_generated.data_a[28]
+data_a[29] => altsyncram_elh1:auto_generated.data_a[29]
+data_a[30] => altsyncram_elh1:auto_generated.data_a[30]
+data_a[31] => altsyncram_elh1:auto_generated.data_a[31]
 data_b[0] => ~NO_FANOUT~
 data_b[1] => ~NO_FANOUT~
 data_b[2] => ~NO_FANOUT~
@@ -993,19 +993,19 @@ data_b[28] => ~NO_FANOUT~
 data_b[29] => ~NO_FANOUT~
 data_b[30] => ~NO_FANOUT~
 data_b[31] => ~NO_FANOUT~
-address_a[0] => altsyncram_ajg1:auto_generated.address_a[0]
-address_a[1] => altsyncram_ajg1:auto_generated.address_a[1]
-address_a[2] => altsyncram_ajg1:auto_generated.address_a[2]
-address_a[3] => altsyncram_ajg1:auto_generated.address_a[3]
-address_a[4] => altsyncram_ajg1:auto_generated.address_a[4]
-address_b[0] => altsyncram_ajg1:auto_generated.address_b[0]
-address_b[1] => altsyncram_ajg1:auto_generated.address_b[1]
-address_b[2] => altsyncram_ajg1:auto_generated.address_b[2]
-address_b[3] => altsyncram_ajg1:auto_generated.address_b[3]
-address_b[4] => altsyncram_ajg1:auto_generated.address_b[4]
+address_a[0] => altsyncram_elh1:auto_generated.address_a[0]
+address_a[1] => altsyncram_elh1:auto_generated.address_a[1]
+address_a[2] => altsyncram_elh1:auto_generated.address_a[2]
+address_a[3] => altsyncram_elh1:auto_generated.address_a[3]
+address_a[4] => altsyncram_elh1:auto_generated.address_a[4]
+address_b[0] => altsyncram_elh1:auto_generated.address_b[0]
+address_b[1] => altsyncram_elh1:auto_generated.address_b[1]
+address_b[2] => altsyncram_elh1:auto_generated.address_b[2]
+address_b[3] => altsyncram_elh1:auto_generated.address_b[3]
+address_b[4] => altsyncram_elh1:auto_generated.address_b[4]
 addressstall_a => ~NO_FANOUT~
 addressstall_b => ~NO_FANOUT~
-clock0 => altsyncram_ajg1:auto_generated.clock0
+clock0 => altsyncram_elh1:auto_generated.clock0
 clock1 => ~NO_FANOUT~
 clocken0 => ~NO_FANOUT~
 clocken1 => ~NO_FANOUT~
@@ -1047,44 +1047,44 @@ q_a[28] <= <GND>
 q_a[29] <= <GND>
 q_a[30] <= <GND>
 q_a[31] <= <GND>
-q_b[0] <= altsyncram_ajg1:auto_generated.q_b[0]
-q_b[1] <= altsyncram_ajg1:auto_generated.q_b[1]
-q_b[2] <= altsyncram_ajg1:auto_generated.q_b[2]
-q_b[3] <= altsyncram_ajg1:auto_generated.q_b[3]
-q_b[4] <= altsyncram_ajg1:auto_generated.q_b[4]
-q_b[5] <= altsyncram_ajg1:auto_generated.q_b[5]
-q_b[6] <= altsyncram_ajg1:auto_generated.q_b[6]
-q_b[7] <= altsyncram_ajg1:auto_generated.q_b[7]
-q_b[8] <= altsyncram_ajg1:auto_generated.q_b[8]
-q_b[9] <= altsyncram_ajg1:auto_generated.q_b[9]
-q_b[10] <= altsyncram_ajg1:auto_generated.q_b[10]
-q_b[11] <= altsyncram_ajg1:auto_generated.q_b[11]
-q_b[12] <= altsyncram_ajg1:auto_generated.q_b[12]
-q_b[13] <= altsyncram_ajg1:auto_generated.q_b[13]
-q_b[14] <= altsyncram_ajg1:auto_generated.q_b[14]
-q_b[15] <= altsyncram_ajg1:auto_generated.q_b[15]
-q_b[16] <= altsyncram_ajg1:auto_generated.q_b[16]
-q_b[17] <= altsyncram_ajg1:auto_generated.q_b[17]
-q_b[18] <= altsyncram_ajg1:auto_generated.q_b[18]
-q_b[19] <= altsyncram_ajg1:auto_generated.q_b[19]
-q_b[20] <= altsyncram_ajg1:auto_generated.q_b[20]
-q_b[21] <= altsyncram_ajg1:auto_generated.q_b[21]
-q_b[22] <= altsyncram_ajg1:auto_generated.q_b[22]
-q_b[23] <= altsyncram_ajg1:auto_generated.q_b[23]
-q_b[24] <= altsyncram_ajg1:auto_generated.q_b[24]
-q_b[25] <= altsyncram_ajg1:auto_generated.q_b[25]
-q_b[26] <= altsyncram_ajg1:auto_generated.q_b[26]
-q_b[27] <= altsyncram_ajg1:auto_generated.q_b[27]
-q_b[28] <= altsyncram_ajg1:auto_generated.q_b[28]
-q_b[29] <= altsyncram_ajg1:auto_generated.q_b[29]
-q_b[30] <= altsyncram_ajg1:auto_generated.q_b[30]
-q_b[31] <= altsyncram_ajg1:auto_generated.q_b[31]
+q_b[0] <= altsyncram_elh1:auto_generated.q_b[0]
+q_b[1] <= altsyncram_elh1:auto_generated.q_b[1]
+q_b[2] <= altsyncram_elh1:auto_generated.q_b[2]
+q_b[3] <= altsyncram_elh1:auto_generated.q_b[3]
+q_b[4] <= altsyncram_elh1:auto_generated.q_b[4]
+q_b[5] <= altsyncram_elh1:auto_generated.q_b[5]
+q_b[6] <= altsyncram_elh1:auto_generated.q_b[6]
+q_b[7] <= altsyncram_elh1:auto_generated.q_b[7]
+q_b[8] <= altsyncram_elh1:auto_generated.q_b[8]
+q_b[9] <= altsyncram_elh1:auto_generated.q_b[9]
+q_b[10] <= altsyncram_elh1:auto_generated.q_b[10]
+q_b[11] <= altsyncram_elh1:auto_generated.q_b[11]
+q_b[12] <= altsyncram_elh1:auto_generated.q_b[12]
+q_b[13] <= altsyncram_elh1:auto_generated.q_b[13]
+q_b[14] <= altsyncram_elh1:auto_generated.q_b[14]
+q_b[15] <= altsyncram_elh1:auto_generated.q_b[15]
+q_b[16] <= altsyncram_elh1:auto_generated.q_b[16]
+q_b[17] <= altsyncram_elh1:auto_generated.q_b[17]
+q_b[18] <= altsyncram_elh1:auto_generated.q_b[18]
+q_b[19] <= altsyncram_elh1:auto_generated.q_b[19]
+q_b[20] <= altsyncram_elh1:auto_generated.q_b[20]
+q_b[21] <= altsyncram_elh1:auto_generated.q_b[21]
+q_b[22] <= altsyncram_elh1:auto_generated.q_b[22]
+q_b[23] <= altsyncram_elh1:auto_generated.q_b[23]
+q_b[24] <= altsyncram_elh1:auto_generated.q_b[24]
+q_b[25] <= altsyncram_elh1:auto_generated.q_b[25]
+q_b[26] <= altsyncram_elh1:auto_generated.q_b[26]
+q_b[27] <= altsyncram_elh1:auto_generated.q_b[27]
+q_b[28] <= altsyncram_elh1:auto_generated.q_b[28]
+q_b[29] <= altsyncram_elh1:auto_generated.q_b[29]
+q_b[30] <= altsyncram_elh1:auto_generated.q_b[30]
+q_b[31] <= altsyncram_elh1:auto_generated.q_b[31]
 eccstatus[0] <= <GND>
 eccstatus[1] <= <GND>
 eccstatus[2] <= <GND>
 
 
-|cpu|cpu_nios2_qsys_0:nios2_qsys_0|cpu_nios2_qsys_0_register_bank_a_module:cpu_nios2_qsys_0_register_bank_a|altsyncram:the_altsyncram|altsyncram_ajg1:auto_generated
+|cpu_evolution|cpu_evolution_nios2_qsys_0:nios2_qsys_0|cpu_evolution_nios2_qsys_0_register_bank_a_module:cpu_evolution_nios2_qsys_0_register_bank_a|altsyncram:the_altsyncram|altsyncram_elh1:auto_generated
 address_a[0] => ram_block1a0.PORTAADDR
 address_a[0] => ram_block1a1.PORTAADDR
 address_a[0] => ram_block1a2.PORTAADDR
@@ -1535,7 +1535,7 @@ wren_a => ram_block1a30.PORTAWE
 wren_a => ram_block1a31.PORTAWE
 
 
-|cpu|cpu_nios2_qsys_0:nios2_qsys_0|cpu_nios2_qsys_0_register_bank_b_module:cpu_nios2_qsys_0_register_bank_b
+|cpu_evolution|cpu_evolution_nios2_qsys_0:nios2_qsys_0|cpu_evolution_nios2_qsys_0_register_bank_b_module:cpu_evolution_nios2_qsys_0_register_bank_b
 clock => clock.IN1
 data[0] => data[0].IN1
 data[1] => data[1].IN1
@@ -1614,43 +1614,43 @@ q[30] <= altsyncram:the_altsyncram.q_b
 q[31] <= altsyncram:the_altsyncram.q_b
 
 
-|cpu|cpu_nios2_qsys_0:nios2_qsys_0|cpu_nios2_qsys_0_register_bank_b_module:cpu_nios2_qsys_0_register_bank_b|altsyncram:the_altsyncram
-wren_a => altsyncram_bjg1:auto_generated.wren_a
+|cpu_evolution|cpu_evolution_nios2_qsys_0:nios2_qsys_0|cpu_evolution_nios2_qsys_0_register_bank_b_module:cpu_evolution_nios2_qsys_0_register_bank_b|altsyncram:the_altsyncram
+wren_a => altsyncram_flh1:auto_generated.wren_a
 rden_a => ~NO_FANOUT~
 wren_b => ~NO_FANOUT~
 rden_b => ~NO_FANOUT~
-data_a[0] => altsyncram_bjg1:auto_generated.data_a[0]
-data_a[1] => altsyncram_bjg1:auto_generated.data_a[1]
-data_a[2] => altsyncram_bjg1:auto_generated.data_a[2]
-data_a[3] => altsyncram_bjg1:auto_generated.data_a[3]
-data_a[4] => altsyncram_bjg1:auto_generated.data_a[4]
-data_a[5] => altsyncram_bjg1:auto_generated.data_a[5]
-data_a[6] => altsyncram_bjg1:auto_generated.data_a[6]
-data_a[7] => altsyncram_bjg1:auto_generated.data_a[7]
-data_a[8] => altsyncram_bjg1:auto_generated.data_a[8]
-data_a[9] => altsyncram_bjg1:auto_generated.data_a[9]
-data_a[10] => altsyncram_bjg1:auto_generated.data_a[10]
-data_a[11] => altsyncram_bjg1:auto_generated.data_a[11]
-data_a[12] => altsyncram_bjg1:auto_generated.data_a[12]
-data_a[13] => altsyncram_bjg1:auto_generated.data_a[13]
-data_a[14] => altsyncram_bjg1:auto_generated.data_a[14]
-data_a[15] => altsyncram_bjg1:auto_generated.data_a[15]
-data_a[16] => altsyncram_bjg1:auto_generated.data_a[16]
-data_a[17] => altsyncram_bjg1:auto_generated.data_a[17]
-data_a[18] => altsyncram_bjg1:auto_generated.data_a[18]
-data_a[19] => altsyncram_bjg1:auto_generated.data_a[19]
-data_a[20] => altsyncram_bjg1:auto_generated.data_a[20]
-data_a[21] => altsyncram_bjg1:auto_generated.data_a[21]
-data_a[22] => altsyncram_bjg1:auto_generated.data_a[22]
-data_a[23] => altsyncram_bjg1:auto_generated.data_a[23]
-data_a[24] => altsyncram_bjg1:auto_generated.data_a[24]
-data_a[25] => altsyncram_bjg1:auto_generated.data_a[25]
-data_a[26] => altsyncram_bjg1:auto_generated.data_a[26]
-data_a[27] => altsyncram_bjg1:auto_generated.data_a[27]
-data_a[28] => altsyncram_bjg1:auto_generated.data_a[28]
-data_a[29] => altsyncram_bjg1:auto_generated.data_a[29]
-data_a[30] => altsyncram_bjg1:auto_generated.data_a[30]
-data_a[31] => altsyncram_bjg1:auto_generated.data_a[31]
+data_a[0] => altsyncram_flh1:auto_generated.data_a[0]
+data_a[1] => altsyncram_flh1:auto_generated.data_a[1]
+data_a[2] => altsyncram_flh1:auto_generated.data_a[2]
+data_a[3] => altsyncram_flh1:auto_generated.data_a[3]
+data_a[4] => altsyncram_flh1:auto_generated.data_a[4]
+data_a[5] => altsyncram_flh1:auto_generated.data_a[5]
+data_a[6] => altsyncram_flh1:auto_generated.data_a[6]
+data_a[7] => altsyncram_flh1:auto_generated.data_a[7]
+data_a[8] => altsyncram_flh1:auto_generated.data_a[8]
+data_a[9] => altsyncram_flh1:auto_generated.data_a[9]
+data_a[10] => altsyncram_flh1:auto_generated.data_a[10]
+data_a[11] => altsyncram_flh1:auto_generated.data_a[11]
+data_a[12] => altsyncram_flh1:auto_generated.data_a[12]
+data_a[13] => altsyncram_flh1:auto_generated.data_a[13]
+data_a[14] => altsyncram_flh1:auto_generated.data_a[14]
+data_a[15] => altsyncram_flh1:auto_generated.data_a[15]
+data_a[16] => altsyncram_flh1:auto_generated.data_a[16]
+data_a[17] => altsyncram_flh1:auto_generated.data_a[17]
+data_a[18] => altsyncram_flh1:auto_generated.data_a[18]
+data_a[19] => altsyncram_flh1:auto_generated.data_a[19]
+data_a[20] => altsyncram_flh1:auto_generated.data_a[20]
+data_a[21] => altsyncram_flh1:auto_generated.data_a[21]
+data_a[22] => altsyncram_flh1:auto_generated.data_a[22]
+data_a[23] => altsyncram_flh1:auto_generated.data_a[23]
+data_a[24] => altsyncram_flh1:auto_generated.data_a[24]
+data_a[25] => altsyncram_flh1:auto_generated.data_a[25]
+data_a[26] => altsyncram_flh1:auto_generated.data_a[26]
+data_a[27] => altsyncram_flh1:auto_generated.data_a[27]
+data_a[28] => altsyncram_flh1:auto_generated.data_a[28]
+data_a[29] => altsyncram_flh1:auto_generated.data_a[29]
+data_a[30] => altsyncram_flh1:auto_generated.data_a[30]
+data_a[31] => altsyncram_flh1:auto_generated.data_a[31]
 data_b[0] => ~NO_FANOUT~
 data_b[1] => ~NO_FANOUT~
 data_b[2] => ~NO_FANOUT~
@@ -1683,19 +1683,19 @@ data_b[28] => ~NO_FANOUT~
 data_b[29] => ~NO_FANOUT~
 data_b[30] => ~NO_FANOUT~
 data_b[31] => ~NO_FANOUT~
-address_a[0] => altsyncram_bjg1:auto_generated.address_a[0]
-address_a[1] => altsyncram_bjg1:auto_generated.address_a[1]
-address_a[2] => altsyncram_bjg1:auto_generated.address_a[2]
-address_a[3] => altsyncram_bjg1:auto_generated.address_a[3]
-address_a[4] => altsyncram_bjg1:auto_generated.address_a[4]
-address_b[0] => altsyncram_bjg1:auto_generated.address_b[0]
-address_b[1] => altsyncram_bjg1:auto_generated.address_b[1]
-address_b[2] => altsyncram_bjg1:auto_generated.address_b[2]
-address_b[3] => altsyncram_bjg1:auto_generated.address_b[3]
-address_b[4] => altsyncram_bjg1:auto_generated.address_b[4]
+address_a[0] => altsyncram_flh1:auto_generated.address_a[0]
+address_a[1] => altsyncram_flh1:auto_generated.address_a[1]
+address_a[2] => altsyncram_flh1:auto_generated.address_a[2]
+address_a[3] => altsyncram_flh1:auto_generated.address_a[3]
+address_a[4] => altsyncram_flh1:auto_generated.address_a[4]
+address_b[0] => altsyncram_flh1:auto_generated.address_b[0]
+address_b[1] => altsyncram_flh1:auto_generated.address_b[1]
+address_b[2] => altsyncram_flh1:auto_generated.address_b[2]
+address_b[3] => altsyncram_flh1:auto_generated.address_b[3]
+address_b[4] => altsyncram_flh1:auto_generated.address_b[4]
 addressstall_a => ~NO_FANOUT~
 addressstall_b => ~NO_FANOUT~
-clock0 => altsyncram_bjg1:auto_generated.clock0
+clock0 => altsyncram_flh1:auto_generated.clock0
 clock1 => ~NO_FANOUT~
 clocken0 => ~NO_FANOUT~
 clocken1 => ~NO_FANOUT~
@@ -1737,44 +1737,44 @@ q_a[28] <= <GND>
 q_a[29] <= <GND>
 q_a[30] <= <GND>
 q_a[31] <= <GND>
-q_b[0] <= altsyncram_bjg1:auto_generated.q_b[0]
-q_b[1] <= altsyncram_bjg1:auto_generated.q_b[1]
-q_b[2] <= altsyncram_bjg1:auto_generated.q_b[2]
-q_b[3] <= altsyncram_bjg1:auto_generated.q_b[3]
-q_b[4] <= altsyncram_bjg1:auto_generated.q_b[4]
-q_b[5] <= altsyncram_bjg1:auto_generated.q_b[5]
-q_b[6] <= altsyncram_bjg1:auto_generated.q_b[6]
-q_b[7] <= altsyncram_bjg1:auto_generated.q_b[7]
-q_b[8] <= altsyncram_bjg1:auto_generated.q_b[8]
-q_b[9] <= altsyncram_bjg1:auto_generated.q_b[9]
-q_b[10] <= altsyncram_bjg1:auto_generated.q_b[10]
-q_b[11] <= altsyncram_bjg1:auto_generated.q_b[11]
-q_b[12] <= altsyncram_bjg1:auto_generated.q_b[12]
-q_b[13] <= altsyncram_bjg1:auto_generated.q_b[13]
-q_b[14] <= altsyncram_bjg1:auto_generated.q_b[14]
-q_b[15] <= altsyncram_bjg1:auto_generated.q_b[15]
-q_b[16] <= altsyncram_bjg1:auto_generated.q_b[16]
-q_b[17] <= altsyncram_bjg1:auto_generated.q_b[17]
-q_b[18] <= altsyncram_bjg1:auto_generated.q_b[18]
-q_b[19] <= altsyncram_bjg1:auto_generated.q_b[19]
-q_b[20] <= altsyncram_bjg1:auto_generated.q_b[20]
-q_b[21] <= altsyncram_bjg1:auto_generated.q_b[21]
-q_b[22] <= altsyncram_bjg1:auto_generated.q_b[22]
-q_b[23] <= altsyncram_bjg1:auto_generated.q_b[23]
-q_b[24] <= altsyncram_bjg1:auto_generated.q_b[24]
-q_b[25] <= altsyncram_bjg1:auto_generated.q_b[25]
-q_b[26] <= altsyncram_bjg1:auto_generated.q_b[26]
-q_b[27] <= altsyncram_bjg1:auto_generated.q_b[27]
-q_b[28] <= altsyncram_bjg1:auto_generated.q_b[28]
-q_b[29] <= altsyncram_bjg1:auto_generated.q_b[29]
-q_b[30] <= altsyncram_bjg1:auto_generated.q_b[30]
-q_b[31] <= altsyncram_bjg1:auto_generated.q_b[31]
+q_b[0] <= altsyncram_flh1:auto_generated.q_b[0]
+q_b[1] <= altsyncram_flh1:auto_generated.q_b[1]
+q_b[2] <= altsyncram_flh1:auto_generated.q_b[2]
+q_b[3] <= altsyncram_flh1:auto_generated.q_b[3]
+q_b[4] <= altsyncram_flh1:auto_generated.q_b[4]
+q_b[5] <= altsyncram_flh1:auto_generated.q_b[5]
+q_b[6] <= altsyncram_flh1:auto_generated.q_b[6]
+q_b[7] <= altsyncram_flh1:auto_generated.q_b[7]
+q_b[8] <= altsyncram_flh1:auto_generated.q_b[8]
+q_b[9] <= altsyncram_flh1:auto_generated.q_b[9]
+q_b[10] <= altsyncram_flh1:auto_generated.q_b[10]
+q_b[11] <= altsyncram_flh1:auto_generated.q_b[11]
+q_b[12] <= altsyncram_flh1:auto_generated.q_b[12]
+q_b[13] <= altsyncram_flh1:auto_generated.q_b[13]
+q_b[14] <= altsyncram_flh1:auto_generated.q_b[14]
+q_b[15] <= altsyncram_flh1:auto_generated.q_b[15]
+q_b[16] <= altsyncram_flh1:auto_generated.q_b[16]
+q_b[17] <= altsyncram_flh1:auto_generated.q_b[17]
+q_b[18] <= altsyncram_flh1:auto_generated.q_b[18]
+q_b[19] <= altsyncram_flh1:auto_generated.q_b[19]
+q_b[20] <= altsyncram_flh1:auto_generated.q_b[20]
+q_b[21] <= altsyncram_flh1:auto_generated.q_b[21]
+q_b[22] <= altsyncram_flh1:auto_generated.q_b[22]
+q_b[23] <= altsyncram_flh1:auto_generated.q_b[23]
+q_b[24] <= altsyncram_flh1:auto_generated.q_b[24]
+q_b[25] <= altsyncram_flh1:auto_generated.q_b[25]
+q_b[26] <= altsyncram_flh1:auto_generated.q_b[26]
+q_b[27] <= altsyncram_flh1:auto_generated.q_b[27]
+q_b[28] <= altsyncram_flh1:auto_generated.q_b[28]
+q_b[29] <= altsyncram_flh1:auto_generated.q_b[29]
+q_b[30] <= altsyncram_flh1:auto_generated.q_b[30]
+q_b[31] <= altsyncram_flh1:auto_generated.q_b[31]
 eccstatus[0] <= <GND>
 eccstatus[1] <= <GND>
 eccstatus[2] <= <GND>
 
 
-|cpu|cpu_nios2_qsys_0:nios2_qsys_0|cpu_nios2_qsys_0_register_bank_b_module:cpu_nios2_qsys_0_register_bank_b|altsyncram:the_altsyncram|altsyncram_bjg1:auto_generated
+|cpu_evolution|cpu_evolution_nios2_qsys_0:nios2_qsys_0|cpu_evolution_nios2_qsys_0_register_bank_b_module:cpu_evolution_nios2_qsys_0_register_bank_b|altsyncram:the_altsyncram|altsyncram_flh1:auto_generated
 address_a[0] => ram_block1a0.PORTAADDR
 address_a[0] => ram_block1a1.PORTAADDR
 address_a[0] => ram_block1a2.PORTAADDR
@@ -2225,7 +2225,7 @@ wren_a => ram_block1a30.PORTAWE
 wren_a => ram_block1a31.PORTAWE
 
 
-|cpu|cpu_nios2_qsys_0:nios2_qsys_0|cpu_nios2_qsys_0_nios2_oci:the_cpu_nios2_qsys_0_nios2_oci
+|cpu_evolution|cpu_evolution_nios2_qsys_0:nios2_qsys_0|cpu_evolution_nios2_qsys_0_nios2_oci:the_cpu_evolution_nios2_qsys_0_nios2_oci
 D_valid => D_valid.IN1
 E_st_data[0] => E_st_data[0].IN1
 E_st_data[1] => E_st_data[1].IN1
@@ -2376,40 +2376,40 @@ writedata_nxt[29] => writedata[29].DATAIN
 writedata_nxt[30] => writedata[30].DATAIN
 writedata_nxt[31] => writedata[31].DATAIN
 jtag_debug_module_debugaccess_to_roms <= debugack.DB_MAX_OUTPUT_PORT_TYPE
-oci_hbreak_req <= cpu_nios2_qsys_0_nios2_oci_debug:the_cpu_nios2_qsys_0_nios2_oci_debug.oci_hbreak_req
-oci_ienable[0] <= cpu_nios2_qsys_0_nios2_avalon_reg:the_cpu_nios2_qsys_0_nios2_avalon_reg.oci_ienable
-oci_ienable[1] <= cpu_nios2_qsys_0_nios2_avalon_reg:the_cpu_nios2_qsys_0_nios2_avalon_reg.oci_ienable
-oci_ienable[2] <= cpu_nios2_qsys_0_nios2_avalon_reg:the_cpu_nios2_qsys_0_nios2_avalon_reg.oci_ienable
-oci_ienable[3] <= cpu_nios2_qsys_0_nios2_avalon_reg:the_cpu_nios2_qsys_0_nios2_avalon_reg.oci_ienable
-oci_ienable[4] <= cpu_nios2_qsys_0_nios2_avalon_reg:the_cpu_nios2_qsys_0_nios2_avalon_reg.oci_ienable
-oci_ienable[5] <= cpu_nios2_qsys_0_nios2_avalon_reg:the_cpu_nios2_qsys_0_nios2_avalon_reg.oci_ienable
-oci_ienable[6] <= cpu_nios2_qsys_0_nios2_avalon_reg:the_cpu_nios2_qsys_0_nios2_avalon_reg.oci_ienable
-oci_ienable[7] <= cpu_nios2_qsys_0_nios2_avalon_reg:the_cpu_nios2_qsys_0_nios2_avalon_reg.oci_ienable
-oci_ienable[8] <= cpu_nios2_qsys_0_nios2_avalon_reg:the_cpu_nios2_qsys_0_nios2_avalon_reg.oci_ienable
-oci_ienable[9] <= cpu_nios2_qsys_0_nios2_avalon_reg:the_cpu_nios2_qsys_0_nios2_avalon_reg.oci_ienable
-oci_ienable[10] <= cpu_nios2_qsys_0_nios2_avalon_reg:the_cpu_nios2_qsys_0_nios2_avalon_reg.oci_ienable
-oci_ienable[11] <= cpu_nios2_qsys_0_nios2_avalon_reg:the_cpu_nios2_qsys_0_nios2_avalon_reg.oci_ienable
-oci_ienable[12] <= cpu_nios2_qsys_0_nios2_avalon_reg:the_cpu_nios2_qsys_0_nios2_avalon_reg.oci_ienable
-oci_ienable[13] <= cpu_nios2_qsys_0_nios2_avalon_reg:the_cpu_nios2_qsys_0_nios2_avalon_reg.oci_ienable
-oci_ienable[14] <= cpu_nios2_qsys_0_nios2_avalon_reg:the_cpu_nios2_qsys_0_nios2_avalon_reg.oci_ienable
-oci_ienable[15] <= cpu_nios2_qsys_0_nios2_avalon_reg:the_cpu_nios2_qsys_0_nios2_avalon_reg.oci_ienable
-oci_ienable[16] <= cpu_nios2_qsys_0_nios2_avalon_reg:the_cpu_nios2_qsys_0_nios2_avalon_reg.oci_ienable
-oci_ienable[17] <= cpu_nios2_qsys_0_nios2_avalon_reg:the_cpu_nios2_qsys_0_nios2_avalon_reg.oci_ienable
-oci_ienable[18] <= cpu_nios2_qsys_0_nios2_avalon_reg:the_cpu_nios2_qsys_0_nios2_avalon_reg.oci_ienable
-oci_ienable[19] <= cpu_nios2_qsys_0_nios2_avalon_reg:the_cpu_nios2_qsys_0_nios2_avalon_reg.oci_ienable
-oci_ienable[20] <= cpu_nios2_qsys_0_nios2_avalon_reg:the_cpu_nios2_qsys_0_nios2_avalon_reg.oci_ienable
-oci_ienable[21] <= cpu_nios2_qsys_0_nios2_avalon_reg:the_cpu_nios2_qsys_0_nios2_avalon_reg.oci_ienable
-oci_ienable[22] <= cpu_nios2_qsys_0_nios2_avalon_reg:the_cpu_nios2_qsys_0_nios2_avalon_reg.oci_ienable
-oci_ienable[23] <= cpu_nios2_qsys_0_nios2_avalon_reg:the_cpu_nios2_qsys_0_nios2_avalon_reg.oci_ienable
-oci_ienable[24] <= cpu_nios2_qsys_0_nios2_avalon_reg:the_cpu_nios2_qsys_0_nios2_avalon_reg.oci_ienable
-oci_ienable[25] <= cpu_nios2_qsys_0_nios2_avalon_reg:the_cpu_nios2_qsys_0_nios2_avalon_reg.oci_ienable
-oci_ienable[26] <= cpu_nios2_qsys_0_nios2_avalon_reg:the_cpu_nios2_qsys_0_nios2_avalon_reg.oci_ienable
-oci_ienable[27] <= cpu_nios2_qsys_0_nios2_avalon_reg:the_cpu_nios2_qsys_0_nios2_avalon_reg.oci_ienable
-oci_ienable[28] <= cpu_nios2_qsys_0_nios2_avalon_reg:the_cpu_nios2_qsys_0_nios2_avalon_reg.oci_ienable
-oci_ienable[29] <= cpu_nios2_qsys_0_nios2_avalon_reg:the_cpu_nios2_qsys_0_nios2_avalon_reg.oci_ienable
-oci_ienable[30] <= cpu_nios2_qsys_0_nios2_avalon_reg:the_cpu_nios2_qsys_0_nios2_avalon_reg.oci_ienable
-oci_ienable[31] <= cpu_nios2_qsys_0_nios2_avalon_reg:the_cpu_nios2_qsys_0_nios2_avalon_reg.oci_ienable
-oci_single_step_mode <= cpu_nios2_qsys_0_nios2_avalon_reg:the_cpu_nios2_qsys_0_nios2_avalon_reg.oci_single_step_mode
+oci_hbreak_req <= cpu_evolution_nios2_qsys_0_nios2_oci_debug:the_cpu_evolution_nios2_qsys_0_nios2_oci_debug.oci_hbreak_req
+oci_ienable[0] <= cpu_evolution_nios2_qsys_0_nios2_avalon_reg:the_cpu_evolution_nios2_qsys_0_nios2_avalon_reg.oci_ienable
+oci_ienable[1] <= cpu_evolution_nios2_qsys_0_nios2_avalon_reg:the_cpu_evolution_nios2_qsys_0_nios2_avalon_reg.oci_ienable
+oci_ienable[2] <= cpu_evolution_nios2_qsys_0_nios2_avalon_reg:the_cpu_evolution_nios2_qsys_0_nios2_avalon_reg.oci_ienable
+oci_ienable[3] <= cpu_evolution_nios2_qsys_0_nios2_avalon_reg:the_cpu_evolution_nios2_qsys_0_nios2_avalon_reg.oci_ienable
+oci_ienable[4] <= cpu_evolution_nios2_qsys_0_nios2_avalon_reg:the_cpu_evolution_nios2_qsys_0_nios2_avalon_reg.oci_ienable
+oci_ienable[5] <= cpu_evolution_nios2_qsys_0_nios2_avalon_reg:the_cpu_evolution_nios2_qsys_0_nios2_avalon_reg.oci_ienable
+oci_ienable[6] <= cpu_evolution_nios2_qsys_0_nios2_avalon_reg:the_cpu_evolution_nios2_qsys_0_nios2_avalon_reg.oci_ienable
+oci_ienable[7] <= cpu_evolution_nios2_qsys_0_nios2_avalon_reg:the_cpu_evolution_nios2_qsys_0_nios2_avalon_reg.oci_ienable
+oci_ienable[8] <= cpu_evolution_nios2_qsys_0_nios2_avalon_reg:the_cpu_evolution_nios2_qsys_0_nios2_avalon_reg.oci_ienable
+oci_ienable[9] <= cpu_evolution_nios2_qsys_0_nios2_avalon_reg:the_cpu_evolution_nios2_qsys_0_nios2_avalon_reg.oci_ienable
+oci_ienable[10] <= cpu_evolution_nios2_qsys_0_nios2_avalon_reg:the_cpu_evolution_nios2_qsys_0_nios2_avalon_reg.oci_ienable
+oci_ienable[11] <= cpu_evolution_nios2_qsys_0_nios2_avalon_reg:the_cpu_evolution_nios2_qsys_0_nios2_avalon_reg.oci_ienable
+oci_ienable[12] <= cpu_evolution_nios2_qsys_0_nios2_avalon_reg:the_cpu_evolution_nios2_qsys_0_nios2_avalon_reg.oci_ienable
+oci_ienable[13] <= cpu_evolution_nios2_qsys_0_nios2_avalon_reg:the_cpu_evolution_nios2_qsys_0_nios2_avalon_reg.oci_ienable
+oci_ienable[14] <= cpu_evolution_nios2_qsys_0_nios2_avalon_reg:the_cpu_evolution_nios2_qsys_0_nios2_avalon_reg.oci_ienable
+oci_ienable[15] <= cpu_evolution_nios2_qsys_0_nios2_avalon_reg:the_cpu_evolution_nios2_qsys_0_nios2_avalon_reg.oci_ienable
+oci_ienable[16] <= cpu_evolution_nios2_qsys_0_nios2_avalon_reg:the_cpu_evolution_nios2_qsys_0_nios2_avalon_reg.oci_ienable
+oci_ienable[17] <= cpu_evolution_nios2_qsys_0_nios2_avalon_reg:the_cpu_evolution_nios2_qsys_0_nios2_avalon_reg.oci_ienable
+oci_ienable[18] <= cpu_evolution_nios2_qsys_0_nios2_avalon_reg:the_cpu_evolution_nios2_qsys_0_nios2_avalon_reg.oci_ienable
+oci_ienable[19] <= cpu_evolution_nios2_qsys_0_nios2_avalon_reg:the_cpu_evolution_nios2_qsys_0_nios2_avalon_reg.oci_ienable
+oci_ienable[20] <= cpu_evolution_nios2_qsys_0_nios2_avalon_reg:the_cpu_evolution_nios2_qsys_0_nios2_avalon_reg.oci_ienable
+oci_ienable[21] <= cpu_evolution_nios2_qsys_0_nios2_avalon_reg:the_cpu_evolution_nios2_qsys_0_nios2_avalon_reg.oci_ienable
+oci_ienable[22] <= cpu_evolution_nios2_qsys_0_nios2_avalon_reg:the_cpu_evolution_nios2_qsys_0_nios2_avalon_reg.oci_ienable
+oci_ienable[23] <= cpu_evolution_nios2_qsys_0_nios2_avalon_reg:the_cpu_evolution_nios2_qsys_0_nios2_avalon_reg.oci_ienable
+oci_ienable[24] <= cpu_evolution_nios2_qsys_0_nios2_avalon_reg:the_cpu_evolution_nios2_qsys_0_nios2_avalon_reg.oci_ienable
+oci_ienable[25] <= cpu_evolution_nios2_qsys_0_nios2_avalon_reg:the_cpu_evolution_nios2_qsys_0_nios2_avalon_reg.oci_ienable
+oci_ienable[26] <= cpu_evolution_nios2_qsys_0_nios2_avalon_reg:the_cpu_evolution_nios2_qsys_0_nios2_avalon_reg.oci_ienable
+oci_ienable[27] <= cpu_evolution_nios2_qsys_0_nios2_avalon_reg:the_cpu_evolution_nios2_qsys_0_nios2_avalon_reg.oci_ienable
+oci_ienable[28] <= cpu_evolution_nios2_qsys_0_nios2_avalon_reg:the_cpu_evolution_nios2_qsys_0_nios2_avalon_reg.oci_ienable
+oci_ienable[29] <= cpu_evolution_nios2_qsys_0_nios2_avalon_reg:the_cpu_evolution_nios2_qsys_0_nios2_avalon_reg.oci_ienable
+oci_ienable[30] <= cpu_evolution_nios2_qsys_0_nios2_avalon_reg:the_cpu_evolution_nios2_qsys_0_nios2_avalon_reg.oci_ienable
+oci_ienable[31] <= cpu_evolution_nios2_qsys_0_nios2_avalon_reg:the_cpu_evolution_nios2_qsys_0_nios2_avalon_reg.oci_ienable
+oci_single_step_mode <= cpu_evolution_nios2_qsys_0_nios2_avalon_reg:the_cpu_evolution_nios2_qsys_0_nios2_avalon_reg.oci_single_step_mode
 readdata[0] <= readdata[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 readdata[1] <= readdata[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 readdata[2] <= readdata[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
@@ -2442,11 +2442,11 @@ readdata[28] <= readdata[28]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 readdata[29] <= readdata[29]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 readdata[30] <= readdata[30]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 readdata[31] <= readdata[31]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-resetrequest <= cpu_nios2_qsys_0_nios2_oci_debug:the_cpu_nios2_qsys_0_nios2_oci_debug.resetrequest
-waitrequest <= cpu_nios2_qsys_0_nios2_ocimem:the_cpu_nios2_qsys_0_nios2_ocimem.waitrequest
+resetrequest <= cpu_evolution_nios2_qsys_0_nios2_oci_debug:the_cpu_evolution_nios2_qsys_0_nios2_oci_debug.resetrequest
+waitrequest <= cpu_evolution_nios2_qsys_0_nios2_ocimem:the_cpu_evolution_nios2_qsys_0_nios2_ocimem.waitrequest
 
 
-|cpu|cpu_nios2_qsys_0:nios2_qsys_0|cpu_nios2_qsys_0_nios2_oci:the_cpu_nios2_qsys_0_nios2_oci|cpu_nios2_qsys_0_nios2_oci_debug:the_cpu_nios2_qsys_0_nios2_oci_debug
+|cpu_evolution|cpu_evolution_nios2_qsys_0:nios2_qsys_0|cpu_evolution_nios2_qsys_0_nios2_oci:the_cpu_evolution_nios2_qsys_0_nios2_oci|cpu_evolution_nios2_qsys_0_nios2_oci_debug:the_cpu_evolution_nios2_qsys_0_nios2_oci_debug
 clk => clk.IN1
 dbrk_break => oci_hbreak_req.IN1
 debugreq => always0.IN0
@@ -2514,7 +2514,7 @@ resetlatch <= resetlatch~reg0.DB_MAX_OUTPUT_PORT_TYPE
 resetrequest <= resetrequest~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|cpu|cpu_nios2_qsys_0:nios2_qsys_0|cpu_nios2_qsys_0_nios2_oci:the_cpu_nios2_qsys_0_nios2_oci|cpu_nios2_qsys_0_nios2_oci_debug:the_cpu_nios2_qsys_0_nios2_oci_debug|altera_std_synchronizer:the_altera_std_synchronizer
+|cpu_evolution|cpu_evolution_nios2_qsys_0:nios2_qsys_0|cpu_evolution_nios2_qsys_0_nios2_oci:the_cpu_evolution_nios2_qsys_0_nios2_oci|cpu_evolution_nios2_qsys_0_nios2_oci_debug:the_cpu_evolution_nios2_qsys_0_nios2_oci_debug|altera_std_synchronizer:the_altera_std_synchronizer
 clk => dreg[0].CLK
 clk => din_s1.CLK
 reset_n => dreg[0].ACLR
@@ -2523,7 +2523,7 @@ din => din_s1.DATAIN
 dout <= dout.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|cpu|cpu_nios2_qsys_0:nios2_qsys_0|cpu_nios2_qsys_0_nios2_oci:the_cpu_nios2_qsys_0_nios2_oci|cpu_nios2_qsys_0_nios2_ocimem:the_cpu_nios2_qsys_0_nios2_ocimem
+|cpu_evolution|cpu_evolution_nios2_qsys_0:nios2_qsys_0|cpu_evolution_nios2_qsys_0_nios2_oci:the_cpu_evolution_nios2_qsys_0_nios2_oci|cpu_evolution_nios2_qsys_0_nios2_ocimem:the_cpu_evolution_nios2_qsys_0_nios2_ocimem
 address[0] => ociram_addr.DATAA
 address[1] => ociram_addr.DATAA
 address[2] => ociram_addr.DATAA
@@ -2841,42 +2841,42 @@ MonDReg[28] <= MonDReg[28]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 MonDReg[29] <= MonDReg[29]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 MonDReg[30] <= MonDReg[30]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 MonDReg[31] <= MonDReg[31]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-ociram_readdata[0] <= cpu_nios2_qsys_0_ociram_sp_ram_module:cpu_nios2_qsys_0_ociram_sp_ram.q
-ociram_readdata[1] <= cpu_nios2_qsys_0_ociram_sp_ram_module:cpu_nios2_qsys_0_ociram_sp_ram.q
-ociram_readdata[2] <= cpu_nios2_qsys_0_ociram_sp_ram_module:cpu_nios2_qsys_0_ociram_sp_ram.q
-ociram_readdata[3] <= cpu_nios2_qsys_0_ociram_sp_ram_module:cpu_nios2_qsys_0_ociram_sp_ram.q
-ociram_readdata[4] <= cpu_nios2_qsys_0_ociram_sp_ram_module:cpu_nios2_qsys_0_ociram_sp_ram.q
-ociram_readdata[5] <= cpu_nios2_qsys_0_ociram_sp_ram_module:cpu_nios2_qsys_0_ociram_sp_ram.q
-ociram_readdata[6] <= cpu_nios2_qsys_0_ociram_sp_ram_module:cpu_nios2_qsys_0_ociram_sp_ram.q
-ociram_readdata[7] <= cpu_nios2_qsys_0_ociram_sp_ram_module:cpu_nios2_qsys_0_ociram_sp_ram.q
-ociram_readdata[8] <= cpu_nios2_qsys_0_ociram_sp_ram_module:cpu_nios2_qsys_0_ociram_sp_ram.q
-ociram_readdata[9] <= cpu_nios2_qsys_0_ociram_sp_ram_module:cpu_nios2_qsys_0_ociram_sp_ram.q
-ociram_readdata[10] <= cpu_nios2_qsys_0_ociram_sp_ram_module:cpu_nios2_qsys_0_ociram_sp_ram.q
-ociram_readdata[11] <= cpu_nios2_qsys_0_ociram_sp_ram_module:cpu_nios2_qsys_0_ociram_sp_ram.q
-ociram_readdata[12] <= cpu_nios2_qsys_0_ociram_sp_ram_module:cpu_nios2_qsys_0_ociram_sp_ram.q
-ociram_readdata[13] <= cpu_nios2_qsys_0_ociram_sp_ram_module:cpu_nios2_qsys_0_ociram_sp_ram.q
-ociram_readdata[14] <= cpu_nios2_qsys_0_ociram_sp_ram_module:cpu_nios2_qsys_0_ociram_sp_ram.q
-ociram_readdata[15] <= cpu_nios2_qsys_0_ociram_sp_ram_module:cpu_nios2_qsys_0_ociram_sp_ram.q
-ociram_readdata[16] <= cpu_nios2_qsys_0_ociram_sp_ram_module:cpu_nios2_qsys_0_ociram_sp_ram.q
-ociram_readdata[17] <= cpu_nios2_qsys_0_ociram_sp_ram_module:cpu_nios2_qsys_0_ociram_sp_ram.q
-ociram_readdata[18] <= cpu_nios2_qsys_0_ociram_sp_ram_module:cpu_nios2_qsys_0_ociram_sp_ram.q
-ociram_readdata[19] <= cpu_nios2_qsys_0_ociram_sp_ram_module:cpu_nios2_qsys_0_ociram_sp_ram.q
-ociram_readdata[20] <= cpu_nios2_qsys_0_ociram_sp_ram_module:cpu_nios2_qsys_0_ociram_sp_ram.q
-ociram_readdata[21] <= cpu_nios2_qsys_0_ociram_sp_ram_module:cpu_nios2_qsys_0_ociram_sp_ram.q
-ociram_readdata[22] <= cpu_nios2_qsys_0_ociram_sp_ram_module:cpu_nios2_qsys_0_ociram_sp_ram.q
-ociram_readdata[23] <= cpu_nios2_qsys_0_ociram_sp_ram_module:cpu_nios2_qsys_0_ociram_sp_ram.q
-ociram_readdata[24] <= cpu_nios2_qsys_0_ociram_sp_ram_module:cpu_nios2_qsys_0_ociram_sp_ram.q
-ociram_readdata[25] <= cpu_nios2_qsys_0_ociram_sp_ram_module:cpu_nios2_qsys_0_ociram_sp_ram.q
-ociram_readdata[26] <= cpu_nios2_qsys_0_ociram_sp_ram_module:cpu_nios2_qsys_0_ociram_sp_ram.q
-ociram_readdata[27] <= cpu_nios2_qsys_0_ociram_sp_ram_module:cpu_nios2_qsys_0_ociram_sp_ram.q
-ociram_readdata[28] <= cpu_nios2_qsys_0_ociram_sp_ram_module:cpu_nios2_qsys_0_ociram_sp_ram.q
-ociram_readdata[29] <= cpu_nios2_qsys_0_ociram_sp_ram_module:cpu_nios2_qsys_0_ociram_sp_ram.q
-ociram_readdata[30] <= cpu_nios2_qsys_0_ociram_sp_ram_module:cpu_nios2_qsys_0_ociram_sp_ram.q
-ociram_readdata[31] <= cpu_nios2_qsys_0_ociram_sp_ram_module:cpu_nios2_qsys_0_ociram_sp_ram.q
+ociram_readdata[0] <= cpu_evolution_nios2_qsys_0_ociram_sp_ram_module:cpu_evolution_nios2_qsys_0_ociram_sp_ram.q
+ociram_readdata[1] <= cpu_evolution_nios2_qsys_0_ociram_sp_ram_module:cpu_evolution_nios2_qsys_0_ociram_sp_ram.q
+ociram_readdata[2] <= cpu_evolution_nios2_qsys_0_ociram_sp_ram_module:cpu_evolution_nios2_qsys_0_ociram_sp_ram.q
+ociram_readdata[3] <= cpu_evolution_nios2_qsys_0_ociram_sp_ram_module:cpu_evolution_nios2_qsys_0_ociram_sp_ram.q
+ociram_readdata[4] <= cpu_evolution_nios2_qsys_0_ociram_sp_ram_module:cpu_evolution_nios2_qsys_0_ociram_sp_ram.q
+ociram_readdata[5] <= cpu_evolution_nios2_qsys_0_ociram_sp_ram_module:cpu_evolution_nios2_qsys_0_ociram_sp_ram.q
+ociram_readdata[6] <= cpu_evolution_nios2_qsys_0_ociram_sp_ram_module:cpu_evolution_nios2_qsys_0_ociram_sp_ram.q
+ociram_readdata[7] <= cpu_evolution_nios2_qsys_0_ociram_sp_ram_module:cpu_evolution_nios2_qsys_0_ociram_sp_ram.q
+ociram_readdata[8] <= cpu_evolution_nios2_qsys_0_ociram_sp_ram_module:cpu_evolution_nios2_qsys_0_ociram_sp_ram.q
+ociram_readdata[9] <= cpu_evolution_nios2_qsys_0_ociram_sp_ram_module:cpu_evolution_nios2_qsys_0_ociram_sp_ram.q
+ociram_readdata[10] <= cpu_evolution_nios2_qsys_0_ociram_sp_ram_module:cpu_evolution_nios2_qsys_0_ociram_sp_ram.q
+ociram_readdata[11] <= cpu_evolution_nios2_qsys_0_ociram_sp_ram_module:cpu_evolution_nios2_qsys_0_ociram_sp_ram.q
+ociram_readdata[12] <= cpu_evolution_nios2_qsys_0_ociram_sp_ram_module:cpu_evolution_nios2_qsys_0_ociram_sp_ram.q
+ociram_readdata[13] <= cpu_evolution_nios2_qsys_0_ociram_sp_ram_module:cpu_evolution_nios2_qsys_0_ociram_sp_ram.q
+ociram_readdata[14] <= cpu_evolution_nios2_qsys_0_ociram_sp_ram_module:cpu_evolution_nios2_qsys_0_ociram_sp_ram.q
+ociram_readdata[15] <= cpu_evolution_nios2_qsys_0_ociram_sp_ram_module:cpu_evolution_nios2_qsys_0_ociram_sp_ram.q
+ociram_readdata[16] <= cpu_evolution_nios2_qsys_0_ociram_sp_ram_module:cpu_evolution_nios2_qsys_0_ociram_sp_ram.q
+ociram_readdata[17] <= cpu_evolution_nios2_qsys_0_ociram_sp_ram_module:cpu_evolution_nios2_qsys_0_ociram_sp_ram.q
+ociram_readdata[18] <= cpu_evolution_nios2_qsys_0_ociram_sp_ram_module:cpu_evolution_nios2_qsys_0_ociram_sp_ram.q
+ociram_readdata[19] <= cpu_evolution_nios2_qsys_0_ociram_sp_ram_module:cpu_evolution_nios2_qsys_0_ociram_sp_ram.q
+ociram_readdata[20] <= cpu_evolution_nios2_qsys_0_ociram_sp_ram_module:cpu_evolution_nios2_qsys_0_ociram_sp_ram.q
+ociram_readdata[21] <= cpu_evolution_nios2_qsys_0_ociram_sp_ram_module:cpu_evolution_nios2_qsys_0_ociram_sp_ram.q
+ociram_readdata[22] <= cpu_evolution_nios2_qsys_0_ociram_sp_ram_module:cpu_evolution_nios2_qsys_0_ociram_sp_ram.q
+ociram_readdata[23] <= cpu_evolution_nios2_qsys_0_ociram_sp_ram_module:cpu_evolution_nios2_qsys_0_ociram_sp_ram.q
+ociram_readdata[24] <= cpu_evolution_nios2_qsys_0_ociram_sp_ram_module:cpu_evolution_nios2_qsys_0_ociram_sp_ram.q
+ociram_readdata[25] <= cpu_evolution_nios2_qsys_0_ociram_sp_ram_module:cpu_evolution_nios2_qsys_0_ociram_sp_ram.q
+ociram_readdata[26] <= cpu_evolution_nios2_qsys_0_ociram_sp_ram_module:cpu_evolution_nios2_qsys_0_ociram_sp_ram.q
+ociram_readdata[27] <= cpu_evolution_nios2_qsys_0_ociram_sp_ram_module:cpu_evolution_nios2_qsys_0_ociram_sp_ram.q
+ociram_readdata[28] <= cpu_evolution_nios2_qsys_0_ociram_sp_ram_module:cpu_evolution_nios2_qsys_0_ociram_sp_ram.q
+ociram_readdata[29] <= cpu_evolution_nios2_qsys_0_ociram_sp_ram_module:cpu_evolution_nios2_qsys_0_ociram_sp_ram.q
+ociram_readdata[30] <= cpu_evolution_nios2_qsys_0_ociram_sp_ram_module:cpu_evolution_nios2_qsys_0_ociram_sp_ram.q
+ociram_readdata[31] <= cpu_evolution_nios2_qsys_0_ociram_sp_ram_module:cpu_evolution_nios2_qsys_0_ociram_sp_ram.q
 waitrequest <= waitrequest~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|cpu|cpu_nios2_qsys_0:nios2_qsys_0|cpu_nios2_qsys_0_nios2_oci:the_cpu_nios2_qsys_0_nios2_oci|cpu_nios2_qsys_0_nios2_ocimem:the_cpu_nios2_qsys_0_nios2_ocimem|cpu_nios2_qsys_0_ociram_sp_ram_module:cpu_nios2_qsys_0_ociram_sp_ram
+|cpu_evolution|cpu_evolution_nios2_qsys_0:nios2_qsys_0|cpu_evolution_nios2_qsys_0_nios2_oci:the_cpu_evolution_nios2_qsys_0_nios2_oci|cpu_evolution_nios2_qsys_0_nios2_ocimem:the_cpu_evolution_nios2_qsys_0_nios2_ocimem|cpu_evolution_nios2_qsys_0_ociram_sp_ram_module:cpu_evolution_nios2_qsys_0_ociram_sp_ram
 address[0] => address[0].IN1
 address[1] => address[1].IN1
 address[2] => address[2].IN1
@@ -2957,56 +2957,56 @@ q[30] <= altsyncram:the_altsyncram.q_a
 q[31] <= altsyncram:the_altsyncram.q_a
 
 
-|cpu|cpu_nios2_qsys_0:nios2_qsys_0|cpu_nios2_qsys_0_nios2_oci:the_cpu_nios2_qsys_0_nios2_oci|cpu_nios2_qsys_0_nios2_ocimem:the_cpu_nios2_qsys_0_nios2_ocimem|cpu_nios2_qsys_0_ociram_sp_ram_module:cpu_nios2_qsys_0_ociram_sp_ram|altsyncram:the_altsyncram
-wren_a => altsyncram_e081:auto_generated.wren_a
+|cpu_evolution|cpu_evolution_nios2_qsys_0:nios2_qsys_0|cpu_evolution_nios2_qsys_0_nios2_oci:the_cpu_evolution_nios2_qsys_0_nios2_oci|cpu_evolution_nios2_qsys_0_nios2_ocimem:the_cpu_evolution_nios2_qsys_0_nios2_ocimem|cpu_evolution_nios2_qsys_0_ociram_sp_ram_module:cpu_evolution_nios2_qsys_0_ociram_sp_ram|altsyncram:the_altsyncram
+wren_a => altsyncram_i291:auto_generated.wren_a
 rden_a => ~NO_FANOUT~
 wren_b => ~NO_FANOUT~
 rden_b => ~NO_FANOUT~
-data_a[0] => altsyncram_e081:auto_generated.data_a[0]
-data_a[1] => altsyncram_e081:auto_generated.data_a[1]
-data_a[2] => altsyncram_e081:auto_generated.data_a[2]
-data_a[3] => altsyncram_e081:auto_generated.data_a[3]
-data_a[4] => altsyncram_e081:auto_generated.data_a[4]
-data_a[5] => altsyncram_e081:auto_generated.data_a[5]
-data_a[6] => altsyncram_e081:auto_generated.data_a[6]
-data_a[7] => altsyncram_e081:auto_generated.data_a[7]
-data_a[8] => altsyncram_e081:auto_generated.data_a[8]
-data_a[9] => altsyncram_e081:auto_generated.data_a[9]
-data_a[10] => altsyncram_e081:auto_generated.data_a[10]
-data_a[11] => altsyncram_e081:auto_generated.data_a[11]
-data_a[12] => altsyncram_e081:auto_generated.data_a[12]
-data_a[13] => altsyncram_e081:auto_generated.data_a[13]
-data_a[14] => altsyncram_e081:auto_generated.data_a[14]
-data_a[15] => altsyncram_e081:auto_generated.data_a[15]
-data_a[16] => altsyncram_e081:auto_generated.data_a[16]
-data_a[17] => altsyncram_e081:auto_generated.data_a[17]
-data_a[18] => altsyncram_e081:auto_generated.data_a[18]
-data_a[19] => altsyncram_e081:auto_generated.data_a[19]
-data_a[20] => altsyncram_e081:auto_generated.data_a[20]
-data_a[21] => altsyncram_e081:auto_generated.data_a[21]
-data_a[22] => altsyncram_e081:auto_generated.data_a[22]
-data_a[23] => altsyncram_e081:auto_generated.data_a[23]
-data_a[24] => altsyncram_e081:auto_generated.data_a[24]
-data_a[25] => altsyncram_e081:auto_generated.data_a[25]
-data_a[26] => altsyncram_e081:auto_generated.data_a[26]
-data_a[27] => altsyncram_e081:auto_generated.data_a[27]
-data_a[28] => altsyncram_e081:auto_generated.data_a[28]
-data_a[29] => altsyncram_e081:auto_generated.data_a[29]
-data_a[30] => altsyncram_e081:auto_generated.data_a[30]
-data_a[31] => altsyncram_e081:auto_generated.data_a[31]
+data_a[0] => altsyncram_i291:auto_generated.data_a[0]
+data_a[1] => altsyncram_i291:auto_generated.data_a[1]
+data_a[2] => altsyncram_i291:auto_generated.data_a[2]
+data_a[3] => altsyncram_i291:auto_generated.data_a[3]
+data_a[4] => altsyncram_i291:auto_generated.data_a[4]
+data_a[5] => altsyncram_i291:auto_generated.data_a[5]
+data_a[6] => altsyncram_i291:auto_generated.data_a[6]
+data_a[7] => altsyncram_i291:auto_generated.data_a[7]
+data_a[8] => altsyncram_i291:auto_generated.data_a[8]
+data_a[9] => altsyncram_i291:auto_generated.data_a[9]
+data_a[10] => altsyncram_i291:auto_generated.data_a[10]
+data_a[11] => altsyncram_i291:auto_generated.data_a[11]
+data_a[12] => altsyncram_i291:auto_generated.data_a[12]
+data_a[13] => altsyncram_i291:auto_generated.data_a[13]
+data_a[14] => altsyncram_i291:auto_generated.data_a[14]
+data_a[15] => altsyncram_i291:auto_generated.data_a[15]
+data_a[16] => altsyncram_i291:auto_generated.data_a[16]
+data_a[17] => altsyncram_i291:auto_generated.data_a[17]
+data_a[18] => altsyncram_i291:auto_generated.data_a[18]
+data_a[19] => altsyncram_i291:auto_generated.data_a[19]
+data_a[20] => altsyncram_i291:auto_generated.data_a[20]
+data_a[21] => altsyncram_i291:auto_generated.data_a[21]
+data_a[22] => altsyncram_i291:auto_generated.data_a[22]
+data_a[23] => altsyncram_i291:auto_generated.data_a[23]
+data_a[24] => altsyncram_i291:auto_generated.data_a[24]
+data_a[25] => altsyncram_i291:auto_generated.data_a[25]
+data_a[26] => altsyncram_i291:auto_generated.data_a[26]
+data_a[27] => altsyncram_i291:auto_generated.data_a[27]
+data_a[28] => altsyncram_i291:auto_generated.data_a[28]
+data_a[29] => altsyncram_i291:auto_generated.data_a[29]
+data_a[30] => altsyncram_i291:auto_generated.data_a[30]
+data_a[31] => altsyncram_i291:auto_generated.data_a[31]
 data_b[0] => ~NO_FANOUT~
-address_a[0] => altsyncram_e081:auto_generated.address_a[0]
-address_a[1] => altsyncram_e081:auto_generated.address_a[1]
-address_a[2] => altsyncram_e081:auto_generated.address_a[2]
-address_a[3] => altsyncram_e081:auto_generated.address_a[3]
-address_a[4] => altsyncram_e081:auto_generated.address_a[4]
-address_a[5] => altsyncram_e081:auto_generated.address_a[5]
-address_a[6] => altsyncram_e081:auto_generated.address_a[6]
-address_a[7] => altsyncram_e081:auto_generated.address_a[7]
+address_a[0] => altsyncram_i291:auto_generated.address_a[0]
+address_a[1] => altsyncram_i291:auto_generated.address_a[1]
+address_a[2] => altsyncram_i291:auto_generated.address_a[2]
+address_a[3] => altsyncram_i291:auto_generated.address_a[3]
+address_a[4] => altsyncram_i291:auto_generated.address_a[4]
+address_a[5] => altsyncram_i291:auto_generated.address_a[5]
+address_a[6] => altsyncram_i291:auto_generated.address_a[6]
+address_a[7] => altsyncram_i291:auto_generated.address_a[7]
 address_b[0] => ~NO_FANOUT~
 addressstall_a => ~NO_FANOUT~
 addressstall_b => ~NO_FANOUT~
-clock0 => altsyncram_e081:auto_generated.clock0
+clock0 => altsyncram_i291:auto_generated.clock0
 clock1 => ~NO_FANOUT~
 clocken0 => ~NO_FANOUT~
 clocken1 => ~NO_FANOUT~
@@ -3014,50 +3014,50 @@ clocken2 => ~NO_FANOUT~
 clocken3 => ~NO_FANOUT~
 aclr0 => ~NO_FANOUT~
 aclr1 => ~NO_FANOUT~
-byteena_a[0] => altsyncram_e081:auto_generated.byteena_a[0]
-byteena_a[1] => altsyncram_e081:auto_generated.byteena_a[1]
-byteena_a[2] => altsyncram_e081:auto_generated.byteena_a[2]
-byteena_a[3] => altsyncram_e081:auto_generated.byteena_a[3]
+byteena_a[0] => altsyncram_i291:auto_generated.byteena_a[0]
+byteena_a[1] => altsyncram_i291:auto_generated.byteena_a[1]
+byteena_a[2] => altsyncram_i291:auto_generated.byteena_a[2]
+byteena_a[3] => altsyncram_i291:auto_generated.byteena_a[3]
 byteena_b[0] => ~NO_FANOUT~
-q_a[0] <= altsyncram_e081:auto_generated.q_a[0]
-q_a[1] <= altsyncram_e081:auto_generated.q_a[1]
-q_a[2] <= altsyncram_e081:auto_generated.q_a[2]
-q_a[3] <= altsyncram_e081:auto_generated.q_a[3]
-q_a[4] <= altsyncram_e081:auto_generated.q_a[4]
-q_a[5] <= altsyncram_e081:auto_generated.q_a[5]
-q_a[6] <= altsyncram_e081:auto_generated.q_a[6]
-q_a[7] <= altsyncram_e081:auto_generated.q_a[7]
-q_a[8] <= altsyncram_e081:auto_generated.q_a[8]
-q_a[9] <= altsyncram_e081:auto_generated.q_a[9]
-q_a[10] <= altsyncram_e081:auto_generated.q_a[10]
-q_a[11] <= altsyncram_e081:auto_generated.q_a[11]
-q_a[12] <= altsyncram_e081:auto_generated.q_a[12]
-q_a[13] <= altsyncram_e081:auto_generated.q_a[13]
-q_a[14] <= altsyncram_e081:auto_generated.q_a[14]
-q_a[15] <= altsyncram_e081:auto_generated.q_a[15]
-q_a[16] <= altsyncram_e081:auto_generated.q_a[16]
-q_a[17] <= altsyncram_e081:auto_generated.q_a[17]
-q_a[18] <= altsyncram_e081:auto_generated.q_a[18]
-q_a[19] <= altsyncram_e081:auto_generated.q_a[19]
-q_a[20] <= altsyncram_e081:auto_generated.q_a[20]
-q_a[21] <= altsyncram_e081:auto_generated.q_a[21]
-q_a[22] <= altsyncram_e081:auto_generated.q_a[22]
-q_a[23] <= altsyncram_e081:auto_generated.q_a[23]
-q_a[24] <= altsyncram_e081:auto_generated.q_a[24]
-q_a[25] <= altsyncram_e081:auto_generated.q_a[25]
-q_a[26] <= altsyncram_e081:auto_generated.q_a[26]
-q_a[27] <= altsyncram_e081:auto_generated.q_a[27]
-q_a[28] <= altsyncram_e081:auto_generated.q_a[28]
-q_a[29] <= altsyncram_e081:auto_generated.q_a[29]
-q_a[30] <= altsyncram_e081:auto_generated.q_a[30]
-q_a[31] <= altsyncram_e081:auto_generated.q_a[31]
+q_a[0] <= altsyncram_i291:auto_generated.q_a[0]
+q_a[1] <= altsyncram_i291:auto_generated.q_a[1]
+q_a[2] <= altsyncram_i291:auto_generated.q_a[2]
+q_a[3] <= altsyncram_i291:auto_generated.q_a[3]
+q_a[4] <= altsyncram_i291:auto_generated.q_a[4]
+q_a[5] <= altsyncram_i291:auto_generated.q_a[5]
+q_a[6] <= altsyncram_i291:auto_generated.q_a[6]
+q_a[7] <= altsyncram_i291:auto_generated.q_a[7]
+q_a[8] <= altsyncram_i291:auto_generated.q_a[8]
+q_a[9] <= altsyncram_i291:auto_generated.q_a[9]
+q_a[10] <= altsyncram_i291:auto_generated.q_a[10]
+q_a[11] <= altsyncram_i291:auto_generated.q_a[11]
+q_a[12] <= altsyncram_i291:auto_generated.q_a[12]
+q_a[13] <= altsyncram_i291:auto_generated.q_a[13]
+q_a[14] <= altsyncram_i291:auto_generated.q_a[14]
+q_a[15] <= altsyncram_i291:auto_generated.q_a[15]
+q_a[16] <= altsyncram_i291:auto_generated.q_a[16]
+q_a[17] <= altsyncram_i291:auto_generated.q_a[17]
+q_a[18] <= altsyncram_i291:auto_generated.q_a[18]
+q_a[19] <= altsyncram_i291:auto_generated.q_a[19]
+q_a[20] <= altsyncram_i291:auto_generated.q_a[20]
+q_a[21] <= altsyncram_i291:auto_generated.q_a[21]
+q_a[22] <= altsyncram_i291:auto_generated.q_a[22]
+q_a[23] <= altsyncram_i291:auto_generated.q_a[23]
+q_a[24] <= altsyncram_i291:auto_generated.q_a[24]
+q_a[25] <= altsyncram_i291:auto_generated.q_a[25]
+q_a[26] <= altsyncram_i291:auto_generated.q_a[26]
+q_a[27] <= altsyncram_i291:auto_generated.q_a[27]
+q_a[28] <= altsyncram_i291:auto_generated.q_a[28]
+q_a[29] <= altsyncram_i291:auto_generated.q_a[29]
+q_a[30] <= altsyncram_i291:auto_generated.q_a[30]
+q_a[31] <= altsyncram_i291:auto_generated.q_a[31]
 q_b[0] <= <GND>
 eccstatus[0] <= <GND>
 eccstatus[1] <= <GND>
 eccstatus[2] <= <GND>
 
 
-|cpu|cpu_nios2_qsys_0:nios2_qsys_0|cpu_nios2_qsys_0_nios2_oci:the_cpu_nios2_qsys_0_nios2_oci|cpu_nios2_qsys_0_nios2_ocimem:the_cpu_nios2_qsys_0_nios2_ocimem|cpu_nios2_qsys_0_ociram_sp_ram_module:cpu_nios2_qsys_0_ociram_sp_ram|altsyncram:the_altsyncram|altsyncram_e081:auto_generated
+|cpu_evolution|cpu_evolution_nios2_qsys_0:nios2_qsys_0|cpu_evolution_nios2_qsys_0_nios2_oci:the_cpu_evolution_nios2_qsys_0_nios2_oci|cpu_evolution_nios2_qsys_0_nios2_ocimem:the_cpu_evolution_nios2_qsys_0_nios2_ocimem|cpu_evolution_nios2_qsys_0_ociram_sp_ram_module:cpu_evolution_nios2_qsys_0_ociram_sp_ram|altsyncram:the_altsyncram|altsyncram_i291:auto_generated
 address_a[0] => ram_block1a0.PORTAADDR
 address_a[0] => ram_block1a1.PORTAADDR
 address_a[0] => ram_block1a2.PORTAADDR
@@ -3476,7 +3476,7 @@ wren_a => ram_block1a30.PORTAWE
 wren_a => ram_block1a31.PORTAWE
 
 
-|cpu|cpu_nios2_qsys_0:nios2_qsys_0|cpu_nios2_qsys_0_nios2_oci:the_cpu_nios2_qsys_0_nios2_oci|cpu_nios2_qsys_0_nios2_avalon_reg:the_cpu_nios2_qsys_0_nios2_avalon_reg
+|cpu_evolution|cpu_evolution_nios2_qsys_0:nios2_qsys_0|cpu_evolution_nios2_qsys_0_nios2_oci:the_cpu_evolution_nios2_qsys_0_nios2_oci|cpu_evolution_nios2_qsys_0_nios2_avalon_reg:the_cpu_evolution_nios2_qsys_0_nios2_avalon_reg
 address[0] => Equal0.IN8
 address[0] => Equal1.IN1
 address[1] => Equal0.IN7
@@ -3669,7 +3669,7 @@ ocireg_mrs <= writedata[0].DB_MAX_OUTPUT_PORT_TYPE
 take_action_ocireg <= take_action_ocireg.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|cpu|cpu_nios2_qsys_0:nios2_qsys_0|cpu_nios2_qsys_0_nios2_oci:the_cpu_nios2_qsys_0_nios2_oci|cpu_nios2_qsys_0_nios2_oci_break:the_cpu_nios2_qsys_0_nios2_oci_break
+|cpu_evolution|cpu_evolution_nios2_qsys_0:nios2_qsys_0|cpu_evolution_nios2_qsys_0_nios2_oci:the_cpu_evolution_nios2_qsys_0_nios2_oci|cpu_evolution_nios2_qsys_0_nios2_oci_break:the_cpu_evolution_nios2_qsys_0_nios2_oci_break
 clk => trigger_state.CLK
 clk => break_readreg[0]~reg0.CLK
 clk => break_readreg[1]~reg0.CLK
@@ -4017,7 +4017,7 @@ xbrk_ctrl3[6] <= <GND>
 xbrk_ctrl3[7] <= <GND>
 
 
-|cpu|cpu_nios2_qsys_0:nios2_qsys_0|cpu_nios2_qsys_0_nios2_oci:the_cpu_nios2_qsys_0_nios2_oci|cpu_nios2_qsys_0_nios2_oci_xbrk:the_cpu_nios2_qsys_0_nios2_oci_xbrk
+|cpu_evolution|cpu_evolution_nios2_qsys_0:nios2_qsys_0|cpu_evolution_nios2_qsys_0_nios2_oci:the_cpu_evolution_nios2_qsys_0_nios2_oci|cpu_evolution_nios2_qsys_0_nios2_oci_xbrk:the_cpu_evolution_nios2_qsys_0_nios2_oci_xbrk
 D_valid => ~NO_FANOUT~
 E_valid => xbrk_break~reg0.ENA
 F_pc[0] => ~NO_FANOUT~
@@ -4076,7 +4076,7 @@ xbrk_traceon <= <GND>
 xbrk_trigout <= <GND>
 
 
-|cpu|cpu_nios2_qsys_0:nios2_qsys_0|cpu_nios2_qsys_0_nios2_oci:the_cpu_nios2_qsys_0_nios2_oci|cpu_nios2_qsys_0_nios2_oci_dbrk:the_cpu_nios2_qsys_0_nios2_oci_dbrk
+|cpu_evolution|cpu_evolution_nios2_qsys_0:nios2_qsys_0|cpu_evolution_nios2_qsys_0_nios2_oci:the_cpu_evolution_nios2_qsys_0_nios2_oci|cpu_evolution_nios2_qsys_0_nios2_oci_dbrk:the_cpu_evolution_nios2_qsys_0_nios2_oci_dbrk
 E_st_data[0] => cpu_d_writedata[0].DATAIN
 E_st_data[1] => cpu_d_writedata[1].DATAIN
 E_st_data[2] => cpu_d_writedata[2].DATAIN
@@ -4265,7 +4265,7 @@ dbrk_traceon <= dbrk_traceon~reg0.DB_MAX_OUTPUT_PORT_TYPE
 dbrk_trigout <= dbrk_trigout~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|cpu|cpu_nios2_qsys_0:nios2_qsys_0|cpu_nios2_qsys_0_nios2_oci:the_cpu_nios2_qsys_0_nios2_oci|cpu_nios2_qsys_0_nios2_oci_itrace:the_cpu_nios2_qsys_0_nios2_oci_itrace
+|cpu_evolution|cpu_evolution_nios2_qsys_0:nios2_qsys_0|cpu_evolution_nios2_qsys_0_nios2_oci:the_cpu_evolution_nios2_qsys_0_nios2_oci|cpu_evolution_nios2_qsys_0_nios2_oci_itrace:the_cpu_evolution_nios2_qsys_0_nios2_oci_itrace
 clk => dct_count[0]~reg0.CLK
 clk => dct_count[1]~reg0.CLK
 clk => dct_count[2]~reg0.CLK
@@ -4518,7 +4518,7 @@ trc_ctrl[15] <= <GND>
 trc_on <= <GND>
 
 
-|cpu|cpu_nios2_qsys_0:nios2_qsys_0|cpu_nios2_qsys_0_nios2_oci:the_cpu_nios2_qsys_0_nios2_oci|cpu_nios2_qsys_0_nios2_oci_dtrace:the_cpu_nios2_qsys_0_nios2_oci_dtrace
+|cpu_evolution|cpu_evolution_nios2_qsys_0:nios2_qsys_0|cpu_evolution_nios2_qsys_0_nios2_oci:the_cpu_evolution_nios2_qsys_0_nios2_oci|cpu_evolution_nios2_qsys_0_nios2_oci_dtrace:the_cpu_evolution_nios2_qsys_0_nios2_oci_dtrace
 clk => dtm[0]~reg0.CLK
 clk => dtm[1]~reg0.CLK
 clk => dtm[2]~reg0.CLK
@@ -4834,7 +4834,7 @@ dtm[34] <= dtm[34]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 dtm[35] <= dtm[35]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|cpu|cpu_nios2_qsys_0:nios2_qsys_0|cpu_nios2_qsys_0_nios2_oci:the_cpu_nios2_qsys_0_nios2_oci|cpu_nios2_qsys_0_nios2_oci_dtrace:the_cpu_nios2_qsys_0_nios2_oci_dtrace|cpu_nios2_qsys_0_nios2_oci_td_mode:cpu_nios2_qsys_0_nios2_oci_trc_ctrl_td_mode
+|cpu_evolution|cpu_evolution_nios2_qsys_0:nios2_qsys_0|cpu_evolution_nios2_qsys_0_nios2_oci:the_cpu_evolution_nios2_qsys_0_nios2_oci|cpu_evolution_nios2_qsys_0_nios2_oci_dtrace:the_cpu_evolution_nios2_qsys_0_nios2_oci_dtrace|cpu_evolution_nios2_qsys_0_nios2_oci_td_mode:cpu_evolution_nios2_qsys_0_nios2_oci_trc_ctrl_td_mode
 ctrl[0] => ~NO_FANOUT~
 ctrl[1] => ~NO_FANOUT~
 ctrl[2] => ~NO_FANOUT~
@@ -4854,7 +4854,7 @@ td_mode[2] <= ctrl[6].DB_MAX_OUTPUT_PORT_TYPE
 td_mode[3] <= ctrl[5].DB_MAX_OUTPUT_PORT_TYPE
 
 
-|cpu|cpu_nios2_qsys_0:nios2_qsys_0|cpu_nios2_qsys_0_nios2_oci:the_cpu_nios2_qsys_0_nios2_oci|cpu_nios2_qsys_0_nios2_oci_fifo:the_cpu_nios2_qsys_0_nios2_oci_fifo
+|cpu_evolution|cpu_evolution_nios2_qsys_0:nios2_qsys_0|cpu_evolution_nios2_qsys_0_nios2_oci:the_cpu_evolution_nios2_qsys_0_nios2_oci|cpu_evolution_nios2_qsys_0_nios2_oci_fifo:the_cpu_evolution_nios2_qsys_0_nios2_oci_fifo
 atm[0] => ~NO_FANOUT~
 atm[1] => ~NO_FANOUT~
 atm[2] => ~NO_FANOUT~
@@ -5056,7 +5056,7 @@ tw[34] <= itm[34].DB_MAX_OUTPUT_PORT_TYPE
 tw[35] <= itm[35].DB_MAX_OUTPUT_PORT_TYPE
 
 
-|cpu|cpu_nios2_qsys_0:nios2_qsys_0|cpu_nios2_qsys_0_nios2_oci:the_cpu_nios2_qsys_0_nios2_oci|cpu_nios2_qsys_0_nios2_oci_fifo:the_cpu_nios2_qsys_0_nios2_oci_fifo|cpu_nios2_qsys_0_nios2_oci_compute_tm_count:cpu_nios2_qsys_0_nios2_oci_compute_tm_count_tm_count
+|cpu_evolution|cpu_evolution_nios2_qsys_0:nios2_qsys_0|cpu_evolution_nios2_qsys_0_nios2_oci:the_cpu_evolution_nios2_qsys_0_nios2_oci|cpu_evolution_nios2_qsys_0_nios2_oci_fifo:the_cpu_evolution_nios2_qsys_0_nios2_oci_fifo|cpu_evolution_nios2_qsys_0_nios2_oci_compute_tm_count:cpu_evolution_nios2_qsys_0_nios2_oci_compute_tm_count_tm_count
 atm_valid => Decoder0.IN1
 dtm_valid => Decoder0.IN2
 itm_valid => Decoder0.IN0
@@ -5064,7 +5064,7 @@ compute_tm_count[0] <= WideOr1.DB_MAX_OUTPUT_PORT_TYPE
 compute_tm_count[1] <= WideOr0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|cpu|cpu_nios2_qsys_0:nios2_qsys_0|cpu_nios2_qsys_0_nios2_oci:the_cpu_nios2_qsys_0_nios2_oci|cpu_nios2_qsys_0_nios2_oci_fifo:the_cpu_nios2_qsys_0_nios2_oci_fifo|cpu_nios2_qsys_0_nios2_oci_fifowp_inc:cpu_nios2_qsys_0_nios2_oci_fifowp_inc_fifowp
+|cpu_evolution|cpu_evolution_nios2_qsys_0:nios2_qsys_0|cpu_evolution_nios2_qsys_0_nios2_oci:the_cpu_evolution_nios2_qsys_0_nios2_oci|cpu_evolution_nios2_qsys_0_nios2_oci_fifo:the_cpu_evolution_nios2_qsys_0_nios2_oci_fifo|cpu_evolution_nios2_qsys_0_nios2_oci_fifowp_inc:cpu_evolution_nios2_qsys_0_nios2_oci_fifowp_inc_fifowp
 free2 => always0.IN1
 free3 => always0.IN1
 tm_count[0] => LessThan0.IN4
@@ -5079,7 +5079,7 @@ fifowp_inc[2] <= <GND>
 fifowp_inc[3] <= <GND>
 
 
-|cpu|cpu_nios2_qsys_0:nios2_qsys_0|cpu_nios2_qsys_0_nios2_oci:the_cpu_nios2_qsys_0_nios2_oci|cpu_nios2_qsys_0_nios2_oci_fifo:the_cpu_nios2_qsys_0_nios2_oci_fifo|cpu_nios2_qsys_0_nios2_oci_fifocount_inc:cpu_nios2_qsys_0_nios2_oci_fifocount_inc_fifocount
+|cpu_evolution|cpu_evolution_nios2_qsys_0:nios2_qsys_0|cpu_evolution_nios2_qsys_0_nios2_oci:the_cpu_evolution_nios2_qsys_0_nios2_oci|cpu_evolution_nios2_qsys_0_nios2_oci_fifo:the_cpu_evolution_nios2_qsys_0_nios2_oci_fifo|cpu_evolution_nios2_qsys_0_nios2_oci_fifocount_inc:cpu_evolution_nios2_qsys_0_nios2_oci_fifocount_inc_fifocount
 empty => fifocount_inc.OUTPUTSELECT
 empty => fifocount_inc.OUTPUTSELECT
 empty => fifocount_inc.OUTPUTSELECT
@@ -5102,7 +5102,7 @@ fifocount_inc[3] <= fifocount_inc.DB_MAX_OUTPUT_PORT_TYPE
 fifocount_inc[4] <= fifocount_inc.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|cpu|cpu_nios2_qsys_0:nios2_qsys_0|cpu_nios2_qsys_0_nios2_oci:the_cpu_nios2_qsys_0_nios2_oci|cpu_nios2_qsys_0_nios2_oci_fifo:the_cpu_nios2_qsys_0_nios2_oci_fifo|cpu_nios2_qsys_0_oci_test_bench:the_cpu_nios2_qsys_0_oci_test_bench
+|cpu_evolution|cpu_evolution_nios2_qsys_0:nios2_qsys_0|cpu_evolution_nios2_qsys_0_nios2_oci:the_cpu_evolution_nios2_qsys_0_nios2_oci|cpu_evolution_nios2_qsys_0_nios2_oci_fifo:the_cpu_evolution_nios2_qsys_0_nios2_oci_fifo|cpu_evolution_nios2_qsys_0_oci_test_bench:the_cpu_evolution_nios2_qsys_0_oci_test_bench
 dct_buffer[0] => ~NO_FANOUT~
 dct_buffer[1] => ~NO_FANOUT~
 dct_buffer[2] => ~NO_FANOUT~
@@ -5141,7 +5141,7 @@ test_ending => ~NO_FANOUT~
 test_has_ended => ~NO_FANOUT~
 
 
-|cpu|cpu_nios2_qsys_0:nios2_qsys_0|cpu_nios2_qsys_0_nios2_oci:the_cpu_nios2_qsys_0_nios2_oci|cpu_nios2_qsys_0_nios2_oci_pib:the_cpu_nios2_qsys_0_nios2_oci_pib
+|cpu_evolution|cpu_evolution_nios2_qsys_0:nios2_qsys_0|cpu_evolution_nios2_qsys_0_nios2_oci:the_cpu_evolution_nios2_qsys_0_nios2_oci|cpu_evolution_nios2_qsys_0_nios2_oci_pib:the_cpu_evolution_nios2_qsys_0_nios2_oci_pib
 clk => ~NO_FANOUT~
 clkx2 => ~NO_FANOUT~
 jrst_n => ~NO_FANOUT~
@@ -5202,7 +5202,7 @@ tr_data[16] <= <GND>
 tr_data[17] <= <GND>
 
 
-|cpu|cpu_nios2_qsys_0:nios2_qsys_0|cpu_nios2_qsys_0_nios2_oci:the_cpu_nios2_qsys_0_nios2_oci|cpu_nios2_qsys_0_nios2_oci_im:the_cpu_nios2_qsys_0_nios2_oci_im
+|cpu_evolution|cpu_evolution_nios2_qsys_0:nios2_qsys_0|cpu_evolution_nios2_qsys_0_nios2_oci:the_cpu_evolution_nios2_qsys_0_nios2_oci|cpu_evolution_nios2_qsys_0_nios2_oci_im:the_cpu_evolution_nios2_qsys_0_nios2_oci_im
 clk => trc_wrap~reg0.CLK
 clk => trc_im_addr[0]~reg0.CLK
 clk => trc_im_addr[1]~reg0.CLK
@@ -5365,7 +5365,7 @@ trc_wrap <= trc_wrap~reg0.DB_MAX_OUTPUT_PORT_TYPE
 xbrk_wrap_traceoff <= xbrk_wrap_traceoff.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|cpu|cpu_nios2_qsys_0:nios2_qsys_0|cpu_nios2_qsys_0_nios2_oci:the_cpu_nios2_qsys_0_nios2_oci|cpu_nios2_qsys_0_jtag_debug_module_wrapper:the_cpu_nios2_qsys_0_jtag_debug_module_wrapper
+|cpu_evolution|cpu_evolution_nios2_qsys_0:nios2_qsys_0|cpu_evolution_nios2_qsys_0_nios2_oci:the_cpu_evolution_nios2_qsys_0_nios2_oci|cpu_evolution_nios2_qsys_0_jtag_debug_module_wrapper:the_cpu_evolution_nios2_qsys_0_jtag_debug_module_wrapper
 MonDReg[0] => MonDReg[0].IN1
 MonDReg[1] => MonDReg[1].IN1
 MonDReg[2] => MonDReg[2].IN1
@@ -5489,62 +5489,62 @@ trc_on => trc_on.IN1
 trc_wrap => trc_wrap.IN1
 trigbrktype => trigbrktype.IN1
 trigger_state_1 => trigger_state_1.IN1
-jdo[0] <= cpu_nios2_qsys_0_jtag_debug_module_sysclk:the_cpu_nios2_qsys_0_jtag_debug_module_sysclk.jdo
-jdo[1] <= cpu_nios2_qsys_0_jtag_debug_module_sysclk:the_cpu_nios2_qsys_0_jtag_debug_module_sysclk.jdo
-jdo[2] <= cpu_nios2_qsys_0_jtag_debug_module_sysclk:the_cpu_nios2_qsys_0_jtag_debug_module_sysclk.jdo
-jdo[3] <= cpu_nios2_qsys_0_jtag_debug_module_sysclk:the_cpu_nios2_qsys_0_jtag_debug_module_sysclk.jdo
-jdo[4] <= cpu_nios2_qsys_0_jtag_debug_module_sysclk:the_cpu_nios2_qsys_0_jtag_debug_module_sysclk.jdo
-jdo[5] <= cpu_nios2_qsys_0_jtag_debug_module_sysclk:the_cpu_nios2_qsys_0_jtag_debug_module_sysclk.jdo
-jdo[6] <= cpu_nios2_qsys_0_jtag_debug_module_sysclk:the_cpu_nios2_qsys_0_jtag_debug_module_sysclk.jdo
-jdo[7] <= cpu_nios2_qsys_0_jtag_debug_module_sysclk:the_cpu_nios2_qsys_0_jtag_debug_module_sysclk.jdo
-jdo[8] <= cpu_nios2_qsys_0_jtag_debug_module_sysclk:the_cpu_nios2_qsys_0_jtag_debug_module_sysclk.jdo
-jdo[9] <= cpu_nios2_qsys_0_jtag_debug_module_sysclk:the_cpu_nios2_qsys_0_jtag_debug_module_sysclk.jdo
-jdo[10] <= cpu_nios2_qsys_0_jtag_debug_module_sysclk:the_cpu_nios2_qsys_0_jtag_debug_module_sysclk.jdo
-jdo[11] <= cpu_nios2_qsys_0_jtag_debug_module_sysclk:the_cpu_nios2_qsys_0_jtag_debug_module_sysclk.jdo
-jdo[12] <= cpu_nios2_qsys_0_jtag_debug_module_sysclk:the_cpu_nios2_qsys_0_jtag_debug_module_sysclk.jdo
-jdo[13] <= cpu_nios2_qsys_0_jtag_debug_module_sysclk:the_cpu_nios2_qsys_0_jtag_debug_module_sysclk.jdo
-jdo[14] <= cpu_nios2_qsys_0_jtag_debug_module_sysclk:the_cpu_nios2_qsys_0_jtag_debug_module_sysclk.jdo
-jdo[15] <= cpu_nios2_qsys_0_jtag_debug_module_sysclk:the_cpu_nios2_qsys_0_jtag_debug_module_sysclk.jdo
-jdo[16] <= cpu_nios2_qsys_0_jtag_debug_module_sysclk:the_cpu_nios2_qsys_0_jtag_debug_module_sysclk.jdo
-jdo[17] <= cpu_nios2_qsys_0_jtag_debug_module_sysclk:the_cpu_nios2_qsys_0_jtag_debug_module_sysclk.jdo
-jdo[18] <= cpu_nios2_qsys_0_jtag_debug_module_sysclk:the_cpu_nios2_qsys_0_jtag_debug_module_sysclk.jdo
-jdo[19] <= cpu_nios2_qsys_0_jtag_debug_module_sysclk:the_cpu_nios2_qsys_0_jtag_debug_module_sysclk.jdo
-jdo[20] <= cpu_nios2_qsys_0_jtag_debug_module_sysclk:the_cpu_nios2_qsys_0_jtag_debug_module_sysclk.jdo
-jdo[21] <= cpu_nios2_qsys_0_jtag_debug_module_sysclk:the_cpu_nios2_qsys_0_jtag_debug_module_sysclk.jdo
-jdo[22] <= cpu_nios2_qsys_0_jtag_debug_module_sysclk:the_cpu_nios2_qsys_0_jtag_debug_module_sysclk.jdo
-jdo[23] <= cpu_nios2_qsys_0_jtag_debug_module_sysclk:the_cpu_nios2_qsys_0_jtag_debug_module_sysclk.jdo
-jdo[24] <= cpu_nios2_qsys_0_jtag_debug_module_sysclk:the_cpu_nios2_qsys_0_jtag_debug_module_sysclk.jdo
-jdo[25] <= cpu_nios2_qsys_0_jtag_debug_module_sysclk:the_cpu_nios2_qsys_0_jtag_debug_module_sysclk.jdo
-jdo[26] <= cpu_nios2_qsys_0_jtag_debug_module_sysclk:the_cpu_nios2_qsys_0_jtag_debug_module_sysclk.jdo
-jdo[27] <= cpu_nios2_qsys_0_jtag_debug_module_sysclk:the_cpu_nios2_qsys_0_jtag_debug_module_sysclk.jdo
-jdo[28] <= cpu_nios2_qsys_0_jtag_debug_module_sysclk:the_cpu_nios2_qsys_0_jtag_debug_module_sysclk.jdo
-jdo[29] <= cpu_nios2_qsys_0_jtag_debug_module_sysclk:the_cpu_nios2_qsys_0_jtag_debug_module_sysclk.jdo
-jdo[30] <= cpu_nios2_qsys_0_jtag_debug_module_sysclk:the_cpu_nios2_qsys_0_jtag_debug_module_sysclk.jdo
-jdo[31] <= cpu_nios2_qsys_0_jtag_debug_module_sysclk:the_cpu_nios2_qsys_0_jtag_debug_module_sysclk.jdo
-jdo[32] <= cpu_nios2_qsys_0_jtag_debug_module_sysclk:the_cpu_nios2_qsys_0_jtag_debug_module_sysclk.jdo
-jdo[33] <= cpu_nios2_qsys_0_jtag_debug_module_sysclk:the_cpu_nios2_qsys_0_jtag_debug_module_sysclk.jdo
-jdo[34] <= cpu_nios2_qsys_0_jtag_debug_module_sysclk:the_cpu_nios2_qsys_0_jtag_debug_module_sysclk.jdo
-jdo[35] <= cpu_nios2_qsys_0_jtag_debug_module_sysclk:the_cpu_nios2_qsys_0_jtag_debug_module_sysclk.jdo
-jdo[36] <= cpu_nios2_qsys_0_jtag_debug_module_sysclk:the_cpu_nios2_qsys_0_jtag_debug_module_sysclk.jdo
-jdo[37] <= cpu_nios2_qsys_0_jtag_debug_module_sysclk:the_cpu_nios2_qsys_0_jtag_debug_module_sysclk.jdo
-jrst_n <= cpu_nios2_qsys_0_jtag_debug_module_tck:the_cpu_nios2_qsys_0_jtag_debug_module_tck.jrst_n
-st_ready_test_idle <= cpu_nios2_qsys_0_jtag_debug_module_tck:the_cpu_nios2_qsys_0_jtag_debug_module_tck.st_ready_test_idle
-take_action_break_a <= cpu_nios2_qsys_0_jtag_debug_module_sysclk:the_cpu_nios2_qsys_0_jtag_debug_module_sysclk.take_action_break_a
-take_action_break_b <= cpu_nios2_qsys_0_jtag_debug_module_sysclk:the_cpu_nios2_qsys_0_jtag_debug_module_sysclk.take_action_break_b
-take_action_break_c <= cpu_nios2_qsys_0_jtag_debug_module_sysclk:the_cpu_nios2_qsys_0_jtag_debug_module_sysclk.take_action_break_c
-take_action_ocimem_a <= cpu_nios2_qsys_0_jtag_debug_module_sysclk:the_cpu_nios2_qsys_0_jtag_debug_module_sysclk.take_action_ocimem_a
-take_action_ocimem_b <= cpu_nios2_qsys_0_jtag_debug_module_sysclk:the_cpu_nios2_qsys_0_jtag_debug_module_sysclk.take_action_ocimem_b
-take_action_tracectrl <= cpu_nios2_qsys_0_jtag_debug_module_sysclk:the_cpu_nios2_qsys_0_jtag_debug_module_sysclk.take_action_tracectrl
-take_action_tracemem_a <= cpu_nios2_qsys_0_jtag_debug_module_sysclk:the_cpu_nios2_qsys_0_jtag_debug_module_sysclk.take_action_tracemem_a
-take_action_tracemem_b <= cpu_nios2_qsys_0_jtag_debug_module_sysclk:the_cpu_nios2_qsys_0_jtag_debug_module_sysclk.take_action_tracemem_b
-take_no_action_break_a <= cpu_nios2_qsys_0_jtag_debug_module_sysclk:the_cpu_nios2_qsys_0_jtag_debug_module_sysclk.take_no_action_break_a
-take_no_action_break_b <= cpu_nios2_qsys_0_jtag_debug_module_sysclk:the_cpu_nios2_qsys_0_jtag_debug_module_sysclk.take_no_action_break_b
-take_no_action_break_c <= cpu_nios2_qsys_0_jtag_debug_module_sysclk:the_cpu_nios2_qsys_0_jtag_debug_module_sysclk.take_no_action_break_c
-take_no_action_ocimem_a <= cpu_nios2_qsys_0_jtag_debug_module_sysclk:the_cpu_nios2_qsys_0_jtag_debug_module_sysclk.take_no_action_ocimem_a
-take_no_action_tracemem_a <= cpu_nios2_qsys_0_jtag_debug_module_sysclk:the_cpu_nios2_qsys_0_jtag_debug_module_sysclk.take_no_action_tracemem_a
+jdo[0] <= cpu_evolution_nios2_qsys_0_jtag_debug_module_sysclk:the_cpu_evolution_nios2_qsys_0_jtag_debug_module_sysclk.jdo
+jdo[1] <= cpu_evolution_nios2_qsys_0_jtag_debug_module_sysclk:the_cpu_evolution_nios2_qsys_0_jtag_debug_module_sysclk.jdo
+jdo[2] <= cpu_evolution_nios2_qsys_0_jtag_debug_module_sysclk:the_cpu_evolution_nios2_qsys_0_jtag_debug_module_sysclk.jdo
+jdo[3] <= cpu_evolution_nios2_qsys_0_jtag_debug_module_sysclk:the_cpu_evolution_nios2_qsys_0_jtag_debug_module_sysclk.jdo
+jdo[4] <= cpu_evolution_nios2_qsys_0_jtag_debug_module_sysclk:the_cpu_evolution_nios2_qsys_0_jtag_debug_module_sysclk.jdo
+jdo[5] <= cpu_evolution_nios2_qsys_0_jtag_debug_module_sysclk:the_cpu_evolution_nios2_qsys_0_jtag_debug_module_sysclk.jdo
+jdo[6] <= cpu_evolution_nios2_qsys_0_jtag_debug_module_sysclk:the_cpu_evolution_nios2_qsys_0_jtag_debug_module_sysclk.jdo
+jdo[7] <= cpu_evolution_nios2_qsys_0_jtag_debug_module_sysclk:the_cpu_evolution_nios2_qsys_0_jtag_debug_module_sysclk.jdo
+jdo[8] <= cpu_evolution_nios2_qsys_0_jtag_debug_module_sysclk:the_cpu_evolution_nios2_qsys_0_jtag_debug_module_sysclk.jdo
+jdo[9] <= cpu_evolution_nios2_qsys_0_jtag_debug_module_sysclk:the_cpu_evolution_nios2_qsys_0_jtag_debug_module_sysclk.jdo
+jdo[10] <= cpu_evolution_nios2_qsys_0_jtag_debug_module_sysclk:the_cpu_evolution_nios2_qsys_0_jtag_debug_module_sysclk.jdo
+jdo[11] <= cpu_evolution_nios2_qsys_0_jtag_debug_module_sysclk:the_cpu_evolution_nios2_qsys_0_jtag_debug_module_sysclk.jdo
+jdo[12] <= cpu_evolution_nios2_qsys_0_jtag_debug_module_sysclk:the_cpu_evolution_nios2_qsys_0_jtag_debug_module_sysclk.jdo
+jdo[13] <= cpu_evolution_nios2_qsys_0_jtag_debug_module_sysclk:the_cpu_evolution_nios2_qsys_0_jtag_debug_module_sysclk.jdo
+jdo[14] <= cpu_evolution_nios2_qsys_0_jtag_debug_module_sysclk:the_cpu_evolution_nios2_qsys_0_jtag_debug_module_sysclk.jdo
+jdo[15] <= cpu_evolution_nios2_qsys_0_jtag_debug_module_sysclk:the_cpu_evolution_nios2_qsys_0_jtag_debug_module_sysclk.jdo
+jdo[16] <= cpu_evolution_nios2_qsys_0_jtag_debug_module_sysclk:the_cpu_evolution_nios2_qsys_0_jtag_debug_module_sysclk.jdo
+jdo[17] <= cpu_evolution_nios2_qsys_0_jtag_debug_module_sysclk:the_cpu_evolution_nios2_qsys_0_jtag_debug_module_sysclk.jdo
+jdo[18] <= cpu_evolution_nios2_qsys_0_jtag_debug_module_sysclk:the_cpu_evolution_nios2_qsys_0_jtag_debug_module_sysclk.jdo
+jdo[19] <= cpu_evolution_nios2_qsys_0_jtag_debug_module_sysclk:the_cpu_evolution_nios2_qsys_0_jtag_debug_module_sysclk.jdo
+jdo[20] <= cpu_evolution_nios2_qsys_0_jtag_debug_module_sysclk:the_cpu_evolution_nios2_qsys_0_jtag_debug_module_sysclk.jdo
+jdo[21] <= cpu_evolution_nios2_qsys_0_jtag_debug_module_sysclk:the_cpu_evolution_nios2_qsys_0_jtag_debug_module_sysclk.jdo
+jdo[22] <= cpu_evolution_nios2_qsys_0_jtag_debug_module_sysclk:the_cpu_evolution_nios2_qsys_0_jtag_debug_module_sysclk.jdo
+jdo[23] <= cpu_evolution_nios2_qsys_0_jtag_debug_module_sysclk:the_cpu_evolution_nios2_qsys_0_jtag_debug_module_sysclk.jdo
+jdo[24] <= cpu_evolution_nios2_qsys_0_jtag_debug_module_sysclk:the_cpu_evolution_nios2_qsys_0_jtag_debug_module_sysclk.jdo
+jdo[25] <= cpu_evolution_nios2_qsys_0_jtag_debug_module_sysclk:the_cpu_evolution_nios2_qsys_0_jtag_debug_module_sysclk.jdo
+jdo[26] <= cpu_evolution_nios2_qsys_0_jtag_debug_module_sysclk:the_cpu_evolution_nios2_qsys_0_jtag_debug_module_sysclk.jdo
+jdo[27] <= cpu_evolution_nios2_qsys_0_jtag_debug_module_sysclk:the_cpu_evolution_nios2_qsys_0_jtag_debug_module_sysclk.jdo
+jdo[28] <= cpu_evolution_nios2_qsys_0_jtag_debug_module_sysclk:the_cpu_evolution_nios2_qsys_0_jtag_debug_module_sysclk.jdo
+jdo[29] <= cpu_evolution_nios2_qsys_0_jtag_debug_module_sysclk:the_cpu_evolution_nios2_qsys_0_jtag_debug_module_sysclk.jdo
+jdo[30] <= cpu_evolution_nios2_qsys_0_jtag_debug_module_sysclk:the_cpu_evolution_nios2_qsys_0_jtag_debug_module_sysclk.jdo
+jdo[31] <= cpu_evolution_nios2_qsys_0_jtag_debug_module_sysclk:the_cpu_evolution_nios2_qsys_0_jtag_debug_module_sysclk.jdo
+jdo[32] <= cpu_evolution_nios2_qsys_0_jtag_debug_module_sysclk:the_cpu_evolution_nios2_qsys_0_jtag_debug_module_sysclk.jdo
+jdo[33] <= cpu_evolution_nios2_qsys_0_jtag_debug_module_sysclk:the_cpu_evolution_nios2_qsys_0_jtag_debug_module_sysclk.jdo
+jdo[34] <= cpu_evolution_nios2_qsys_0_jtag_debug_module_sysclk:the_cpu_evolution_nios2_qsys_0_jtag_debug_module_sysclk.jdo
+jdo[35] <= cpu_evolution_nios2_qsys_0_jtag_debug_module_sysclk:the_cpu_evolution_nios2_qsys_0_jtag_debug_module_sysclk.jdo
+jdo[36] <= cpu_evolution_nios2_qsys_0_jtag_debug_module_sysclk:the_cpu_evolution_nios2_qsys_0_jtag_debug_module_sysclk.jdo
+jdo[37] <= cpu_evolution_nios2_qsys_0_jtag_debug_module_sysclk:the_cpu_evolution_nios2_qsys_0_jtag_debug_module_sysclk.jdo
+jrst_n <= cpu_evolution_nios2_qsys_0_jtag_debug_module_tck:the_cpu_evolution_nios2_qsys_0_jtag_debug_module_tck.jrst_n
+st_ready_test_idle <= cpu_evolution_nios2_qsys_0_jtag_debug_module_tck:the_cpu_evolution_nios2_qsys_0_jtag_debug_module_tck.st_ready_test_idle
+take_action_break_a <= cpu_evolution_nios2_qsys_0_jtag_debug_module_sysclk:the_cpu_evolution_nios2_qsys_0_jtag_debug_module_sysclk.take_action_break_a
+take_action_break_b <= cpu_evolution_nios2_qsys_0_jtag_debug_module_sysclk:the_cpu_evolution_nios2_qsys_0_jtag_debug_module_sysclk.take_action_break_b
+take_action_break_c <= cpu_evolution_nios2_qsys_0_jtag_debug_module_sysclk:the_cpu_evolution_nios2_qsys_0_jtag_debug_module_sysclk.take_action_break_c
+take_action_ocimem_a <= cpu_evolution_nios2_qsys_0_jtag_debug_module_sysclk:the_cpu_evolution_nios2_qsys_0_jtag_debug_module_sysclk.take_action_ocimem_a
+take_action_ocimem_b <= cpu_evolution_nios2_qsys_0_jtag_debug_module_sysclk:the_cpu_evolution_nios2_qsys_0_jtag_debug_module_sysclk.take_action_ocimem_b
+take_action_tracectrl <= cpu_evolution_nios2_qsys_0_jtag_debug_module_sysclk:the_cpu_evolution_nios2_qsys_0_jtag_debug_module_sysclk.take_action_tracectrl
+take_action_tracemem_a <= cpu_evolution_nios2_qsys_0_jtag_debug_module_sysclk:the_cpu_evolution_nios2_qsys_0_jtag_debug_module_sysclk.take_action_tracemem_a
+take_action_tracemem_b <= cpu_evolution_nios2_qsys_0_jtag_debug_module_sysclk:the_cpu_evolution_nios2_qsys_0_jtag_debug_module_sysclk.take_action_tracemem_b
+take_no_action_break_a <= cpu_evolution_nios2_qsys_0_jtag_debug_module_sysclk:the_cpu_evolution_nios2_qsys_0_jtag_debug_module_sysclk.take_no_action_break_a
+take_no_action_break_b <= cpu_evolution_nios2_qsys_0_jtag_debug_module_sysclk:the_cpu_evolution_nios2_qsys_0_jtag_debug_module_sysclk.take_no_action_break_b
+take_no_action_break_c <= cpu_evolution_nios2_qsys_0_jtag_debug_module_sysclk:the_cpu_evolution_nios2_qsys_0_jtag_debug_module_sysclk.take_no_action_break_c
+take_no_action_ocimem_a <= cpu_evolution_nios2_qsys_0_jtag_debug_module_sysclk:the_cpu_evolution_nios2_qsys_0_jtag_debug_module_sysclk.take_no_action_ocimem_a
+take_no_action_tracemem_a <= cpu_evolution_nios2_qsys_0_jtag_debug_module_sysclk:the_cpu_evolution_nios2_qsys_0_jtag_debug_module_sysclk.take_no_action_tracemem_a
 
 
-|cpu|cpu_nios2_qsys_0:nios2_qsys_0|cpu_nios2_qsys_0_nios2_oci:the_cpu_nios2_qsys_0_nios2_oci|cpu_nios2_qsys_0_jtag_debug_module_wrapper:the_cpu_nios2_qsys_0_jtag_debug_module_wrapper|cpu_nios2_qsys_0_jtag_debug_module_tck:the_cpu_nios2_qsys_0_jtag_debug_module_tck
+|cpu_evolution|cpu_evolution_nios2_qsys_0:nios2_qsys_0|cpu_evolution_nios2_qsys_0_nios2_oci:the_cpu_evolution_nios2_qsys_0_nios2_oci|cpu_evolution_nios2_qsys_0_jtag_debug_module_wrapper:the_cpu_evolution_nios2_qsys_0_jtag_debug_module_wrapper|cpu_evolution_nios2_qsys_0_jtag_debug_module_tck:the_cpu_evolution_nios2_qsys_0_jtag_debug_module_tck
 MonDReg[0] => Mux36.IN0
 MonDReg[1] => Mux35.IN0
 MonDReg[2] => Mux34.IN0
@@ -5880,7 +5880,7 @@ st_ready_test_idle <= jtag_state_rti.DB_MAX_OUTPUT_PORT_TYPE
 tdo <= tdo.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|cpu|cpu_nios2_qsys_0:nios2_qsys_0|cpu_nios2_qsys_0_nios2_oci:the_cpu_nios2_qsys_0_nios2_oci|cpu_nios2_qsys_0_jtag_debug_module_wrapper:the_cpu_nios2_qsys_0_jtag_debug_module_wrapper|cpu_nios2_qsys_0_jtag_debug_module_tck:the_cpu_nios2_qsys_0_jtag_debug_module_tck|altera_std_synchronizer:the_altera_std_synchronizer1
+|cpu_evolution|cpu_evolution_nios2_qsys_0:nios2_qsys_0|cpu_evolution_nios2_qsys_0_nios2_oci:the_cpu_evolution_nios2_qsys_0_nios2_oci|cpu_evolution_nios2_qsys_0_jtag_debug_module_wrapper:the_cpu_evolution_nios2_qsys_0_jtag_debug_module_wrapper|cpu_evolution_nios2_qsys_0_jtag_debug_module_tck:the_cpu_evolution_nios2_qsys_0_jtag_debug_module_tck|altera_std_synchronizer:the_altera_std_synchronizer1
 clk => dreg[0].CLK
 clk => din_s1.CLK
 reset_n => dreg[0].ACLR
@@ -5889,7 +5889,7 @@ din => din_s1.DATAIN
 dout <= dout.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|cpu|cpu_nios2_qsys_0:nios2_qsys_0|cpu_nios2_qsys_0_nios2_oci:the_cpu_nios2_qsys_0_nios2_oci|cpu_nios2_qsys_0_jtag_debug_module_wrapper:the_cpu_nios2_qsys_0_jtag_debug_module_wrapper|cpu_nios2_qsys_0_jtag_debug_module_tck:the_cpu_nios2_qsys_0_jtag_debug_module_tck|altera_std_synchronizer:the_altera_std_synchronizer2
+|cpu_evolution|cpu_evolution_nios2_qsys_0:nios2_qsys_0|cpu_evolution_nios2_qsys_0_nios2_oci:the_cpu_evolution_nios2_qsys_0_nios2_oci|cpu_evolution_nios2_qsys_0_jtag_debug_module_wrapper:the_cpu_evolution_nios2_qsys_0_jtag_debug_module_wrapper|cpu_evolution_nios2_qsys_0_jtag_debug_module_tck:the_cpu_evolution_nios2_qsys_0_jtag_debug_module_tck|altera_std_synchronizer:the_altera_std_synchronizer2
 clk => dreg[0].CLK
 clk => din_s1.CLK
 reset_n => dreg[0].ACLR
@@ -5898,7 +5898,7 @@ din => din_s1.DATAIN
 dout <= dout.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|cpu|cpu_nios2_qsys_0:nios2_qsys_0|cpu_nios2_qsys_0_nios2_oci:the_cpu_nios2_qsys_0_nios2_oci|cpu_nios2_qsys_0_jtag_debug_module_wrapper:the_cpu_nios2_qsys_0_jtag_debug_module_wrapper|cpu_nios2_qsys_0_jtag_debug_module_sysclk:the_cpu_nios2_qsys_0_jtag_debug_module_sysclk
+|cpu_evolution|cpu_evolution_nios2_qsys_0:nios2_qsys_0|cpu_evolution_nios2_qsys_0_nios2_oci:the_cpu_evolution_nios2_qsys_0_nios2_oci|cpu_evolution_nios2_qsys_0_jtag_debug_module_wrapper:the_cpu_evolution_nios2_qsys_0_jtag_debug_module_wrapper|cpu_evolution_nios2_qsys_0_jtag_debug_module_sysclk:the_cpu_evolution_nios2_qsys_0_jtag_debug_module_sysclk
 clk => clk.IN2
 ir_in[0] => ir[0].DATAIN
 ir_in[1] => ir[1].DATAIN
@@ -5995,7 +5995,7 @@ take_no_action_ocimem_a <= take_no_action_ocimem_a.DB_MAX_OUTPUT_PORT_TYPE
 take_no_action_tracemem_a <= take_no_action_tracemem_a.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|cpu|cpu_nios2_qsys_0:nios2_qsys_0|cpu_nios2_qsys_0_nios2_oci:the_cpu_nios2_qsys_0_nios2_oci|cpu_nios2_qsys_0_jtag_debug_module_wrapper:the_cpu_nios2_qsys_0_jtag_debug_module_wrapper|cpu_nios2_qsys_0_jtag_debug_module_sysclk:the_cpu_nios2_qsys_0_jtag_debug_module_sysclk|altera_std_synchronizer:the_altera_std_synchronizer3
+|cpu_evolution|cpu_evolution_nios2_qsys_0:nios2_qsys_0|cpu_evolution_nios2_qsys_0_nios2_oci:the_cpu_evolution_nios2_qsys_0_nios2_oci|cpu_evolution_nios2_qsys_0_jtag_debug_module_wrapper:the_cpu_evolution_nios2_qsys_0_jtag_debug_module_wrapper|cpu_evolution_nios2_qsys_0_jtag_debug_module_sysclk:the_cpu_evolution_nios2_qsys_0_jtag_debug_module_sysclk|altera_std_synchronizer:the_altera_std_synchronizer3
 clk => dreg[0].CLK
 clk => din_s1.CLK
 reset_n => dreg[0].ACLR
@@ -6004,7 +6004,7 @@ din => din_s1.DATAIN
 dout <= dout.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|cpu|cpu_nios2_qsys_0:nios2_qsys_0|cpu_nios2_qsys_0_nios2_oci:the_cpu_nios2_qsys_0_nios2_oci|cpu_nios2_qsys_0_jtag_debug_module_wrapper:the_cpu_nios2_qsys_0_jtag_debug_module_wrapper|cpu_nios2_qsys_0_jtag_debug_module_sysclk:the_cpu_nios2_qsys_0_jtag_debug_module_sysclk|altera_std_synchronizer:the_altera_std_synchronizer4
+|cpu_evolution|cpu_evolution_nios2_qsys_0:nios2_qsys_0|cpu_evolution_nios2_qsys_0_nios2_oci:the_cpu_evolution_nios2_qsys_0_nios2_oci|cpu_evolution_nios2_qsys_0_jtag_debug_module_wrapper:the_cpu_evolution_nios2_qsys_0_jtag_debug_module_wrapper|cpu_evolution_nios2_qsys_0_jtag_debug_module_sysclk:the_cpu_evolution_nios2_qsys_0_jtag_debug_module_sysclk|altera_std_synchronizer:the_altera_std_synchronizer4
 clk => dreg[0].CLK
 clk => din_s1.CLK
 reset_n => dreg[0].ACLR
@@ -6013,7 +6013,7 @@ din => din_s1.DATAIN
 dout <= dout.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|cpu|cpu_nios2_qsys_0:nios2_qsys_0|cpu_nios2_qsys_0_nios2_oci:the_cpu_nios2_qsys_0_nios2_oci|cpu_nios2_qsys_0_jtag_debug_module_wrapper:the_cpu_nios2_qsys_0_jtag_debug_module_wrapper|sld_virtual_jtag_basic:cpu_nios2_qsys_0_jtag_debug_module_phy
+|cpu_evolution|cpu_evolution_nios2_qsys_0:nios2_qsys_0|cpu_evolution_nios2_qsys_0_nios2_oci:the_cpu_evolution_nios2_qsys_0_nios2_oci|cpu_evolution_nios2_qsys_0_jtag_debug_module_wrapper:the_cpu_evolution_nios2_qsys_0_jtag_debug_module_wrapper|sld_virtual_jtag_basic:cpu_evolution_nios2_qsys_0_jtag_debug_module_phy
 tck <= sld_virtual_jtag_impl:sld_virtual_jtag_impl_inst.usr_tck
 tdi <= sld_virtual_jtag_impl:sld_virtual_jtag_impl_inst.usr_tdi
 ir_in[0] <= sld_virtual_jtag_impl:sld_virtual_jtag_impl_inst.usr_ir_in
@@ -6048,7 +6048,7 @@ jtag_state_e2ir <= sld_virtual_jtag_impl:sld_virtual_jtag_impl_inst.usr_jtag_sta
 jtag_state_uir <= sld_virtual_jtag_impl:sld_virtual_jtag_impl_inst.usr_jtag_state_uir
 
 
-|cpu|cpu_nios2_qsys_0:nios2_qsys_0|cpu_nios2_qsys_0_nios2_oci:the_cpu_nios2_qsys_0_nios2_oci|cpu_nios2_qsys_0_jtag_debug_module_wrapper:the_cpu_nios2_qsys_0_jtag_debug_module_wrapper|sld_virtual_jtag_basic:cpu_nios2_qsys_0_jtag_debug_module_phy|sld_virtual_jtag_impl:sld_virtual_jtag_impl_inst
+|cpu_evolution|cpu_evolution_nios2_qsys_0:nios2_qsys_0|cpu_evolution_nios2_qsys_0_nios2_oci:the_cpu_evolution_nios2_qsys_0_nios2_oci|cpu_evolution_nios2_qsys_0_jtag_debug_module_wrapper:the_cpu_evolution_nios2_qsys_0_jtag_debug_module_wrapper|sld_virtual_jtag_basic:cpu_evolution_nios2_qsys_0_jtag_debug_module_phy|sld_virtual_jtag_impl:sld_virtual_jtag_impl_inst
 usr_tck <= raw_tck.DB_MAX_OUTPUT_PORT_TYPE
 usr_tdi <= tdi.DB_MAX_OUTPUT_PORT_TYPE
 usr_ir_in[0] <= ir_in[0].DB_MAX_OUTPUT_PORT_TYPE
@@ -6120,7 +6120,7 @@ ir_out[0] <= usr_ir_out[0].DB_MAX_OUTPUT_PORT_TYPE
 ir_out[1] <= usr_ir_out[1].DB_MAX_OUTPUT_PORT_TYPE
 
 
-|cpu|cpu_onchip_memory2_0:onchip_memory2_0
+|cpu_evolution|cpu_evolution_onchip_memory2_0:onchip_memory2_0
 address[0] => address[0].IN1
 address[1] => address[1].IN1
 address[2] => address[2].IN1
@@ -6207,109 +6207,109 @@ readdata[30] <= altsyncram:the_altsyncram.q_a
 readdata[31] <= altsyncram:the_altsyncram.q_a
 
 
-|cpu|cpu_onchip_memory2_0:onchip_memory2_0|altsyncram:the_altsyncram
-wren_a => altsyncram_0891:auto_generated.wren_a
+|cpu_evolution|cpu_evolution_onchip_memory2_0:onchip_memory2_0|altsyncram:the_altsyncram
+wren_a => altsyncram_cnd1:auto_generated.wren_a
 rden_a => ~NO_FANOUT~
 wren_b => ~NO_FANOUT~
 rden_b => ~NO_FANOUT~
-data_a[0] => altsyncram_0891:auto_generated.data_a[0]
-data_a[1] => altsyncram_0891:auto_generated.data_a[1]
-data_a[2] => altsyncram_0891:auto_generated.data_a[2]
-data_a[3] => altsyncram_0891:auto_generated.data_a[3]
-data_a[4] => altsyncram_0891:auto_generated.data_a[4]
-data_a[5] => altsyncram_0891:auto_generated.data_a[5]
-data_a[6] => altsyncram_0891:auto_generated.data_a[6]
-data_a[7] => altsyncram_0891:auto_generated.data_a[7]
-data_a[8] => altsyncram_0891:auto_generated.data_a[8]
-data_a[9] => altsyncram_0891:auto_generated.data_a[9]
-data_a[10] => altsyncram_0891:auto_generated.data_a[10]
-data_a[11] => altsyncram_0891:auto_generated.data_a[11]
-data_a[12] => altsyncram_0891:auto_generated.data_a[12]
-data_a[13] => altsyncram_0891:auto_generated.data_a[13]
-data_a[14] => altsyncram_0891:auto_generated.data_a[14]
-data_a[15] => altsyncram_0891:auto_generated.data_a[15]
-data_a[16] => altsyncram_0891:auto_generated.data_a[16]
-data_a[17] => altsyncram_0891:auto_generated.data_a[17]
-data_a[18] => altsyncram_0891:auto_generated.data_a[18]
-data_a[19] => altsyncram_0891:auto_generated.data_a[19]
-data_a[20] => altsyncram_0891:auto_generated.data_a[20]
-data_a[21] => altsyncram_0891:auto_generated.data_a[21]
-data_a[22] => altsyncram_0891:auto_generated.data_a[22]
-data_a[23] => altsyncram_0891:auto_generated.data_a[23]
-data_a[24] => altsyncram_0891:auto_generated.data_a[24]
-data_a[25] => altsyncram_0891:auto_generated.data_a[25]
-data_a[26] => altsyncram_0891:auto_generated.data_a[26]
-data_a[27] => altsyncram_0891:auto_generated.data_a[27]
-data_a[28] => altsyncram_0891:auto_generated.data_a[28]
-data_a[29] => altsyncram_0891:auto_generated.data_a[29]
-data_a[30] => altsyncram_0891:auto_generated.data_a[30]
-data_a[31] => altsyncram_0891:auto_generated.data_a[31]
+data_a[0] => altsyncram_cnd1:auto_generated.data_a[0]
+data_a[1] => altsyncram_cnd1:auto_generated.data_a[1]
+data_a[2] => altsyncram_cnd1:auto_generated.data_a[2]
+data_a[3] => altsyncram_cnd1:auto_generated.data_a[3]
+data_a[4] => altsyncram_cnd1:auto_generated.data_a[4]
+data_a[5] => altsyncram_cnd1:auto_generated.data_a[5]
+data_a[6] => altsyncram_cnd1:auto_generated.data_a[6]
+data_a[7] => altsyncram_cnd1:auto_generated.data_a[7]
+data_a[8] => altsyncram_cnd1:auto_generated.data_a[8]
+data_a[9] => altsyncram_cnd1:auto_generated.data_a[9]
+data_a[10] => altsyncram_cnd1:auto_generated.data_a[10]
+data_a[11] => altsyncram_cnd1:auto_generated.data_a[11]
+data_a[12] => altsyncram_cnd1:auto_generated.data_a[12]
+data_a[13] => altsyncram_cnd1:auto_generated.data_a[13]
+data_a[14] => altsyncram_cnd1:auto_generated.data_a[14]
+data_a[15] => altsyncram_cnd1:auto_generated.data_a[15]
+data_a[16] => altsyncram_cnd1:auto_generated.data_a[16]
+data_a[17] => altsyncram_cnd1:auto_generated.data_a[17]
+data_a[18] => altsyncram_cnd1:auto_generated.data_a[18]
+data_a[19] => altsyncram_cnd1:auto_generated.data_a[19]
+data_a[20] => altsyncram_cnd1:auto_generated.data_a[20]
+data_a[21] => altsyncram_cnd1:auto_generated.data_a[21]
+data_a[22] => altsyncram_cnd1:auto_generated.data_a[22]
+data_a[23] => altsyncram_cnd1:auto_generated.data_a[23]
+data_a[24] => altsyncram_cnd1:auto_generated.data_a[24]
+data_a[25] => altsyncram_cnd1:auto_generated.data_a[25]
+data_a[26] => altsyncram_cnd1:auto_generated.data_a[26]
+data_a[27] => altsyncram_cnd1:auto_generated.data_a[27]
+data_a[28] => altsyncram_cnd1:auto_generated.data_a[28]
+data_a[29] => altsyncram_cnd1:auto_generated.data_a[29]
+data_a[30] => altsyncram_cnd1:auto_generated.data_a[30]
+data_a[31] => altsyncram_cnd1:auto_generated.data_a[31]
 data_b[0] => ~NO_FANOUT~
-address_a[0] => altsyncram_0891:auto_generated.address_a[0]
-address_a[1] => altsyncram_0891:auto_generated.address_a[1]
-address_a[2] => altsyncram_0891:auto_generated.address_a[2]
-address_a[3] => altsyncram_0891:auto_generated.address_a[3]
-address_a[4] => altsyncram_0891:auto_generated.address_a[4]
-address_a[5] => altsyncram_0891:auto_generated.address_a[5]
-address_a[6] => altsyncram_0891:auto_generated.address_a[6]
-address_a[7] => altsyncram_0891:auto_generated.address_a[7]
-address_a[8] => altsyncram_0891:auto_generated.address_a[8]
-address_a[9] => altsyncram_0891:auto_generated.address_a[9]
+address_a[0] => altsyncram_cnd1:auto_generated.address_a[0]
+address_a[1] => altsyncram_cnd1:auto_generated.address_a[1]
+address_a[2] => altsyncram_cnd1:auto_generated.address_a[2]
+address_a[3] => altsyncram_cnd1:auto_generated.address_a[3]
+address_a[4] => altsyncram_cnd1:auto_generated.address_a[4]
+address_a[5] => altsyncram_cnd1:auto_generated.address_a[5]
+address_a[6] => altsyncram_cnd1:auto_generated.address_a[6]
+address_a[7] => altsyncram_cnd1:auto_generated.address_a[7]
+address_a[8] => altsyncram_cnd1:auto_generated.address_a[8]
+address_a[9] => altsyncram_cnd1:auto_generated.address_a[9]
 address_b[0] => ~NO_FANOUT~
 addressstall_a => ~NO_FANOUT~
 addressstall_b => ~NO_FANOUT~
-clock0 => altsyncram_0891:auto_generated.clock0
+clock0 => altsyncram_cnd1:auto_generated.clock0
 clock1 => ~NO_FANOUT~
-clocken0 => altsyncram_0891:auto_generated.clocken0
+clocken0 => altsyncram_cnd1:auto_generated.clocken0
 clocken1 => ~NO_FANOUT~
 clocken2 => ~NO_FANOUT~
 clocken3 => ~NO_FANOUT~
 aclr0 => ~NO_FANOUT~
 aclr1 => ~NO_FANOUT~
-byteena_a[0] => altsyncram_0891:auto_generated.byteena_a[0]
-byteena_a[1] => altsyncram_0891:auto_generated.byteena_a[1]
-byteena_a[2] => altsyncram_0891:auto_generated.byteena_a[2]
-byteena_a[3] => altsyncram_0891:auto_generated.byteena_a[3]
+byteena_a[0] => altsyncram_cnd1:auto_generated.byteena_a[0]
+byteena_a[1] => altsyncram_cnd1:auto_generated.byteena_a[1]
+byteena_a[2] => altsyncram_cnd1:auto_generated.byteena_a[2]
+byteena_a[3] => altsyncram_cnd1:auto_generated.byteena_a[3]
 byteena_b[0] => ~NO_FANOUT~
-q_a[0] <= altsyncram_0891:auto_generated.q_a[0]
-q_a[1] <= altsyncram_0891:auto_generated.q_a[1]
-q_a[2] <= altsyncram_0891:auto_generated.q_a[2]
-q_a[3] <= altsyncram_0891:auto_generated.q_a[3]
-q_a[4] <= altsyncram_0891:auto_generated.q_a[4]
-q_a[5] <= altsyncram_0891:auto_generated.q_a[5]
-q_a[6] <= altsyncram_0891:auto_generated.q_a[6]
-q_a[7] <= altsyncram_0891:auto_generated.q_a[7]
-q_a[8] <= altsyncram_0891:auto_generated.q_a[8]
-q_a[9] <= altsyncram_0891:auto_generated.q_a[9]
-q_a[10] <= altsyncram_0891:auto_generated.q_a[10]
-q_a[11] <= altsyncram_0891:auto_generated.q_a[11]
-q_a[12] <= altsyncram_0891:auto_generated.q_a[12]
-q_a[13] <= altsyncram_0891:auto_generated.q_a[13]
-q_a[14] <= altsyncram_0891:auto_generated.q_a[14]
-q_a[15] <= altsyncram_0891:auto_generated.q_a[15]
-q_a[16] <= altsyncram_0891:auto_generated.q_a[16]
-q_a[17] <= altsyncram_0891:auto_generated.q_a[17]
-q_a[18] <= altsyncram_0891:auto_generated.q_a[18]
-q_a[19] <= altsyncram_0891:auto_generated.q_a[19]
-q_a[20] <= altsyncram_0891:auto_generated.q_a[20]
-q_a[21] <= altsyncram_0891:auto_generated.q_a[21]
-q_a[22] <= altsyncram_0891:auto_generated.q_a[22]
-q_a[23] <= altsyncram_0891:auto_generated.q_a[23]
-q_a[24] <= altsyncram_0891:auto_generated.q_a[24]
-q_a[25] <= altsyncram_0891:auto_generated.q_a[25]
-q_a[26] <= altsyncram_0891:auto_generated.q_a[26]
-q_a[27] <= altsyncram_0891:auto_generated.q_a[27]
-q_a[28] <= altsyncram_0891:auto_generated.q_a[28]
-q_a[29] <= altsyncram_0891:auto_generated.q_a[29]
-q_a[30] <= altsyncram_0891:auto_generated.q_a[30]
-q_a[31] <= altsyncram_0891:auto_generated.q_a[31]
+q_a[0] <= altsyncram_cnd1:auto_generated.q_a[0]
+q_a[1] <= altsyncram_cnd1:auto_generated.q_a[1]
+q_a[2] <= altsyncram_cnd1:auto_generated.q_a[2]
+q_a[3] <= altsyncram_cnd1:auto_generated.q_a[3]
+q_a[4] <= altsyncram_cnd1:auto_generated.q_a[4]
+q_a[5] <= altsyncram_cnd1:auto_generated.q_a[5]
+q_a[6] <= altsyncram_cnd1:auto_generated.q_a[6]
+q_a[7] <= altsyncram_cnd1:auto_generated.q_a[7]
+q_a[8] <= altsyncram_cnd1:auto_generated.q_a[8]
+q_a[9] <= altsyncram_cnd1:auto_generated.q_a[9]
+q_a[10] <= altsyncram_cnd1:auto_generated.q_a[10]
+q_a[11] <= altsyncram_cnd1:auto_generated.q_a[11]
+q_a[12] <= altsyncram_cnd1:auto_generated.q_a[12]
+q_a[13] <= altsyncram_cnd1:auto_generated.q_a[13]
+q_a[14] <= altsyncram_cnd1:auto_generated.q_a[14]
+q_a[15] <= altsyncram_cnd1:auto_generated.q_a[15]
+q_a[16] <= altsyncram_cnd1:auto_generated.q_a[16]
+q_a[17] <= altsyncram_cnd1:auto_generated.q_a[17]
+q_a[18] <= altsyncram_cnd1:auto_generated.q_a[18]
+q_a[19] <= altsyncram_cnd1:auto_generated.q_a[19]
+q_a[20] <= altsyncram_cnd1:auto_generated.q_a[20]
+q_a[21] <= altsyncram_cnd1:auto_generated.q_a[21]
+q_a[22] <= altsyncram_cnd1:auto_generated.q_a[22]
+q_a[23] <= altsyncram_cnd1:auto_generated.q_a[23]
+q_a[24] <= altsyncram_cnd1:auto_generated.q_a[24]
+q_a[25] <= altsyncram_cnd1:auto_generated.q_a[25]
+q_a[26] <= altsyncram_cnd1:auto_generated.q_a[26]
+q_a[27] <= altsyncram_cnd1:auto_generated.q_a[27]
+q_a[28] <= altsyncram_cnd1:auto_generated.q_a[28]
+q_a[29] <= altsyncram_cnd1:auto_generated.q_a[29]
+q_a[30] <= altsyncram_cnd1:auto_generated.q_a[30]
+q_a[31] <= altsyncram_cnd1:auto_generated.q_a[31]
 q_b[0] <= <GND>
 eccstatus[0] <= <GND>
 eccstatus[1] <= <GND>
 eccstatus[2] <= <GND>
 
 
-|cpu|cpu_onchip_memory2_0:onchip_memory2_0|altsyncram:the_altsyncram|altsyncram_0891:auto_generated
+|cpu_evolution|cpu_evolution_onchip_memory2_0:onchip_memory2_0|altsyncram:the_altsyncram|altsyncram_cnd1:auto_generated
 address_a[0] => ram_block1a0.PORTAADDR
 address_a[0] => ram_block1a1.PORTAADDR
 address_a[0] => ram_block1a2.PORTAADDR
@@ -6824,7 +6824,7 @@ wren_a => ram_block1a30.PORTAWE
 wren_a => ram_block1a31.PORTAWE
 
 
-|cpu|cpu_jtag_uart_0:jtag_uart_0
+|cpu_evolution|cpu_evolution_jtag_uart_0:jtag_uart_0
 av_address => ien_AF.OUTPUTSELECT
 av_address => ien_AE.OUTPUTSELECT
 av_address => ac.OUTPUTSELECT
@@ -6889,8 +6889,8 @@ av_readdata[8] <= ipen_AF.DB_MAX_OUTPUT_PORT_TYPE
 av_readdata[9] <= ipen_AE.DB_MAX_OUTPUT_PORT_TYPE
 av_readdata[10] <= ac.DB_MAX_OUTPUT_PORT_TYPE
 av_readdata[11] <= <GND>
-av_readdata[12] <= cpu_jtag_uart_0_scfifo_r:the_cpu_jtag_uart_0_scfifo_r.fifo_EF
-av_readdata[13] <= cpu_jtag_uart_0_scfifo_w:the_cpu_jtag_uart_0_scfifo_w.fifo_FF
+av_readdata[12] <= cpu_evolution_jtag_uart_0_scfifo_r:the_cpu_evolution_jtag_uart_0_scfifo_r.fifo_EF
+av_readdata[13] <= cpu_evolution_jtag_uart_0_scfifo_w:the_cpu_evolution_jtag_uart_0_scfifo_w.fifo_FF
 av_readdata[14] <= woverflow.DB_MAX_OUTPUT_PORT_TYPE
 av_readdata[15] <= rvalid.DB_MAX_OUTPUT_PORT_TYPE
 av_readdata[16] <= av_readdata.DB_MAX_OUTPUT_PORT_TYPE
@@ -6914,7 +6914,7 @@ dataavailable <= dataavailable~reg0.DB_MAX_OUTPUT_PORT_TYPE
 readyfordata <= readyfordata~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|cpu|cpu_jtag_uart_0:jtag_uart_0|cpu_jtag_uart_0_scfifo_w:the_cpu_jtag_uart_0_scfifo_w
+|cpu_evolution|cpu_evolution_jtag_uart_0:jtag_uart_0|cpu_evolution_jtag_uart_0_scfifo_w:the_cpu_evolution_jtag_uart_0_scfifo_w
 clk => clk.IN1
 fifo_clear => fifo_clear.IN1
 fifo_wdata[0] => fifo_wdata[0].IN1
@@ -6945,7 +6945,7 @@ wfifo_used[4] <= scfifo:wfifo.usedw
 wfifo_used[5] <= scfifo:wfifo.usedw
 
 
-|cpu|cpu_jtag_uart_0:jtag_uart_0|cpu_jtag_uart_0_scfifo_w:the_cpu_jtag_uart_0_scfifo_w|scfifo:wfifo
+|cpu_evolution|cpu_evolution_jtag_uart_0:jtag_uart_0|cpu_evolution_jtag_uart_0_scfifo_w:the_cpu_evolution_jtag_uart_0_scfifo_w|scfifo:wfifo
 data[0] => scfifo_jr21:auto_generated.data[0]
 data[1] => scfifo_jr21:auto_generated.data[1]
 data[2] => scfifo_jr21:auto_generated.data[2]
@@ -6979,7 +6979,7 @@ usedw[4] <= scfifo_jr21:auto_generated.usedw[4]
 usedw[5] <= scfifo_jr21:auto_generated.usedw[5]
 
 
-|cpu|cpu_jtag_uart_0:jtag_uart_0|cpu_jtag_uart_0_scfifo_w:the_cpu_jtag_uart_0_scfifo_w|scfifo:wfifo|scfifo_jr21:auto_generated
+|cpu_evolution|cpu_evolution_jtag_uart_0:jtag_uart_0|cpu_evolution_jtag_uart_0_scfifo_w:the_cpu_evolution_jtag_uart_0_scfifo_w|scfifo:wfifo|scfifo_jr21:auto_generated
 aclr => a_dpfifo_q131:dpfifo.aclr
 clock => a_dpfifo_q131:dpfifo.clock
 data[0] => a_dpfifo_q131:dpfifo.data[0]
@@ -7010,7 +7010,7 @@ usedw[5] <= a_dpfifo_q131:dpfifo.usedw[5]
 wrreq => a_dpfifo_q131:dpfifo.wreq
 
 
-|cpu|cpu_jtag_uart_0:jtag_uart_0|cpu_jtag_uart_0_scfifo_w:the_cpu_jtag_uart_0_scfifo_w|scfifo:wfifo|scfifo_jr21:auto_generated|a_dpfifo_q131:dpfifo
+|cpu_evolution|cpu_evolution_jtag_uart_0:jtag_uart_0|cpu_evolution_jtag_uart_0_scfifo_w:the_cpu_evolution_jtag_uart_0_scfifo_w|scfifo:wfifo|scfifo_jr21:auto_generated|a_dpfifo_q131:dpfifo
 aclr => a_fefifo_7cf:fifo_state.aclr
 aclr => cntr_1ob:rd_ptr_count.aclr
 aclr => cntr_1ob:wr_ptr.aclr
@@ -7056,7 +7056,7 @@ wreq => dpram_nl21:FIFOram.wren
 wreq => cntr_1ob:wr_ptr.cnt_en
 
 
-|cpu|cpu_jtag_uart_0:jtag_uart_0|cpu_jtag_uart_0_scfifo_w:the_cpu_jtag_uart_0_scfifo_w|scfifo:wfifo|scfifo_jr21:auto_generated|a_dpfifo_q131:dpfifo|a_fefifo_7cf:fifo_state
+|cpu_evolution|cpu_evolution_jtag_uart_0:jtag_uart_0|cpu_evolution_jtag_uart_0_scfifo_w:the_cpu_evolution_jtag_uart_0_scfifo_w|scfifo:wfifo|scfifo_jr21:auto_generated|a_dpfifo_q131:dpfifo|a_fefifo_7cf:fifo_state
 aclr => b_full.IN0
 aclr => b_non_empty.IN0
 aclr => cntr_do7:count_usedw.aclr
@@ -7088,7 +7088,7 @@ wreq => _.IN0
 wreq => cntr_do7:count_usedw.updown
 
 
-|cpu|cpu_jtag_uart_0:jtag_uart_0|cpu_jtag_uart_0_scfifo_w:the_cpu_jtag_uart_0_scfifo_w|scfifo:wfifo|scfifo_jr21:auto_generated|a_dpfifo_q131:dpfifo|a_fefifo_7cf:fifo_state|cntr_do7:count_usedw
+|cpu_evolution|cpu_evolution_jtag_uart_0:jtag_uart_0|cpu_evolution_jtag_uart_0_scfifo_w:the_cpu_evolution_jtag_uart_0_scfifo_w|scfifo:wfifo|scfifo_jr21:auto_generated|a_dpfifo_q131:dpfifo|a_fefifo_7cf:fifo_state|cntr_do7:count_usedw
 aclr => counter_reg_bit[5].IN0
 clock => counter_reg_bit[5].CLK
 clock => counter_reg_bit[4].CLK
@@ -7114,7 +7114,7 @@ updown => counter_comb_bita4.DATAB
 updown => counter_comb_bita5.DATAB
 
 
-|cpu|cpu_jtag_uart_0:jtag_uart_0|cpu_jtag_uart_0_scfifo_w:the_cpu_jtag_uart_0_scfifo_w|scfifo:wfifo|scfifo_jr21:auto_generated|a_dpfifo_q131:dpfifo|dpram_nl21:FIFOram
+|cpu_evolution|cpu_evolution_jtag_uart_0:jtag_uart_0|cpu_evolution_jtag_uart_0_scfifo_w:the_cpu_evolution_jtag_uart_0_scfifo_w|scfifo:wfifo|scfifo_jr21:auto_generated|a_dpfifo_q131:dpfifo|dpram_nl21:FIFOram
 data[0] => altsyncram_r1m1:altsyncram1.data_a[0]
 data[1] => altsyncram_r1m1:altsyncram1.data_a[1]
 data[2] => altsyncram_r1m1:altsyncram1.data_a[2]
@@ -7149,7 +7149,7 @@ wraddress[5] => altsyncram_r1m1:altsyncram1.address_a[5]
 wren => altsyncram_r1m1:altsyncram1.wren_a
 
 
-|cpu|cpu_jtag_uart_0:jtag_uart_0|cpu_jtag_uart_0_scfifo_w:the_cpu_jtag_uart_0_scfifo_w|scfifo:wfifo|scfifo_jr21:auto_generated|a_dpfifo_q131:dpfifo|dpram_nl21:FIFOram|altsyncram_r1m1:altsyncram1
+|cpu_evolution|cpu_evolution_jtag_uart_0:jtag_uart_0|cpu_evolution_jtag_uart_0_scfifo_w:the_cpu_evolution_jtag_uart_0_scfifo_w|scfifo:wfifo|scfifo_jr21:auto_generated|a_dpfifo_q131:dpfifo|dpram_nl21:FIFOram|altsyncram_r1m1:altsyncram1
 address_a[0] => ram_block2a0.PORTAADDR
 address_a[0] => ram_block2a1.PORTAADDR
 address_a[0] => ram_block2a2.PORTAADDR
@@ -7304,7 +7304,7 @@ wren_a => ram_block2a7.PORTAWE
 wren_a => ram_block2a7.ENA0
 
 
-|cpu|cpu_jtag_uart_0:jtag_uart_0|cpu_jtag_uart_0_scfifo_w:the_cpu_jtag_uart_0_scfifo_w|scfifo:wfifo|scfifo_jr21:auto_generated|a_dpfifo_q131:dpfifo|cntr_1ob:rd_ptr_count
+|cpu_evolution|cpu_evolution_jtag_uart_0:jtag_uart_0|cpu_evolution_jtag_uart_0_scfifo_w:the_cpu_evolution_jtag_uart_0_scfifo_w|scfifo:wfifo|scfifo_jr21:auto_generated|a_dpfifo_q131:dpfifo|cntr_1ob:rd_ptr_count
 aclr => counter_reg_bit[5].IN0
 clock => counter_reg_bit[5].CLK
 clock => counter_reg_bit[4].CLK
@@ -7324,7 +7324,7 @@ sclr => _.IN0
 sclr => _.IN0
 
 
-|cpu|cpu_jtag_uart_0:jtag_uart_0|cpu_jtag_uart_0_scfifo_w:the_cpu_jtag_uart_0_scfifo_w|scfifo:wfifo|scfifo_jr21:auto_generated|a_dpfifo_q131:dpfifo|cntr_1ob:wr_ptr
+|cpu_evolution|cpu_evolution_jtag_uart_0:jtag_uart_0|cpu_evolution_jtag_uart_0_scfifo_w:the_cpu_evolution_jtag_uart_0_scfifo_w|scfifo:wfifo|scfifo_jr21:auto_generated|a_dpfifo_q131:dpfifo|cntr_1ob:wr_ptr
 aclr => counter_reg_bit[5].IN0
 clock => counter_reg_bit[5].CLK
 clock => counter_reg_bit[4].CLK
@@ -7344,7 +7344,7 @@ sclr => _.IN0
 sclr => _.IN0
 
 
-|cpu|cpu_jtag_uart_0:jtag_uart_0|cpu_jtag_uart_0_scfifo_r:the_cpu_jtag_uart_0_scfifo_r
+|cpu_evolution|cpu_evolution_jtag_uart_0:jtag_uart_0|cpu_evolution_jtag_uart_0_scfifo_r:the_cpu_evolution_jtag_uart_0_scfifo_r
 clk => clk.IN1
 fifo_clear => fifo_clear.IN1
 fifo_rd => fifo_rd.IN1
@@ -7376,7 +7376,7 @@ rfifo_used[4] <= scfifo:rfifo.usedw
 rfifo_used[5] <= scfifo:rfifo.usedw
 
 
-|cpu|cpu_jtag_uart_0:jtag_uart_0|cpu_jtag_uart_0_scfifo_r:the_cpu_jtag_uart_0_scfifo_r|scfifo:rfifo
+|cpu_evolution|cpu_evolution_jtag_uart_0:jtag_uart_0|cpu_evolution_jtag_uart_0_scfifo_r:the_cpu_evolution_jtag_uart_0_scfifo_r|scfifo:rfifo
 data[0] => scfifo_jr21:auto_generated.data[0]
 data[1] => scfifo_jr21:auto_generated.data[1]
 data[2] => scfifo_jr21:auto_generated.data[2]
@@ -7410,7 +7410,7 @@ usedw[4] <= scfifo_jr21:auto_generated.usedw[4]
 usedw[5] <= scfifo_jr21:auto_generated.usedw[5]
 
 
-|cpu|cpu_jtag_uart_0:jtag_uart_0|cpu_jtag_uart_0_scfifo_r:the_cpu_jtag_uart_0_scfifo_r|scfifo:rfifo|scfifo_jr21:auto_generated
+|cpu_evolution|cpu_evolution_jtag_uart_0:jtag_uart_0|cpu_evolution_jtag_uart_0_scfifo_r:the_cpu_evolution_jtag_uart_0_scfifo_r|scfifo:rfifo|scfifo_jr21:auto_generated
 aclr => a_dpfifo_q131:dpfifo.aclr
 clock => a_dpfifo_q131:dpfifo.clock
 data[0] => a_dpfifo_q131:dpfifo.data[0]
@@ -7441,7 +7441,7 @@ usedw[5] <= a_dpfifo_q131:dpfifo.usedw[5]
 wrreq => a_dpfifo_q131:dpfifo.wreq
 
 
-|cpu|cpu_jtag_uart_0:jtag_uart_0|cpu_jtag_uart_0_scfifo_r:the_cpu_jtag_uart_0_scfifo_r|scfifo:rfifo|scfifo_jr21:auto_generated|a_dpfifo_q131:dpfifo
+|cpu_evolution|cpu_evolution_jtag_uart_0:jtag_uart_0|cpu_evolution_jtag_uart_0_scfifo_r:the_cpu_evolution_jtag_uart_0_scfifo_r|scfifo:rfifo|scfifo_jr21:auto_generated|a_dpfifo_q131:dpfifo
 aclr => a_fefifo_7cf:fifo_state.aclr
 aclr => cntr_1ob:rd_ptr_count.aclr
 aclr => cntr_1ob:wr_ptr.aclr
@@ -7487,7 +7487,7 @@ wreq => dpram_nl21:FIFOram.wren
 wreq => cntr_1ob:wr_ptr.cnt_en
 
 
-|cpu|cpu_jtag_uart_0:jtag_uart_0|cpu_jtag_uart_0_scfifo_r:the_cpu_jtag_uart_0_scfifo_r|scfifo:rfifo|scfifo_jr21:auto_generated|a_dpfifo_q131:dpfifo|a_fefifo_7cf:fifo_state
+|cpu_evolution|cpu_evolution_jtag_uart_0:jtag_uart_0|cpu_evolution_jtag_uart_0_scfifo_r:the_cpu_evolution_jtag_uart_0_scfifo_r|scfifo:rfifo|scfifo_jr21:auto_generated|a_dpfifo_q131:dpfifo|a_fefifo_7cf:fifo_state
 aclr => b_full.IN0
 aclr => b_non_empty.IN0
 aclr => cntr_do7:count_usedw.aclr
@@ -7519,7 +7519,7 @@ wreq => _.IN0
 wreq => cntr_do7:count_usedw.updown
 
 
-|cpu|cpu_jtag_uart_0:jtag_uart_0|cpu_jtag_uart_0_scfifo_r:the_cpu_jtag_uart_0_scfifo_r|scfifo:rfifo|scfifo_jr21:auto_generated|a_dpfifo_q131:dpfifo|a_fefifo_7cf:fifo_state|cntr_do7:count_usedw
+|cpu_evolution|cpu_evolution_jtag_uart_0:jtag_uart_0|cpu_evolution_jtag_uart_0_scfifo_r:the_cpu_evolution_jtag_uart_0_scfifo_r|scfifo:rfifo|scfifo_jr21:auto_generated|a_dpfifo_q131:dpfifo|a_fefifo_7cf:fifo_state|cntr_do7:count_usedw
 aclr => counter_reg_bit[5].IN0
 clock => counter_reg_bit[5].CLK
 clock => counter_reg_bit[4].CLK
@@ -7545,7 +7545,7 @@ updown => counter_comb_bita4.DATAB
 updown => counter_comb_bita5.DATAB
 
 
-|cpu|cpu_jtag_uart_0:jtag_uart_0|cpu_jtag_uart_0_scfifo_r:the_cpu_jtag_uart_0_scfifo_r|scfifo:rfifo|scfifo_jr21:auto_generated|a_dpfifo_q131:dpfifo|dpram_nl21:FIFOram
+|cpu_evolution|cpu_evolution_jtag_uart_0:jtag_uart_0|cpu_evolution_jtag_uart_0_scfifo_r:the_cpu_evolution_jtag_uart_0_scfifo_r|scfifo:rfifo|scfifo_jr21:auto_generated|a_dpfifo_q131:dpfifo|dpram_nl21:FIFOram
 data[0] => altsyncram_r1m1:altsyncram1.data_a[0]
 data[1] => altsyncram_r1m1:altsyncram1.data_a[1]
 data[2] => altsyncram_r1m1:altsyncram1.data_a[2]
@@ -7580,7 +7580,7 @@ wraddress[5] => altsyncram_r1m1:altsyncram1.address_a[5]
 wren => altsyncram_r1m1:altsyncram1.wren_a
 
 
-|cpu|cpu_jtag_uart_0:jtag_uart_0|cpu_jtag_uart_0_scfifo_r:the_cpu_jtag_uart_0_scfifo_r|scfifo:rfifo|scfifo_jr21:auto_generated|a_dpfifo_q131:dpfifo|dpram_nl21:FIFOram|altsyncram_r1m1:altsyncram1
+|cpu_evolution|cpu_evolution_jtag_uart_0:jtag_uart_0|cpu_evolution_jtag_uart_0_scfifo_r:the_cpu_evolution_jtag_uart_0_scfifo_r|scfifo:rfifo|scfifo_jr21:auto_generated|a_dpfifo_q131:dpfifo|dpram_nl21:FIFOram|altsyncram_r1m1:altsyncram1
 address_a[0] => ram_block2a0.PORTAADDR
 address_a[0] => ram_block2a1.PORTAADDR
 address_a[0] => ram_block2a2.PORTAADDR
@@ -7735,7 +7735,7 @@ wren_a => ram_block2a7.PORTAWE
 wren_a => ram_block2a7.ENA0
 
 
-|cpu|cpu_jtag_uart_0:jtag_uart_0|cpu_jtag_uart_0_scfifo_r:the_cpu_jtag_uart_0_scfifo_r|scfifo:rfifo|scfifo_jr21:auto_generated|a_dpfifo_q131:dpfifo|cntr_1ob:rd_ptr_count
+|cpu_evolution|cpu_evolution_jtag_uart_0:jtag_uart_0|cpu_evolution_jtag_uart_0_scfifo_r:the_cpu_evolution_jtag_uart_0_scfifo_r|scfifo:rfifo|scfifo_jr21:auto_generated|a_dpfifo_q131:dpfifo|cntr_1ob:rd_ptr_count
 aclr => counter_reg_bit[5].IN0
 clock => counter_reg_bit[5].CLK
 clock => counter_reg_bit[4].CLK
@@ -7755,7 +7755,7 @@ sclr => _.IN0
 sclr => _.IN0
 
 
-|cpu|cpu_jtag_uart_0:jtag_uart_0|cpu_jtag_uart_0_scfifo_r:the_cpu_jtag_uart_0_scfifo_r|scfifo:rfifo|scfifo_jr21:auto_generated|a_dpfifo_q131:dpfifo|cntr_1ob:wr_ptr
+|cpu_evolution|cpu_evolution_jtag_uart_0:jtag_uart_0|cpu_evolution_jtag_uart_0_scfifo_r:the_cpu_evolution_jtag_uart_0_scfifo_r|scfifo:rfifo|scfifo_jr21:auto_generated|a_dpfifo_q131:dpfifo|cntr_1ob:wr_ptr
 aclr => counter_reg_bit[5].IN0
 clock => counter_reg_bit[5].CLK
 clock => counter_reg_bit[4].CLK
@@ -7775,7 +7775,7 @@ sclr => _.IN0
 sclr => _.IN0
 
 
-|cpu|cpu_jtag_uart_0:jtag_uart_0|alt_jtag_atlantic:cpu_jtag_uart_0_alt_jtag_atlantic
+|cpu_evolution|cpu_evolution_jtag_uart_0:jtag_uart_0|alt_jtag_atlantic:cpu_evolution_jtag_uart_0_alt_jtag_atlantic
 raw_tck => write_stalled.CLK
 raw_tck => wdata[0].CLK
 raw_tck => wdata[1].CLK
@@ -7997,7 +7997,7 @@ t_dat[7] <= t_dat[7].DB_MAX_OUTPUT_PORT_TYPE
 t_pause <= t_pause~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|cpu|cpu_pio_buttons:pio_buttons
+|cpu_evolution|cpu_evolution_pio_btn:pio_btn
 address[0] => Equal0.IN31
 address[1] => Equal0.IN30
 clk => readdata[0]~reg0.CLK
@@ -8102,7 +8102,7 @@ readdata[30] <= readdata[30]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 readdata[31] <= readdata[31]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|cpu|lcd:lcd_controller_0
+|cpu_evolution|lcd:lcd_controller_0
 instruction[0] => rs.DATAB
 instruction[1] => ~NO_FANOUT~
 instruction[2] => ~NO_FANOUT~
@@ -8202,7 +8202,7 @@ display[6] <= display[6]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 display[7] <= display[7]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|cpu|display7segment:a_7seg_controller_0
+|cpu_evolution|display7segment:a_7seg_controller_0
 dataa[0] => ~NO_FANOUT~
 dataa[1] => ~NO_FANOUT~
 dataa[2] => ~NO_FANOUT~
@@ -8317,7 +8317,7 @@ cat[2] <= <VCC>
 cat[3] <= <VCC>
 
 
-|cpu|altera_customins_master_translator:nios2_qsys_0_custom_instruction_master_translator
+|cpu_evolution|altera_customins_master_translator:nios2_qsys_0_custom_instruction_master_translator
 ci_slave_dataa[0] => multi_ci_master_dataa[0].DATAIN
 ci_slave_dataa[0] => comb_ci_master_dataa[0].DATAIN
 ci_slave_dataa[1] => multi_ci_master_dataa[1].DATAIN
@@ -9006,7 +9006,7 @@ multi_ci_master_c[3] <= ci_slave_c[3].DB_MAX_OUTPUT_PORT_TYPE
 multi_ci_master_c[4] <= ci_slave_c[4].DB_MAX_OUTPUT_PORT_TYPE
 
 
-|cpu|cpu_nios2_qsys_0_custom_instruction_master_multi_xconnect:nios2_qsys_0_custom_instruction_master_multi_xconnect
+|cpu_evolution|cpu_evolution_nios2_qsys_0_custom_instruction_master_multi_xconnect:nios2_qsys_0_custom_instruction_master_multi_xconnect
 ci_master0_dataa[0] <= ci_slave_dataa[0].DB_MAX_OUTPUT_PORT_TYPE
 ci_master0_dataa[1] <= ci_slave_dataa[1].DB_MAX_OUTPUT_PORT_TYPE
 ci_master0_dataa[2] <= ci_slave_dataa[2].DB_MAX_OUTPUT_PORT_TYPE
@@ -9648,7 +9648,7 @@ ci_slave_estatus => ci_master1_estatus.DATAIN
 ci_slave_estatus => ci_master0_estatus.DATAIN
 
 
-|cpu|altera_customins_slave_translator:nios2_qsys_0_custom_instruction_master_multi_slave_translator0
+|cpu_evolution|altera_customins_slave_translator:nios2_qsys_0_custom_instruction_master_multi_slave_translator0
 ci_slave_dataa[0] => ci_master_dataa[0].DATAIN
 ci_slave_dataa[1] => ci_master_dataa[1].DATAIN
 ci_slave_dataa[2] => ci_master_dataa[2].DATAIN
@@ -9981,7 +9981,7 @@ ci_master_start <= ci_slave_start.DB_MAX_OUTPUT_PORT_TYPE
 ci_master_done => ~NO_FANOUT~
 
 
-|cpu|altera_customins_slave_translator:nios2_qsys_0_custom_instruction_master_multi_slave_translator1
+|cpu_evolution|altera_customins_slave_translator:nios2_qsys_0_custom_instruction_master_multi_slave_translator1
 ci_slave_dataa[0] => ci_master_dataa[0].DATAIN
 ci_slave_dataa[1] => ci_master_dataa[1].DATAIN
 ci_slave_dataa[2] => ci_master_dataa[2].DATAIN
@@ -10314,7 +10314,7 @@ ci_master_start <= ci_slave_start.DB_MAX_OUTPUT_PORT_TYPE
 ci_master_done => ~NO_FANOUT~
 
 
-|cpu|altera_merlin_master_translator:nios2_qsys_0_instruction_master_translator
+|cpu_evolution|altera_merlin_master_translator:nios2_qsys_0_instruction_master_translator
 clk => read_accepted.CLK
 reset => read_accepted.ACLR
 uav_write <= <GND>
@@ -10517,7 +10517,7 @@ av_writeresponserequest => ~NO_FANOUT~
 av_writeresponsevalid <= <GND>
 
 
-|cpu|altera_merlin_master_translator:nios2_qsys_0_data_master_translator
+|cpu_evolution|altera_merlin_master_translator:nios2_qsys_0_data_master_translator
 clk => end_begintransfer.CLK
 clk => write_accepted.CLK
 clk => read_accepted.CLK
@@ -10728,7 +10728,7 @@ av_writeresponserequest => ~NO_FANOUT~
 av_writeresponsevalid <= <GND>
 
 
-|cpu|altera_merlin_slave_translator:nios2_qsys_0_jtag_debug_module_translator
+|cpu_evolution|altera_merlin_slave_translator:nios2_qsys_0_jtag_debug_module_translator
 clk => in_transfer.CLK
 clk => end_beginbursttransfer.CLK
 clk => end_begintransfer.CLK
@@ -11022,236 +11022,7 @@ av_writeresponserequest <= uav_writeresponserequest.DB_MAX_OUTPUT_PORT_TYPE
 av_writeresponsevalid => uav_writeresponsevalid.DATAIN
 
 
-|cpu|altera_merlin_slave_translator:onchip_memory2_0_s1_translator
-clk => in_transfer.CLK
-clk => end_beginbursttransfer.CLK
-clk => end_begintransfer.CLK
-clk => av_chipselect_pre.CLK
-clk => av_outputenable_pre.CLK
-clk => read_latency_shift_reg[0].CLK
-clk => waitrequest_reset_override.CLK
-reset => in_transfer.ACLR
-reset => end_beginbursttransfer.ACLR
-reset => end_begintransfer.ACLR
-reset => av_chipselect_pre.ACLR
-reset => av_outputenable_pre.ACLR
-reset => read_latency_shift_reg[0].ACLR
-reset => waitrequest_reset_override.PRESET
-uav_address[0] => ~NO_FANOUT~
-uav_address[1] => ~NO_FANOUT~
-uav_address[2] => av_address[0].DATAIN
-uav_address[3] => av_address[1].DATAIN
-uav_address[4] => av_address[2].DATAIN
-uav_address[5] => av_address[3].DATAIN
-uav_address[6] => av_address[4].DATAIN
-uav_address[7] => av_address[5].DATAIN
-uav_address[8] => av_address[6].DATAIN
-uav_address[9] => av_address[7].DATAIN
-uav_address[10] => av_address[8].DATAIN
-uav_address[11] => av_address[9].DATAIN
-uav_address[12] => ~NO_FANOUT~
-uav_address[13] => ~NO_FANOUT~
-uav_writedata[0] => av_writedata[0].DATAIN
-uav_writedata[1] => av_writedata[1].DATAIN
-uav_writedata[2] => av_writedata[2].DATAIN
-uav_writedata[3] => av_writedata[3].DATAIN
-uav_writedata[4] => av_writedata[4].DATAIN
-uav_writedata[5] => av_writedata[5].DATAIN
-uav_writedata[6] => av_writedata[6].DATAIN
-uav_writedata[7] => av_writedata[7].DATAIN
-uav_writedata[8] => av_writedata[8].DATAIN
-uav_writedata[9] => av_writedata[9].DATAIN
-uav_writedata[10] => av_writedata[10].DATAIN
-uav_writedata[11] => av_writedata[11].DATAIN
-uav_writedata[12] => av_writedata[12].DATAIN
-uav_writedata[13] => av_writedata[13].DATAIN
-uav_writedata[14] => av_writedata[14].DATAIN
-uav_writedata[15] => av_writedata[15].DATAIN
-uav_writedata[16] => av_writedata[16].DATAIN
-uav_writedata[17] => av_writedata[17].DATAIN
-uav_writedata[18] => av_writedata[18].DATAIN
-uav_writedata[19] => av_writedata[19].DATAIN
-uav_writedata[20] => av_writedata[20].DATAIN
-uav_writedata[21] => av_writedata[21].DATAIN
-uav_writedata[22] => av_writedata[22].DATAIN
-uav_writedata[23] => av_writedata[23].DATAIN
-uav_writedata[24] => av_writedata[24].DATAIN
-uav_writedata[25] => av_writedata[25].DATAIN
-uav_writedata[26] => av_writedata[26].DATAIN
-uav_writedata[27] => av_writedata[27].DATAIN
-uav_writedata[28] => av_writedata[28].DATAIN
-uav_writedata[29] => av_writedata[29].DATAIN
-uav_writedata[30] => av_writedata[30].DATAIN
-uav_writedata[31] => av_writedata[31].DATAIN
-uav_write => av_writebyteenable.IN0
-uav_write => av_writebyteenable.IN0
-uav_write => av_writebyteenable.IN0
-uav_write => av_writebyteenable.IN0
-uav_write => av_begintransfer.IN0
-uav_write => end_beginbursttransfer.IN1
-uav_write => always20.IN1
-uav_write => in_transfer.OUTPUTSELECT
-uav_write => av_write.DATAIN
-uav_read => read_latency_shift_reg.IN1
-uav_read => av_outputenable.OUTPUTSELECT
-uav_read => av_begintransfer.IN1
-uav_read => av_beginbursttransfer.OUTPUTSELECT
-uav_read => av_read.DATAIN
-uav_read => av_outputenable_pre.DATAIN
-uav_burstcount[0] => Equal0.IN3
-uav_burstcount[1] => Equal0.IN2
-uav_burstcount[2] => av_burstcount[0].DATAIN
-uav_burstcount[2] => Equal0.IN4
-uav_byteenable[0] => av_writebyteenable.IN1
-uav_byteenable[0] => av_byteenable[0].DATAIN
-uav_byteenable[1] => av_writebyteenable.IN1
-uav_byteenable[1] => av_byteenable[1].DATAIN
-uav_byteenable[2] => av_writebyteenable.IN1
-uav_byteenable[2] => av_byteenable[2].DATAIN
-uav_byteenable[3] => av_writebyteenable.IN1
-uav_byteenable[3] => av_byteenable[3].DATAIN
-uav_lock => av_lock.DATAIN
-uav_debugaccess => av_debugaccess.DATAIN
-uav_clken => ~NO_FANOUT~
-uav_readdatavalid <= read_latency_shift_reg[0].DB_MAX_OUTPUT_PORT_TYPE
-uav_waitrequest <= waitrequest_reset_override.DB_MAX_OUTPUT_PORT_TYPE
-uav_readdata[0] <= av_readdata[0].DB_MAX_OUTPUT_PORT_TYPE
-uav_readdata[1] <= av_readdata[1].DB_MAX_OUTPUT_PORT_TYPE
-uav_readdata[2] <= av_readdata[2].DB_MAX_OUTPUT_PORT_TYPE
-uav_readdata[3] <= av_readdata[3].DB_MAX_OUTPUT_PORT_TYPE
-uav_readdata[4] <= av_readdata[4].DB_MAX_OUTPUT_PORT_TYPE
-uav_readdata[5] <= av_readdata[5].DB_MAX_OUTPUT_PORT_TYPE
-uav_readdata[6] <= av_readdata[6].DB_MAX_OUTPUT_PORT_TYPE
-uav_readdata[7] <= av_readdata[7].DB_MAX_OUTPUT_PORT_TYPE
-uav_readdata[8] <= av_readdata[8].DB_MAX_OUTPUT_PORT_TYPE
-uav_readdata[9] <= av_readdata[9].DB_MAX_OUTPUT_PORT_TYPE
-uav_readdata[10] <= av_readdata[10].DB_MAX_OUTPUT_PORT_TYPE
-uav_readdata[11] <= av_readdata[11].DB_MAX_OUTPUT_PORT_TYPE
-uav_readdata[12] <= av_readdata[12].DB_MAX_OUTPUT_PORT_TYPE
-uav_readdata[13] <= av_readdata[13].DB_MAX_OUTPUT_PORT_TYPE
-uav_readdata[14] <= av_readdata[14].DB_MAX_OUTPUT_PORT_TYPE
-uav_readdata[15] <= av_readdata[15].DB_MAX_OUTPUT_PORT_TYPE
-uav_readdata[16] <= av_readdata[16].DB_MAX_OUTPUT_PORT_TYPE
-uav_readdata[17] <= av_readdata[17].DB_MAX_OUTPUT_PORT_TYPE
-uav_readdata[18] <= av_readdata[18].DB_MAX_OUTPUT_PORT_TYPE
-uav_readdata[19] <= av_readdata[19].DB_MAX_OUTPUT_PORT_TYPE
-uav_readdata[20] <= av_readdata[20].DB_MAX_OUTPUT_PORT_TYPE
-uav_readdata[21] <= av_readdata[21].DB_MAX_OUTPUT_PORT_TYPE
-uav_readdata[22] <= av_readdata[22].DB_MAX_OUTPUT_PORT_TYPE
-uav_readdata[23] <= av_readdata[23].DB_MAX_OUTPUT_PORT_TYPE
-uav_readdata[24] <= av_readdata[24].DB_MAX_OUTPUT_PORT_TYPE
-uav_readdata[25] <= av_readdata[25].DB_MAX_OUTPUT_PORT_TYPE
-uav_readdata[26] <= av_readdata[26].DB_MAX_OUTPUT_PORT_TYPE
-uav_readdata[27] <= av_readdata[27].DB_MAX_OUTPUT_PORT_TYPE
-uav_readdata[28] <= av_readdata[28].DB_MAX_OUTPUT_PORT_TYPE
-uav_readdata[29] <= av_readdata[29].DB_MAX_OUTPUT_PORT_TYPE
-uav_readdata[30] <= av_readdata[30].DB_MAX_OUTPUT_PORT_TYPE
-uav_readdata[31] <= av_readdata[31].DB_MAX_OUTPUT_PORT_TYPE
-uav_response[0] <= <GND>
-uav_response[1] <= <GND>
-uav_writeresponserequest => av_writeresponserequest.DATAIN
-uav_writeresponsevalid <= av_writeresponsevalid.DB_MAX_OUTPUT_PORT_TYPE
-av_address[0] <= uav_address[2].DB_MAX_OUTPUT_PORT_TYPE
-av_address[1] <= uav_address[3].DB_MAX_OUTPUT_PORT_TYPE
-av_address[2] <= uav_address[4].DB_MAX_OUTPUT_PORT_TYPE
-av_address[3] <= uav_address[5].DB_MAX_OUTPUT_PORT_TYPE
-av_address[4] <= uav_address[6].DB_MAX_OUTPUT_PORT_TYPE
-av_address[5] <= uav_address[7].DB_MAX_OUTPUT_PORT_TYPE
-av_address[6] <= uav_address[8].DB_MAX_OUTPUT_PORT_TYPE
-av_address[7] <= uav_address[9].DB_MAX_OUTPUT_PORT_TYPE
-av_address[8] <= uav_address[10].DB_MAX_OUTPUT_PORT_TYPE
-av_address[9] <= uav_address[11].DB_MAX_OUTPUT_PORT_TYPE
-av_writedata[0] <= uav_writedata[0].DB_MAX_OUTPUT_PORT_TYPE
-av_writedata[1] <= uav_writedata[1].DB_MAX_OUTPUT_PORT_TYPE
-av_writedata[2] <= uav_writedata[2].DB_MAX_OUTPUT_PORT_TYPE
-av_writedata[3] <= uav_writedata[3].DB_MAX_OUTPUT_PORT_TYPE
-av_writedata[4] <= uav_writedata[4].DB_MAX_OUTPUT_PORT_TYPE
-av_writedata[5] <= uav_writedata[5].DB_MAX_OUTPUT_PORT_TYPE
-av_writedata[6] <= uav_writedata[6].DB_MAX_OUTPUT_PORT_TYPE
-av_writedata[7] <= uav_writedata[7].DB_MAX_OUTPUT_PORT_TYPE
-av_writedata[8] <= uav_writedata[8].DB_MAX_OUTPUT_PORT_TYPE
-av_writedata[9] <= uav_writedata[9].DB_MAX_OUTPUT_PORT_TYPE
-av_writedata[10] <= uav_writedata[10].DB_MAX_OUTPUT_PORT_TYPE
-av_writedata[11] <= uav_writedata[11].DB_MAX_OUTPUT_PORT_TYPE
-av_writedata[12] <= uav_writedata[12].DB_MAX_OUTPUT_PORT_TYPE
-av_writedata[13] <= uav_writedata[13].DB_MAX_OUTPUT_PORT_TYPE
-av_writedata[14] <= uav_writedata[14].DB_MAX_OUTPUT_PORT_TYPE
-av_writedata[15] <= uav_writedata[15].DB_MAX_OUTPUT_PORT_TYPE
-av_writedata[16] <= uav_writedata[16].DB_MAX_OUTPUT_PORT_TYPE
-av_writedata[17] <= uav_writedata[17].DB_MAX_OUTPUT_PORT_TYPE
-av_writedata[18] <= uav_writedata[18].DB_MAX_OUTPUT_PORT_TYPE
-av_writedata[19] <= uav_writedata[19].DB_MAX_OUTPUT_PORT_TYPE
-av_writedata[20] <= uav_writedata[20].DB_MAX_OUTPUT_PORT_TYPE
-av_writedata[21] <= uav_writedata[21].DB_MAX_OUTPUT_PORT_TYPE
-av_writedata[22] <= uav_writedata[22].DB_MAX_OUTPUT_PORT_TYPE
-av_writedata[23] <= uav_writedata[23].DB_MAX_OUTPUT_PORT_TYPE
-av_writedata[24] <= uav_writedata[24].DB_MAX_OUTPUT_PORT_TYPE
-av_writedata[25] <= uav_writedata[25].DB_MAX_OUTPUT_PORT_TYPE
-av_writedata[26] <= uav_writedata[26].DB_MAX_OUTPUT_PORT_TYPE
-av_writedata[27] <= uav_writedata[27].DB_MAX_OUTPUT_PORT_TYPE
-av_writedata[28] <= uav_writedata[28].DB_MAX_OUTPUT_PORT_TYPE
-av_writedata[29] <= uav_writedata[29].DB_MAX_OUTPUT_PORT_TYPE
-av_writedata[30] <= uav_writedata[30].DB_MAX_OUTPUT_PORT_TYPE
-av_writedata[31] <= uav_writedata[31].DB_MAX_OUTPUT_PORT_TYPE
-av_write <= uav_write.DB_MAX_OUTPUT_PORT_TYPE
-av_read <= uav_read.DB_MAX_OUTPUT_PORT_TYPE
-av_burstcount[0] <= uav_burstcount[2].DB_MAX_OUTPUT_PORT_TYPE
-av_byteenable[0] <= uav_byteenable[0].DB_MAX_OUTPUT_PORT_TYPE
-av_byteenable[1] <= uav_byteenable[1].DB_MAX_OUTPUT_PORT_TYPE
-av_byteenable[2] <= uav_byteenable[2].DB_MAX_OUTPUT_PORT_TYPE
-av_byteenable[3] <= uav_byteenable[3].DB_MAX_OUTPUT_PORT_TYPE
-av_writebyteenable[0] <= av_writebyteenable.DB_MAX_OUTPUT_PORT_TYPE
-av_writebyteenable[1] <= av_writebyteenable.DB_MAX_OUTPUT_PORT_TYPE
-av_writebyteenable[2] <= av_writebyteenable.DB_MAX_OUTPUT_PORT_TYPE
-av_writebyteenable[3] <= av_writebyteenable.DB_MAX_OUTPUT_PORT_TYPE
-av_begintransfer <= av_begintransfer.DB_MAX_OUTPUT_PORT_TYPE
-av_chipselect <= av_chipselect.DB_MAX_OUTPUT_PORT_TYPE
-av_beginbursttransfer <= av_beginbursttransfer.DB_MAX_OUTPUT_PORT_TYPE
-av_lock <= uav_lock.DB_MAX_OUTPUT_PORT_TYPE
-av_clken <= <VCC>
-av_debugaccess <= uav_debugaccess.DB_MAX_OUTPUT_PORT_TYPE
-av_outputenable <= av_outputenable.DB_MAX_OUTPUT_PORT_TYPE
-av_readdata[0] => uav_readdata[0].DATAIN
-av_readdata[1] => uav_readdata[1].DATAIN
-av_readdata[2] => uav_readdata[2].DATAIN
-av_readdata[3] => uav_readdata[3].DATAIN
-av_readdata[4] => uav_readdata[4].DATAIN
-av_readdata[5] => uav_readdata[5].DATAIN
-av_readdata[6] => uav_readdata[6].DATAIN
-av_readdata[7] => uav_readdata[7].DATAIN
-av_readdata[8] => uav_readdata[8].DATAIN
-av_readdata[9] => uav_readdata[9].DATAIN
-av_readdata[10] => uav_readdata[10].DATAIN
-av_readdata[11] => uav_readdata[11].DATAIN
-av_readdata[12] => uav_readdata[12].DATAIN
-av_readdata[13] => uav_readdata[13].DATAIN
-av_readdata[14] => uav_readdata[14].DATAIN
-av_readdata[15] => uav_readdata[15].DATAIN
-av_readdata[16] => uav_readdata[16].DATAIN
-av_readdata[17] => uav_readdata[17].DATAIN
-av_readdata[18] => uav_readdata[18].DATAIN
-av_readdata[19] => uav_readdata[19].DATAIN
-av_readdata[20] => uav_readdata[20].DATAIN
-av_readdata[21] => uav_readdata[21].DATAIN
-av_readdata[22] => uav_readdata[22].DATAIN
-av_readdata[23] => uav_readdata[23].DATAIN
-av_readdata[24] => uav_readdata[24].DATAIN
-av_readdata[25] => uav_readdata[25].DATAIN
-av_readdata[26] => uav_readdata[26].DATAIN
-av_readdata[27] => uav_readdata[27].DATAIN
-av_readdata[28] => uav_readdata[28].DATAIN
-av_readdata[29] => uav_readdata[29].DATAIN
-av_readdata[30] => uav_readdata[30].DATAIN
-av_readdata[31] => uav_readdata[31].DATAIN
-av_readdatavalid => ~NO_FANOUT~
-av_waitrequest => ~NO_FANOUT~
-av_response[0] => ~NO_FANOUT~
-av_response[1] => ~NO_FANOUT~
-av_writeresponserequest <= uav_writeresponserequest.DB_MAX_OUTPUT_PORT_TYPE
-av_writeresponsevalid => uav_writeresponsevalid.DATAIN
-
-
-|cpu|altera_merlin_slave_translator:jtag_uart_0_avalon_jtag_slave_translator
+|cpu_evolution|altera_merlin_slave_translator:jtag_uart_0_avalon_jtag_slave_translator
 clk => in_transfer.CLK
 clk => end_beginbursttransfer.CLK
 clk => end_begintransfer.CLK
@@ -11525,7 +11296,7 @@ av_writeresponserequest <= uav_writeresponserequest.DB_MAX_OUTPUT_PORT_TYPE
 av_writeresponsevalid => uav_writeresponsevalid.DATAIN
 
 
-|cpu|altera_merlin_slave_translator:pio_buttons_s1_translator
+|cpu_evolution|altera_merlin_slave_translator:pio_btn_s1_translator
 clk => in_transfer.CLK
 clk => end_beginbursttransfer.CLK
 clk => end_begintransfer.CLK
@@ -11802,7 +11573,236 @@ av_writeresponserequest <= uav_writeresponserequest.DB_MAX_OUTPUT_PORT_TYPE
 av_writeresponsevalid => uav_writeresponsevalid.DATAIN
 
 
-|cpu|altera_merlin_master_agent:nios2_qsys_0_instruction_master_translator_avalon_universal_master_0_agent
+|cpu_evolution|altera_merlin_slave_translator:onchip_memory2_0_s1_translator
+clk => in_transfer.CLK
+clk => end_beginbursttransfer.CLK
+clk => end_begintransfer.CLK
+clk => av_chipselect_pre.CLK
+clk => av_outputenable_pre.CLK
+clk => read_latency_shift_reg[0].CLK
+clk => waitrequest_reset_override.CLK
+reset => in_transfer.ACLR
+reset => end_beginbursttransfer.ACLR
+reset => end_begintransfer.ACLR
+reset => av_chipselect_pre.ACLR
+reset => av_outputenable_pre.ACLR
+reset => read_latency_shift_reg[0].ACLR
+reset => waitrequest_reset_override.PRESET
+uav_address[0] => ~NO_FANOUT~
+uav_address[1] => ~NO_FANOUT~
+uav_address[2] => av_address[0].DATAIN
+uav_address[3] => av_address[1].DATAIN
+uav_address[4] => av_address[2].DATAIN
+uav_address[5] => av_address[3].DATAIN
+uav_address[6] => av_address[4].DATAIN
+uav_address[7] => av_address[5].DATAIN
+uav_address[8] => av_address[6].DATAIN
+uav_address[9] => av_address[7].DATAIN
+uav_address[10] => av_address[8].DATAIN
+uav_address[11] => av_address[9].DATAIN
+uav_address[12] => ~NO_FANOUT~
+uav_address[13] => ~NO_FANOUT~
+uav_writedata[0] => av_writedata[0].DATAIN
+uav_writedata[1] => av_writedata[1].DATAIN
+uav_writedata[2] => av_writedata[2].DATAIN
+uav_writedata[3] => av_writedata[3].DATAIN
+uav_writedata[4] => av_writedata[4].DATAIN
+uav_writedata[5] => av_writedata[5].DATAIN
+uav_writedata[6] => av_writedata[6].DATAIN
+uav_writedata[7] => av_writedata[7].DATAIN
+uav_writedata[8] => av_writedata[8].DATAIN
+uav_writedata[9] => av_writedata[9].DATAIN
+uav_writedata[10] => av_writedata[10].DATAIN
+uav_writedata[11] => av_writedata[11].DATAIN
+uav_writedata[12] => av_writedata[12].DATAIN
+uav_writedata[13] => av_writedata[13].DATAIN
+uav_writedata[14] => av_writedata[14].DATAIN
+uav_writedata[15] => av_writedata[15].DATAIN
+uav_writedata[16] => av_writedata[16].DATAIN
+uav_writedata[17] => av_writedata[17].DATAIN
+uav_writedata[18] => av_writedata[18].DATAIN
+uav_writedata[19] => av_writedata[19].DATAIN
+uav_writedata[20] => av_writedata[20].DATAIN
+uav_writedata[21] => av_writedata[21].DATAIN
+uav_writedata[22] => av_writedata[22].DATAIN
+uav_writedata[23] => av_writedata[23].DATAIN
+uav_writedata[24] => av_writedata[24].DATAIN
+uav_writedata[25] => av_writedata[25].DATAIN
+uav_writedata[26] => av_writedata[26].DATAIN
+uav_writedata[27] => av_writedata[27].DATAIN
+uav_writedata[28] => av_writedata[28].DATAIN
+uav_writedata[29] => av_writedata[29].DATAIN
+uav_writedata[30] => av_writedata[30].DATAIN
+uav_writedata[31] => av_writedata[31].DATAIN
+uav_write => av_writebyteenable.IN0
+uav_write => av_writebyteenable.IN0
+uav_write => av_writebyteenable.IN0
+uav_write => av_writebyteenable.IN0
+uav_write => av_begintransfer.IN0
+uav_write => end_beginbursttransfer.IN1
+uav_write => always20.IN1
+uav_write => in_transfer.OUTPUTSELECT
+uav_write => av_write.DATAIN
+uav_read => read_latency_shift_reg.IN1
+uav_read => av_outputenable.OUTPUTSELECT
+uav_read => av_begintransfer.IN1
+uav_read => av_beginbursttransfer.OUTPUTSELECT
+uav_read => av_read.DATAIN
+uav_read => av_outputenable_pre.DATAIN
+uav_burstcount[0] => Equal0.IN3
+uav_burstcount[1] => Equal0.IN2
+uav_burstcount[2] => av_burstcount[0].DATAIN
+uav_burstcount[2] => Equal0.IN4
+uav_byteenable[0] => av_writebyteenable.IN1
+uav_byteenable[0] => av_byteenable[0].DATAIN
+uav_byteenable[1] => av_writebyteenable.IN1
+uav_byteenable[1] => av_byteenable[1].DATAIN
+uav_byteenable[2] => av_writebyteenable.IN1
+uav_byteenable[2] => av_byteenable[2].DATAIN
+uav_byteenable[3] => av_writebyteenable.IN1
+uav_byteenable[3] => av_byteenable[3].DATAIN
+uav_lock => av_lock.DATAIN
+uav_debugaccess => av_debugaccess.DATAIN
+uav_clken => ~NO_FANOUT~
+uav_readdatavalid <= read_latency_shift_reg[0].DB_MAX_OUTPUT_PORT_TYPE
+uav_waitrequest <= waitrequest_reset_override.DB_MAX_OUTPUT_PORT_TYPE
+uav_readdata[0] <= av_readdata[0].DB_MAX_OUTPUT_PORT_TYPE
+uav_readdata[1] <= av_readdata[1].DB_MAX_OUTPUT_PORT_TYPE
+uav_readdata[2] <= av_readdata[2].DB_MAX_OUTPUT_PORT_TYPE
+uav_readdata[3] <= av_readdata[3].DB_MAX_OUTPUT_PORT_TYPE
+uav_readdata[4] <= av_readdata[4].DB_MAX_OUTPUT_PORT_TYPE
+uav_readdata[5] <= av_readdata[5].DB_MAX_OUTPUT_PORT_TYPE
+uav_readdata[6] <= av_readdata[6].DB_MAX_OUTPUT_PORT_TYPE
+uav_readdata[7] <= av_readdata[7].DB_MAX_OUTPUT_PORT_TYPE
+uav_readdata[8] <= av_readdata[8].DB_MAX_OUTPUT_PORT_TYPE
+uav_readdata[9] <= av_readdata[9].DB_MAX_OUTPUT_PORT_TYPE
+uav_readdata[10] <= av_readdata[10].DB_MAX_OUTPUT_PORT_TYPE
+uav_readdata[11] <= av_readdata[11].DB_MAX_OUTPUT_PORT_TYPE
+uav_readdata[12] <= av_readdata[12].DB_MAX_OUTPUT_PORT_TYPE
+uav_readdata[13] <= av_readdata[13].DB_MAX_OUTPUT_PORT_TYPE
+uav_readdata[14] <= av_readdata[14].DB_MAX_OUTPUT_PORT_TYPE
+uav_readdata[15] <= av_readdata[15].DB_MAX_OUTPUT_PORT_TYPE
+uav_readdata[16] <= av_readdata[16].DB_MAX_OUTPUT_PORT_TYPE
+uav_readdata[17] <= av_readdata[17].DB_MAX_OUTPUT_PORT_TYPE
+uav_readdata[18] <= av_readdata[18].DB_MAX_OUTPUT_PORT_TYPE
+uav_readdata[19] <= av_readdata[19].DB_MAX_OUTPUT_PORT_TYPE
+uav_readdata[20] <= av_readdata[20].DB_MAX_OUTPUT_PORT_TYPE
+uav_readdata[21] <= av_readdata[21].DB_MAX_OUTPUT_PORT_TYPE
+uav_readdata[22] <= av_readdata[22].DB_MAX_OUTPUT_PORT_TYPE
+uav_readdata[23] <= av_readdata[23].DB_MAX_OUTPUT_PORT_TYPE
+uav_readdata[24] <= av_readdata[24].DB_MAX_OUTPUT_PORT_TYPE
+uav_readdata[25] <= av_readdata[25].DB_MAX_OUTPUT_PORT_TYPE
+uav_readdata[26] <= av_readdata[26].DB_MAX_OUTPUT_PORT_TYPE
+uav_readdata[27] <= av_readdata[27].DB_MAX_OUTPUT_PORT_TYPE
+uav_readdata[28] <= av_readdata[28].DB_MAX_OUTPUT_PORT_TYPE
+uav_readdata[29] <= av_readdata[29].DB_MAX_OUTPUT_PORT_TYPE
+uav_readdata[30] <= av_readdata[30].DB_MAX_OUTPUT_PORT_TYPE
+uav_readdata[31] <= av_readdata[31].DB_MAX_OUTPUT_PORT_TYPE
+uav_response[0] <= <GND>
+uav_response[1] <= <GND>
+uav_writeresponserequest => av_writeresponserequest.DATAIN
+uav_writeresponsevalid <= av_writeresponsevalid.DB_MAX_OUTPUT_PORT_TYPE
+av_address[0] <= uav_address[2].DB_MAX_OUTPUT_PORT_TYPE
+av_address[1] <= uav_address[3].DB_MAX_OUTPUT_PORT_TYPE
+av_address[2] <= uav_address[4].DB_MAX_OUTPUT_PORT_TYPE
+av_address[3] <= uav_address[5].DB_MAX_OUTPUT_PORT_TYPE
+av_address[4] <= uav_address[6].DB_MAX_OUTPUT_PORT_TYPE
+av_address[5] <= uav_address[7].DB_MAX_OUTPUT_PORT_TYPE
+av_address[6] <= uav_address[8].DB_MAX_OUTPUT_PORT_TYPE
+av_address[7] <= uav_address[9].DB_MAX_OUTPUT_PORT_TYPE
+av_address[8] <= uav_address[10].DB_MAX_OUTPUT_PORT_TYPE
+av_address[9] <= uav_address[11].DB_MAX_OUTPUT_PORT_TYPE
+av_writedata[0] <= uav_writedata[0].DB_MAX_OUTPUT_PORT_TYPE
+av_writedata[1] <= uav_writedata[1].DB_MAX_OUTPUT_PORT_TYPE
+av_writedata[2] <= uav_writedata[2].DB_MAX_OUTPUT_PORT_TYPE
+av_writedata[3] <= uav_writedata[3].DB_MAX_OUTPUT_PORT_TYPE
+av_writedata[4] <= uav_writedata[4].DB_MAX_OUTPUT_PORT_TYPE
+av_writedata[5] <= uav_writedata[5].DB_MAX_OUTPUT_PORT_TYPE
+av_writedata[6] <= uav_writedata[6].DB_MAX_OUTPUT_PORT_TYPE
+av_writedata[7] <= uav_writedata[7].DB_MAX_OUTPUT_PORT_TYPE
+av_writedata[8] <= uav_writedata[8].DB_MAX_OUTPUT_PORT_TYPE
+av_writedata[9] <= uav_writedata[9].DB_MAX_OUTPUT_PORT_TYPE
+av_writedata[10] <= uav_writedata[10].DB_MAX_OUTPUT_PORT_TYPE
+av_writedata[11] <= uav_writedata[11].DB_MAX_OUTPUT_PORT_TYPE
+av_writedata[12] <= uav_writedata[12].DB_MAX_OUTPUT_PORT_TYPE
+av_writedata[13] <= uav_writedata[13].DB_MAX_OUTPUT_PORT_TYPE
+av_writedata[14] <= uav_writedata[14].DB_MAX_OUTPUT_PORT_TYPE
+av_writedata[15] <= uav_writedata[15].DB_MAX_OUTPUT_PORT_TYPE
+av_writedata[16] <= uav_writedata[16].DB_MAX_OUTPUT_PORT_TYPE
+av_writedata[17] <= uav_writedata[17].DB_MAX_OUTPUT_PORT_TYPE
+av_writedata[18] <= uav_writedata[18].DB_MAX_OUTPUT_PORT_TYPE
+av_writedata[19] <= uav_writedata[19].DB_MAX_OUTPUT_PORT_TYPE
+av_writedata[20] <= uav_writedata[20].DB_MAX_OUTPUT_PORT_TYPE
+av_writedata[21] <= uav_writedata[21].DB_MAX_OUTPUT_PORT_TYPE
+av_writedata[22] <= uav_writedata[22].DB_MAX_OUTPUT_PORT_TYPE
+av_writedata[23] <= uav_writedata[23].DB_MAX_OUTPUT_PORT_TYPE
+av_writedata[24] <= uav_writedata[24].DB_MAX_OUTPUT_PORT_TYPE
+av_writedata[25] <= uav_writedata[25].DB_MAX_OUTPUT_PORT_TYPE
+av_writedata[26] <= uav_writedata[26].DB_MAX_OUTPUT_PORT_TYPE
+av_writedata[27] <= uav_writedata[27].DB_MAX_OUTPUT_PORT_TYPE
+av_writedata[28] <= uav_writedata[28].DB_MAX_OUTPUT_PORT_TYPE
+av_writedata[29] <= uav_writedata[29].DB_MAX_OUTPUT_PORT_TYPE
+av_writedata[30] <= uav_writedata[30].DB_MAX_OUTPUT_PORT_TYPE
+av_writedata[31] <= uav_writedata[31].DB_MAX_OUTPUT_PORT_TYPE
+av_write <= uav_write.DB_MAX_OUTPUT_PORT_TYPE
+av_read <= uav_read.DB_MAX_OUTPUT_PORT_TYPE
+av_burstcount[0] <= uav_burstcount[2].DB_MAX_OUTPUT_PORT_TYPE
+av_byteenable[0] <= uav_byteenable[0].DB_MAX_OUTPUT_PORT_TYPE
+av_byteenable[1] <= uav_byteenable[1].DB_MAX_OUTPUT_PORT_TYPE
+av_byteenable[2] <= uav_byteenable[2].DB_MAX_OUTPUT_PORT_TYPE
+av_byteenable[3] <= uav_byteenable[3].DB_MAX_OUTPUT_PORT_TYPE
+av_writebyteenable[0] <= av_writebyteenable.DB_MAX_OUTPUT_PORT_TYPE
+av_writebyteenable[1] <= av_writebyteenable.DB_MAX_OUTPUT_PORT_TYPE
+av_writebyteenable[2] <= av_writebyteenable.DB_MAX_OUTPUT_PORT_TYPE
+av_writebyteenable[3] <= av_writebyteenable.DB_MAX_OUTPUT_PORT_TYPE
+av_begintransfer <= av_begintransfer.DB_MAX_OUTPUT_PORT_TYPE
+av_chipselect <= av_chipselect.DB_MAX_OUTPUT_PORT_TYPE
+av_beginbursttransfer <= av_beginbursttransfer.DB_MAX_OUTPUT_PORT_TYPE
+av_lock <= uav_lock.DB_MAX_OUTPUT_PORT_TYPE
+av_clken <= <VCC>
+av_debugaccess <= uav_debugaccess.DB_MAX_OUTPUT_PORT_TYPE
+av_outputenable <= av_outputenable.DB_MAX_OUTPUT_PORT_TYPE
+av_readdata[0] => uav_readdata[0].DATAIN
+av_readdata[1] => uav_readdata[1].DATAIN
+av_readdata[2] => uav_readdata[2].DATAIN
+av_readdata[3] => uav_readdata[3].DATAIN
+av_readdata[4] => uav_readdata[4].DATAIN
+av_readdata[5] => uav_readdata[5].DATAIN
+av_readdata[6] => uav_readdata[6].DATAIN
+av_readdata[7] => uav_readdata[7].DATAIN
+av_readdata[8] => uav_readdata[8].DATAIN
+av_readdata[9] => uav_readdata[9].DATAIN
+av_readdata[10] => uav_readdata[10].DATAIN
+av_readdata[11] => uav_readdata[11].DATAIN
+av_readdata[12] => uav_readdata[12].DATAIN
+av_readdata[13] => uav_readdata[13].DATAIN
+av_readdata[14] => uav_readdata[14].DATAIN
+av_readdata[15] => uav_readdata[15].DATAIN
+av_readdata[16] => uav_readdata[16].DATAIN
+av_readdata[17] => uav_readdata[17].DATAIN
+av_readdata[18] => uav_readdata[18].DATAIN
+av_readdata[19] => uav_readdata[19].DATAIN
+av_readdata[20] => uav_readdata[20].DATAIN
+av_readdata[21] => uav_readdata[21].DATAIN
+av_readdata[22] => uav_readdata[22].DATAIN
+av_readdata[23] => uav_readdata[23].DATAIN
+av_readdata[24] => uav_readdata[24].DATAIN
+av_readdata[25] => uav_readdata[25].DATAIN
+av_readdata[26] => uav_readdata[26].DATAIN
+av_readdata[27] => uav_readdata[27].DATAIN
+av_readdata[28] => uav_readdata[28].DATAIN
+av_readdata[29] => uav_readdata[29].DATAIN
+av_readdata[30] => uav_readdata[30].DATAIN
+av_readdata[31] => uav_readdata[31].DATAIN
+av_readdatavalid => ~NO_FANOUT~
+av_waitrequest => ~NO_FANOUT~
+av_response[0] => ~NO_FANOUT~
+av_response[1] => ~NO_FANOUT~
+av_writeresponserequest <= uav_writeresponserequest.DB_MAX_OUTPUT_PORT_TYPE
+av_writeresponsevalid => uav_writeresponsevalid.DATAIN
+
+
+|cpu_evolution|altera_merlin_master_agent:nios2_qsys_0_instruction_master_translator_avalon_universal_master_0_agent
 clk => hold_waitrequest.CLK
 reset => hold_waitrequest.PRESET
 av_address[0] => ~NO_FANOUT~
@@ -12089,7 +12089,7 @@ rp_endofpacket => ~NO_FANOUT~
 rp_ready <= <VCC>
 
 
-|cpu|altera_merlin_master_agent:nios2_qsys_0_data_master_translator_avalon_universal_master_0_agent
+|cpu_evolution|altera_merlin_master_agent:nios2_qsys_0_data_master_translator_avalon_universal_master_0_agent
 clk => hold_waitrequest.CLK
 reset => hold_waitrequest.PRESET
 av_address[0] => ~NO_FANOUT~
@@ -12376,7 +12376,7 @@ rp_endofpacket => ~NO_FANOUT~
 rp_ready <= <VCC>
 
 
-|cpu|altera_merlin_slave_agent:nios2_qsys_0_jtag_debug_module_translator_avalon_universal_slave_0_agent
+|cpu_evolution|altera_merlin_slave_agent:nios2_qsys_0_jtag_debug_module_translator_avalon_universal_slave_0_agent
 clk => clk.IN1
 reset => reset.IN1
 m0_address[0] <= <GND>
@@ -12949,7 +12949,7 @@ rp_startofpacket <= altera_merlin_burst_uncompressor:uncompressor.source_startof
 rp_endofpacket <= altera_merlin_burst_uncompressor:uncompressor.source_endofpacket
 
 
-|cpu|altera_merlin_slave_agent:nios2_qsys_0_jtag_debug_module_translator_avalon_universal_slave_0_agent|altera_merlin_burst_uncompressor:uncompressor
+|cpu_evolution|altera_merlin_slave_agent:nios2_qsys_0_jtag_debug_module_translator_avalon_universal_slave_0_agent|altera_merlin_burst_uncompressor:uncompressor
 clk => burst_uncompress_address_offset[0].CLK
 clk => burst_uncompress_address_offset[1].CLK
 clk => burst_uncompress_address_offset[2].CLK
@@ -13143,7 +13143,7 @@ source_burstsize[1] <= sink_burstsize[1].DB_MAX_OUTPUT_PORT_TYPE
 source_burstsize[2] <= sink_burstsize[2].DB_MAX_OUTPUT_PORT_TYPE
 
 
-|cpu|altera_avalon_sc_fifo:nios2_qsys_0_jtag_debug_module_translator_avalon_universal_slave_0_agent_rsp_fifo
+|cpu_evolution|altera_avalon_sc_fifo:nios2_qsys_0_jtag_debug_module_translator_avalon_universal_slave_0_agent_rsp_fifo
 clk => csr_readdata[0]~reg0.CLK
 clk => csr_readdata[1]~reg0.CLK
 clk => csr_readdata[2]~reg0.CLK
@@ -13854,7 +13854,7 @@ almost_full_data <= <GND>
 almost_empty_data <= <GND>
 
 
-|cpu|altera_merlin_slave_agent:onchip_memory2_0_s1_translator_avalon_universal_slave_0_agent
+|cpu_evolution|altera_merlin_slave_agent:jtag_uart_0_avalon_jtag_slave_translator_avalon_universal_slave_0_agent
 clk => clk.IN1
 reset => reset.IN1
 m0_address[0] <= <GND>
@@ -14427,7 +14427,7 @@ rp_startofpacket <= altera_merlin_burst_uncompressor:uncompressor.source_startof
 rp_endofpacket <= altera_merlin_burst_uncompressor:uncompressor.source_endofpacket
 
 
-|cpu|altera_merlin_slave_agent:onchip_memory2_0_s1_translator_avalon_universal_slave_0_agent|altera_merlin_burst_uncompressor:uncompressor
+|cpu_evolution|altera_merlin_slave_agent:jtag_uart_0_avalon_jtag_slave_translator_avalon_universal_slave_0_agent|altera_merlin_burst_uncompressor:uncompressor
 clk => burst_uncompress_address_offset[0].CLK
 clk => burst_uncompress_address_offset[1].CLK
 clk => burst_uncompress_address_offset[2].CLK
@@ -14621,7 +14621,7 @@ source_burstsize[1] <= sink_burstsize[1].DB_MAX_OUTPUT_PORT_TYPE
 source_burstsize[2] <= sink_burstsize[2].DB_MAX_OUTPUT_PORT_TYPE
 
 
-|cpu|altera_avalon_sc_fifo:onchip_memory2_0_s1_translator_avalon_universal_slave_0_agent_rsp_fifo
+|cpu_evolution|altera_avalon_sc_fifo:jtag_uart_0_avalon_jtag_slave_translator_avalon_universal_slave_0_agent_rsp_fifo
 clk => csr_readdata[0]~reg0.CLK
 clk => csr_readdata[1]~reg0.CLK
 clk => csr_readdata[2]~reg0.CLK
@@ -15332,7 +15332,7 @@ almost_full_data <= <GND>
 almost_empty_data <= <GND>
 
 
-|cpu|altera_merlin_slave_agent:jtag_uart_0_avalon_jtag_slave_translator_avalon_universal_slave_0_agent
+|cpu_evolution|altera_merlin_slave_agent:pio_btn_s1_translator_avalon_universal_slave_0_agent
 clk => clk.IN1
 reset => reset.IN1
 m0_address[0] <= <GND>
@@ -15905,7 +15905,7 @@ rp_startofpacket <= altera_merlin_burst_uncompressor:uncompressor.source_startof
 rp_endofpacket <= altera_merlin_burst_uncompressor:uncompressor.source_endofpacket
 
 
-|cpu|altera_merlin_slave_agent:jtag_uart_0_avalon_jtag_slave_translator_avalon_universal_slave_0_agent|altera_merlin_burst_uncompressor:uncompressor
+|cpu_evolution|altera_merlin_slave_agent:pio_btn_s1_translator_avalon_universal_slave_0_agent|altera_merlin_burst_uncompressor:uncompressor
 clk => burst_uncompress_address_offset[0].CLK
 clk => burst_uncompress_address_offset[1].CLK
 clk => burst_uncompress_address_offset[2].CLK
@@ -16099,7 +16099,7 @@ source_burstsize[1] <= sink_burstsize[1].DB_MAX_OUTPUT_PORT_TYPE
 source_burstsize[2] <= sink_burstsize[2].DB_MAX_OUTPUT_PORT_TYPE
 
 
-|cpu|altera_avalon_sc_fifo:jtag_uart_0_avalon_jtag_slave_translator_avalon_universal_slave_0_agent_rsp_fifo
+|cpu_evolution|altera_avalon_sc_fifo:pio_btn_s1_translator_avalon_universal_slave_0_agent_rsp_fifo
 clk => csr_readdata[0]~reg0.CLK
 clk => csr_readdata[1]~reg0.CLK
 clk => csr_readdata[2]~reg0.CLK
@@ -16810,7 +16810,7 @@ almost_full_data <= <GND>
 almost_empty_data <= <GND>
 
 
-|cpu|altera_merlin_slave_agent:pio_buttons_s1_translator_avalon_universal_slave_0_agent
+|cpu_evolution|altera_merlin_slave_agent:onchip_memory2_0_s1_translator_avalon_universal_slave_0_agent
 clk => clk.IN1
 reset => reset.IN1
 m0_address[0] <= <GND>
@@ -17383,7 +17383,7 @@ rp_startofpacket <= altera_merlin_burst_uncompressor:uncompressor.source_startof
 rp_endofpacket <= altera_merlin_burst_uncompressor:uncompressor.source_endofpacket
 
 
-|cpu|altera_merlin_slave_agent:pio_buttons_s1_translator_avalon_universal_slave_0_agent|altera_merlin_burst_uncompressor:uncompressor
+|cpu_evolution|altera_merlin_slave_agent:onchip_memory2_0_s1_translator_avalon_universal_slave_0_agent|altera_merlin_burst_uncompressor:uncompressor
 clk => burst_uncompress_address_offset[0].CLK
 clk => burst_uncompress_address_offset[1].CLK
 clk => burst_uncompress_address_offset[2].CLK
@@ -17577,7 +17577,7 @@ source_burstsize[1] <= sink_burstsize[1].DB_MAX_OUTPUT_PORT_TYPE
 source_burstsize[2] <= sink_burstsize[2].DB_MAX_OUTPUT_PORT_TYPE
 
 
-|cpu|altera_avalon_sc_fifo:pio_buttons_s1_translator_avalon_universal_slave_0_agent_rsp_fifo
+|cpu_evolution|altera_avalon_sc_fifo:onchip_memory2_0_s1_translator_avalon_universal_slave_0_agent_rsp_fifo
 clk => csr_readdata[0]~reg0.CLK
 clk => csr_readdata[1]~reg0.CLK
 clk => csr_readdata[2]~reg0.CLK
@@ -18288,7 +18288,7 @@ almost_full_data <= <GND>
 almost_empty_data <= <GND>
 
 
-|cpu|cpu_addr_router:addr_router
+|cpu_evolution|cpu_evolution_addr_router:addr_router
 clk => ~NO_FANOUT~
 reset => ~NO_FANOUT~
 sink_valid => src_valid.DATAIN
@@ -18501,7 +18501,7 @@ src_endofpacket <= sink_endofpacket.DB_MAX_OUTPUT_PORT_TYPE
 src_ready => sink_ready.DATAIN
 
 
-|cpu|cpu_addr_router:addr_router|cpu_addr_router_default_decode:the_default_decode
+|cpu_evolution|cpu_evolution_addr_router:addr_router|cpu_evolution_addr_router_default_decode:the_default_decode
 default_destination_id[0] <= <GND>
 default_destination_id[1] <= <VCC>
 default_wr_channel[0] <= <GND>
@@ -18513,12 +18513,12 @@ default_rd_channel[1] <= <GND>
 default_rd_channel[2] <= <GND>
 default_rd_channel[3] <= <GND>
 default_src_channel[0] <= <GND>
-default_src_channel[1] <= <VCC>
+default_src_channel[1] <= <GND>
 default_src_channel[2] <= <GND>
-default_src_channel[3] <= <GND>
+default_src_channel[3] <= <VCC>
 
 
-|cpu|cpu_addr_router:addr_router_001
+|cpu_evolution|cpu_evolution_addr_router:addr_router_001
 clk => ~NO_FANOUT~
 reset => ~NO_FANOUT~
 sink_valid => src_valid.DATAIN
@@ -18731,7 +18731,7 @@ src_endofpacket <= sink_endofpacket.DB_MAX_OUTPUT_PORT_TYPE
 src_ready => sink_ready.DATAIN
 
 
-|cpu|cpu_addr_router:addr_router_001|cpu_addr_router_default_decode:the_default_decode
+|cpu_evolution|cpu_evolution_addr_router:addr_router_001|cpu_evolution_addr_router_default_decode:the_default_decode
 default_destination_id[0] <= <GND>
 default_destination_id[1] <= <VCC>
 default_wr_channel[0] <= <GND>
@@ -18743,12 +18743,12 @@ default_rd_channel[1] <= <GND>
 default_rd_channel[2] <= <GND>
 default_rd_channel[3] <= <GND>
 default_src_channel[0] <= <GND>
-default_src_channel[1] <= <VCC>
+default_src_channel[1] <= <GND>
 default_src_channel[2] <= <GND>
-default_src_channel[3] <= <GND>
+default_src_channel[3] <= <VCC>
 
 
-|cpu|cpu_id_router:id_router
+|cpu_evolution|cpu_evolution_id_router:id_router
 clk => ~NO_FANOUT~
 reset => ~NO_FANOUT~
 sink_valid => src_valid.DATAIN
@@ -18939,7 +18939,7 @@ src_endofpacket <= sink_endofpacket.DB_MAX_OUTPUT_PORT_TYPE
 src_ready => sink_ready.DATAIN
 
 
-|cpu|cpu_id_router:id_router|cpu_id_router_default_decode:the_default_decode
+|cpu_evolution|cpu_evolution_id_router:id_router|cpu_evolution_id_router_default_decode:the_default_decode
 default_destination_id[0] <= <VCC>
 default_destination_id[1] <= <GND>
 default_wr_channel[0] <= <GND>
@@ -18956,7 +18956,7 @@ default_src_channel[2] <= <GND>
 default_src_channel[3] <= <GND>
 
 
-|cpu|cpu_id_router:id_router_001
+|cpu_evolution|cpu_evolution_id_router:id_router_001
 clk => ~NO_FANOUT~
 reset => ~NO_FANOUT~
 sink_valid => src_valid.DATAIN
@@ -19147,7 +19147,7 @@ src_endofpacket <= sink_endofpacket.DB_MAX_OUTPUT_PORT_TYPE
 src_ready => sink_ready.DATAIN
 
 
-|cpu|cpu_id_router:id_router_001|cpu_id_router_default_decode:the_default_decode
+|cpu_evolution|cpu_evolution_id_router:id_router_001|cpu_evolution_id_router_default_decode:the_default_decode
 default_destination_id[0] <= <VCC>
 default_destination_id[1] <= <GND>
 default_wr_channel[0] <= <GND>
@@ -19164,7 +19164,7 @@ default_src_channel[2] <= <GND>
 default_src_channel[3] <= <GND>
 
 
-|cpu|cpu_id_router:id_router_002
+|cpu_evolution|cpu_evolution_id_router:id_router_002
 clk => ~NO_FANOUT~
 reset => ~NO_FANOUT~
 sink_valid => src_valid.DATAIN
@@ -19355,7 +19355,7 @@ src_endofpacket <= sink_endofpacket.DB_MAX_OUTPUT_PORT_TYPE
 src_ready => sink_ready.DATAIN
 
 
-|cpu|cpu_id_router:id_router_002|cpu_id_router_default_decode:the_default_decode
+|cpu_evolution|cpu_evolution_id_router:id_router_002|cpu_evolution_id_router_default_decode:the_default_decode
 default_destination_id[0] <= <VCC>
 default_destination_id[1] <= <GND>
 default_wr_channel[0] <= <GND>
@@ -19372,7 +19372,7 @@ default_src_channel[2] <= <GND>
 default_src_channel[3] <= <GND>
 
 
-|cpu|cpu_id_router:id_router_003
+|cpu_evolution|cpu_evolution_id_router:id_router_003
 clk => ~NO_FANOUT~
 reset => ~NO_FANOUT~
 sink_valid => src_valid.DATAIN
@@ -19563,7 +19563,7 @@ src_endofpacket <= sink_endofpacket.DB_MAX_OUTPUT_PORT_TYPE
 src_ready => sink_ready.DATAIN
 
 
-|cpu|cpu_id_router:id_router_003|cpu_id_router_default_decode:the_default_decode
+|cpu_evolution|cpu_evolution_id_router:id_router_003|cpu_evolution_id_router_default_decode:the_default_decode
 default_destination_id[0] <= <VCC>
 default_destination_id[1] <= <GND>
 default_wr_channel[0] <= <GND>
@@ -19580,7 +19580,7 @@ default_src_channel[2] <= <GND>
 default_src_channel[3] <= <GND>
 
 
-|cpu|altera_reset_controller:rst_controller
+|cpu_evolution|altera_reset_controller:rst_controller
 reset_in0 => merged_reset.IN0
 reset_in1 => merged_reset.IN1
 reset_in2 => merged_reset.IN1
@@ -19602,7 +19602,7 @@ reset_out <= r_sync_rst.DB_MAX_OUTPUT_PORT_TYPE
 reset_req <= r_early_rst.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|cpu|altera_reset_controller:rst_controller|altera_reset_synchronizer:alt_rst_sync_uq1
+|cpu_evolution|altera_reset_controller:rst_controller|altera_reset_synchronizer:alt_rst_sync_uq1
 reset_in => altera_reset_synchronizer_int_chain_out.PRESET
 reset_in => altera_reset_synchronizer_int_chain[0].PRESET
 reset_in => altera_reset_synchronizer_int_chain[1].PRESET
@@ -19612,7 +19612,7 @@ clk => altera_reset_synchronizer_int_chain[1].CLK
 reset_out <= altera_reset_synchronizer_int_chain_out.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|cpu|cpu_cmd_xbar_demux:cmd_xbar_demux
+|cpu_evolution|cpu_evolution_cmd_xbar_demux:cmd_xbar_demux
 sink_valid[0] => src0_valid.IN0
 sink_valid[0] => src1_valid.IN0
 sink_valid[0] => src2_valid.IN0
@@ -20350,7 +20350,7 @@ clk => ~NO_FANOUT~
 reset => ~NO_FANOUT~
 
 
-|cpu|cpu_cmd_xbar_demux:cmd_xbar_demux_001
+|cpu_evolution|cpu_evolution_cmd_xbar_demux:cmd_xbar_demux_001
 sink_valid[0] => src0_valid.IN0
 sink_valid[0] => src1_valid.IN0
 sink_valid[0] => src2_valid.IN0
@@ -21088,7 +21088,7 @@ clk => ~NO_FANOUT~
 reset => ~NO_FANOUT~
 
 
-|cpu|cpu_cmd_xbar_mux:cmd_xbar_mux
+|cpu_evolution|cpu_evolution_cmd_xbar_mux:cmd_xbar_mux
 sink0_valid => request.IN1
 sink0_valid => src_valid.IN1
 sink0_data[0] => src_payload.IN1
@@ -21378,7 +21378,7 @@ clk => clk.IN1
 reset => reset.IN1
 
 
-|cpu|cpu_cmd_xbar_mux:cmd_xbar_mux|altera_merlin_arbitrator:arb
+|cpu_evolution|cpu_evolution_cmd_xbar_mux:cmd_xbar_mux|altera_merlin_arbitrator:arb
 clk => top_priority_reg[0].CLK
 clk => top_priority_reg[1].CLK
 reset => top_priority_reg[0].PRESET
@@ -21400,7 +21400,7 @@ increment_top_priority => top_priority_reg.OUTPUTSELECT
 save_top_priority => ~NO_FANOUT~
 
 
-|cpu|cpu_cmd_xbar_mux:cmd_xbar_mux|altera_merlin_arbitrator:arb|altera_merlin_arb_adder:adder
+|cpu_evolution|cpu_evolution_cmd_xbar_mux:cmd_xbar_mux|altera_merlin_arbitrator:arb|altera_merlin_arb_adder:adder
 a[0] => sum.IN0
 a[0] => full_adder.cout[0].IN0
 a[1] => cout.IN0
@@ -21421,7 +21421,7 @@ sum[2] <= sum.DB_MAX_OUTPUT_PORT_TYPE
 sum[3] <= sum.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|cpu|cpu_cmd_xbar_mux:cmd_xbar_mux_001
+|cpu_evolution|cpu_evolution_cmd_xbar_mux:cmd_xbar_mux_001
 sink0_valid => request.IN1
 sink0_valid => src_valid.IN1
 sink0_data[0] => src_payload.IN1
@@ -21711,7 +21711,7 @@ clk => clk.IN1
 reset => reset.IN1
 
 
-|cpu|cpu_cmd_xbar_mux:cmd_xbar_mux_001|altera_merlin_arbitrator:arb
+|cpu_evolution|cpu_evolution_cmd_xbar_mux:cmd_xbar_mux_001|altera_merlin_arbitrator:arb
 clk => top_priority_reg[0].CLK
 clk => top_priority_reg[1].CLK
 reset => top_priority_reg[0].PRESET
@@ -21733,7 +21733,7 @@ increment_top_priority => top_priority_reg.OUTPUTSELECT
 save_top_priority => ~NO_FANOUT~
 
 
-|cpu|cpu_cmd_xbar_mux:cmd_xbar_mux_001|altera_merlin_arbitrator:arb|altera_merlin_arb_adder:adder
+|cpu_evolution|cpu_evolution_cmd_xbar_mux:cmd_xbar_mux_001|altera_merlin_arbitrator:arb|altera_merlin_arb_adder:adder
 a[0] => sum.IN0
 a[0] => full_adder.cout[0].IN0
 a[1] => cout.IN0
@@ -21754,7 +21754,7 @@ sum[2] <= sum.DB_MAX_OUTPUT_PORT_TYPE
 sum[3] <= sum.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|cpu|cpu_cmd_xbar_mux:cmd_xbar_mux_002
+|cpu_evolution|cpu_evolution_cmd_xbar_mux:cmd_xbar_mux_002
 sink0_valid => request.IN1
 sink0_valid => src_valid.IN1
 sink0_data[0] => src_payload.IN1
@@ -22044,7 +22044,7 @@ clk => clk.IN1
 reset => reset.IN1
 
 
-|cpu|cpu_cmd_xbar_mux:cmd_xbar_mux_002|altera_merlin_arbitrator:arb
+|cpu_evolution|cpu_evolution_cmd_xbar_mux:cmd_xbar_mux_002|altera_merlin_arbitrator:arb
 clk => top_priority_reg[0].CLK
 clk => top_priority_reg[1].CLK
 reset => top_priority_reg[0].PRESET
@@ -22066,7 +22066,7 @@ increment_top_priority => top_priority_reg.OUTPUTSELECT
 save_top_priority => ~NO_FANOUT~
 
 
-|cpu|cpu_cmd_xbar_mux:cmd_xbar_mux_002|altera_merlin_arbitrator:arb|altera_merlin_arb_adder:adder
+|cpu_evolution|cpu_evolution_cmd_xbar_mux:cmd_xbar_mux_002|altera_merlin_arbitrator:arb|altera_merlin_arb_adder:adder
 a[0] => sum.IN0
 a[0] => full_adder.cout[0].IN0
 a[1] => cout.IN0
@@ -22087,7 +22087,7 @@ sum[2] <= sum.DB_MAX_OUTPUT_PORT_TYPE
 sum[3] <= sum.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|cpu|cpu_cmd_xbar_mux:cmd_xbar_mux_003
+|cpu_evolution|cpu_evolution_cmd_xbar_mux:cmd_xbar_mux_003
 sink0_valid => request.IN1
 sink0_valid => src_valid.IN1
 sink0_data[0] => src_payload.IN1
@@ -22377,7 +22377,7 @@ clk => clk.IN1
 reset => reset.IN1
 
 
-|cpu|cpu_cmd_xbar_mux:cmd_xbar_mux_003|altera_merlin_arbitrator:arb
+|cpu_evolution|cpu_evolution_cmd_xbar_mux:cmd_xbar_mux_003|altera_merlin_arbitrator:arb
 clk => top_priority_reg[0].CLK
 clk => top_priority_reg[1].CLK
 reset => top_priority_reg[0].PRESET
@@ -22399,7 +22399,7 @@ increment_top_priority => top_priority_reg.OUTPUTSELECT
 save_top_priority => ~NO_FANOUT~
 
 
-|cpu|cpu_cmd_xbar_mux:cmd_xbar_mux_003|altera_merlin_arbitrator:arb|altera_merlin_arb_adder:adder
+|cpu_evolution|cpu_evolution_cmd_xbar_mux:cmd_xbar_mux_003|altera_merlin_arbitrator:arb|altera_merlin_arb_adder:adder
 a[0] => sum.IN0
 a[0] => full_adder.cout[0].IN0
 a[1] => cout.IN0
@@ -22420,7 +22420,7 @@ sum[2] <= sum.DB_MAX_OUTPUT_PORT_TYPE
 sum[3] <= sum.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|cpu|cpu_rsp_xbar_demux:rsp_xbar_demux
+|cpu_evolution|cpu_evolution_rsp_xbar_demux:rsp_xbar_demux
 sink_valid[0] => src0_valid.IN0
 sink_valid[0] => src1_valid.IN0
 sink_data[0] => src1_data[0].DATAIN
@@ -22796,7 +22796,7 @@ clk => ~NO_FANOUT~
 reset => ~NO_FANOUT~
 
 
-|cpu|cpu_rsp_xbar_demux:rsp_xbar_demux_001
+|cpu_evolution|cpu_evolution_rsp_xbar_demux:rsp_xbar_demux_001
 sink_valid[0] => src0_valid.IN0
 sink_valid[0] => src1_valid.IN0
 sink_data[0] => src1_data[0].DATAIN
@@ -23172,7 +23172,7 @@ clk => ~NO_FANOUT~
 reset => ~NO_FANOUT~
 
 
-|cpu|cpu_rsp_xbar_demux:rsp_xbar_demux_002
+|cpu_evolution|cpu_evolution_rsp_xbar_demux:rsp_xbar_demux_002
 sink_valid[0] => src0_valid.IN0
 sink_valid[0] => src1_valid.IN0
 sink_data[0] => src1_data[0].DATAIN
@@ -23548,7 +23548,7 @@ clk => ~NO_FANOUT~
 reset => ~NO_FANOUT~
 
 
-|cpu|cpu_rsp_xbar_demux:rsp_xbar_demux_003
+|cpu_evolution|cpu_evolution_rsp_xbar_demux:rsp_xbar_demux_003
 sink_valid[0] => src0_valid.IN0
 sink_valid[0] => src1_valid.IN0
 sink_data[0] => src1_data[0].DATAIN
@@ -23924,7 +23924,7 @@ clk => ~NO_FANOUT~
 reset => ~NO_FANOUT~
 
 
-|cpu|cpu_rsp_xbar_mux:rsp_xbar_mux
+|cpu_evolution|cpu_evolution_rsp_xbar_mux:rsp_xbar_mux
 sink0_valid => request[0].IN1
 sink0_data[0] => src_payload.IN1
 sink0_data[1] => src_payload.IN1
@@ -24402,7 +24402,7 @@ clk => clk.IN1
 reset => reset.IN1
 
 
-|cpu|cpu_rsp_xbar_mux:rsp_xbar_mux|altera_merlin_arbitrator:arb
+|cpu_evolution|cpu_evolution_rsp_xbar_mux:rsp_xbar_mux|altera_merlin_arbitrator:arb
 clk => ~NO_FANOUT~
 reset => ~NO_FANOUT~
 request[0] => grant[0].DATAIN
@@ -24425,7 +24425,7 @@ increment_top_priority => ~NO_FANOUT~
 save_top_priority => ~NO_FANOUT~
 
 
-|cpu|cpu_rsp_xbar_mux:rsp_xbar_mux|altera_merlin_arbitrator:arb|altera_merlin_arb_adder:adder
+|cpu_evolution|cpu_evolution_rsp_xbar_mux:rsp_xbar_mux|altera_merlin_arbitrator:arb|altera_merlin_arb_adder:adder
 a[0] => sum.IN0
 a[0] => full_adder.cout[0].IN0
 a[1] => cout.IN0
@@ -24466,7 +24466,7 @@ sum[6] <= sum.DB_MAX_OUTPUT_PORT_TYPE
 sum[7] <= sum.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|cpu|cpu_rsp_xbar_mux:rsp_xbar_mux_001
+|cpu_evolution|cpu_evolution_rsp_xbar_mux:rsp_xbar_mux_001
 sink0_valid => request[0].IN1
 sink0_data[0] => src_payload.IN1
 sink0_data[1] => src_payload.IN1
@@ -24944,7 +24944,7 @@ clk => clk.IN1
 reset => reset.IN1
 
 
-|cpu|cpu_rsp_xbar_mux:rsp_xbar_mux_001|altera_merlin_arbitrator:arb
+|cpu_evolution|cpu_evolution_rsp_xbar_mux:rsp_xbar_mux_001|altera_merlin_arbitrator:arb
 clk => ~NO_FANOUT~
 reset => ~NO_FANOUT~
 request[0] => grant[0].DATAIN
@@ -24967,7 +24967,7 @@ increment_top_priority => ~NO_FANOUT~
 save_top_priority => ~NO_FANOUT~
 
 
-|cpu|cpu_rsp_xbar_mux:rsp_xbar_mux_001|altera_merlin_arbitrator:arb|altera_merlin_arb_adder:adder
+|cpu_evolution|cpu_evolution_rsp_xbar_mux:rsp_xbar_mux_001|altera_merlin_arbitrator:arb|altera_merlin_arb_adder:adder
 a[0] => sum.IN0
 a[0] => full_adder.cout[0].IN0
 a[1] => cout.IN0
@@ -25008,7 +25008,7 @@ sum[6] <= sum.DB_MAX_OUTPUT_PORT_TYPE
 sum[7] <= sum.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|cpu|cpu_irq_mapper:irq_mapper
+|cpu_evolution|cpu_evolution_irq_mapper:irq_mapper
 clk => ~NO_FANOUT~
 reset => ~NO_FANOUT~
 receiver0_irq => sender_irq[0].DATAIN
